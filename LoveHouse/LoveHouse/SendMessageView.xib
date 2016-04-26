@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="481" height="54"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5t-x5-dAb">
+                    <rect key="frame" x="381" y="0.0" width="70" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="ksB-qp-HI7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="发布">
+                        <color key="titleColor" red="1" green="0.44554103969999997" blue="0.48705690730000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJB-1O-ZUR">
+                    <rect key="frame" x="30" y="53" width="336" height="1"/>
+                    <color key="backgroundColor" red="1" green="0.44554103969999997" blue="0.48705690730000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="sdo-cp-hin"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="给ta留言" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="na9-FK-6mP">
+                    <rect key="frame" x="30" y="0.0" width="336" height="53"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="V5t-x5-dAb" firstAttribute="leading" secondItem="na9-FK-6mP" secondAttribute="trailing" constant="15" id="Fig-og-OUM"/>
+                <constraint firstItem="nJB-1O-ZUR" firstAttribute="top" secondItem="na9-FK-6mP" secondAttribute="bottom" id="I3q-Oe-TiJ"/>
+                <constraint firstItem="V5t-x5-dAb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KVr-sO-xyY"/>
+                <constraint firstAttribute="trailing" secondItem="V5t-x5-dAb" secondAttribute="trailing" constant="30" id="eyy-6R-Uxg"/>
+                <constraint firstAttribute="bottom" secondItem="nJB-1O-ZUR" secondAttribute="bottom" id="jIF-7h-You"/>
+                <constraint firstItem="nJB-1O-ZUR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="o3I-qo-YHa"/>
+                <constraint firstItem="na9-FK-6mP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="o5t-7L-93E"/>
+                <constraint firstAttribute="bottom" secondItem="V5t-x5-dAb" secondAttribute="bottom" id="p1e-No-Cgi"/>
+                <constraint firstItem="na9-FK-6mP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="sca-tE-fKg"/>
+                <constraint firstItem="nJB-1O-ZUR" firstAttribute="trailing" secondItem="na9-FK-6mP" secondAttribute="trailing" id="zQJ-AA-eDV"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="185.5" y="-1"/>
+        </view>
+    </objects>
+</document>

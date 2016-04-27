@@ -10,6 +10,12 @@
 #import "MenuItemCell.h"
 #import "MenuHeaderCell.h"
 #import <ChameleonFramework/Chameleon.h>
+#import "HouseViewController.h"
+#import "AlbumViewController.h"
+#import "HouseDetailViewController.h"
+#import "ChatRecordViewController.h"
+#import "SettingViewController.h"
+#import "HouseSummaryViewController.h"
 @interface MenuTableViewController ()
 
 @end
@@ -21,6 +27,58 @@
     [self setupUI];
 }
 
+#pragma mark -- 懒加载
+
+- (UINavigationController *)houseSummaryVc
+{
+    if (!_houseSummaryVc) {
+        _houseSummaryVc = [[UINavigationController alloc] initWithRootViewController:[[HouseSummaryViewController alloc] init]];
+    }
+    return _houseSummaryVc;
+}
+
+- (UINavigationController *)houseVc
+{
+    if (!_houseVc) {
+        _houseVc = [[UINavigationController alloc] initWithRootViewController:[[HouseViewController alloc] init]];
+    }
+    return _houseVc;
+}
+
+- (UINavigationController *)albumVc
+{
+    if (!_albumVc) {
+        _albumVc = [[UINavigationController alloc] initWithRootViewController:[[AlbumViewController alloc] init]];
+    }
+    return _albumVc;
+}
+
+- (UINavigationController *)houseDetailVc
+{
+    if (!_houseDetailVc) {
+        _houseDetailVc = [[UINavigationController alloc] initWithRootViewController:[[HouseDetailViewController alloc] init]];
+    }
+    return _houseDetailVc;
+}
+
+- (UINavigationController *)chatRecordVc
+{
+    if (!_chatRecordVc) {
+        _chatRecordVc = [[UINavigationController alloc] initWithRootViewController:[[ChatRecordViewController alloc] init]];
+    }
+    return _chatRecordVc;
+}
+
+- (UINavigationController *)settingVc
+{
+    if (!_settingVc) {
+        _settingVc = [[UINavigationController alloc] initWithRootViewController:[[SettingViewController alloc] init]];
+    }
+    return _settingVc;
+}
+
+
+
 - (void)setupUI
 {
     self.tableView.tableFooterView = [[UIView alloc] init];
@@ -29,7 +87,7 @@
     
     self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 50)];
     NSArray *colors = [NSArray arrayOfColorsFromImage:[UIImage imageNamed:@"1"] withFlatScheme:YES];
-    self.view.backgroundColor = [UIColor colorWithGradientStyle:UIGradientStyleTopToBottom withFrame:self.view.bounds andColors:colors];
+    self.view.backgroundColor = [UIColor colorWithGradientStyle:UIGradientStyleTopToBottom withFrame:[UIScreen mainScreen].bounds andColors:colors];
     self.tableView.separatorColor = [UIColor flatWhiteColor];
 }
 
@@ -99,6 +157,38 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.row) {
+        case 0:
+        {
+            [[LinkNavHelper sharedHelper] linkToMiddleVc:self.houseSummaryVc];
+        }
+            break;
+        case 1:
+        {
+            [[LinkNavHelper sharedHelper] linkToMiddleVc:self.houseVc];
+        }
+            break;
+        case 2:
+        {
+            [[LinkNavHelper sharedHelper] linkToMiddleVc:self.albumVc];
+        }
+            break;
+        case 3:
+        {
+            [[LinkNavHelper sharedHelper] linkToMiddleVc:self.houseDetailVc];
+        }
+            break;
+        case 4:
+        {
+            [[LinkNavHelper sharedHelper] linkToMiddleVc:self.chatRecordVc];
+        }
+            break;
+        default:
+        {
+            [[LinkNavHelper sharedHelper] linkToMiddleVc:self.settingVc];
+        }
+            break;
+    }
 }
 
 @end

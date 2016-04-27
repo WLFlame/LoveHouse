@@ -18,4 +18,5 @@
 #import "UIControl+Block.h"
 #import "LoveHouseMarco.h"
 #import "UIView+LoadFromNib.h"
+#import "LinkNavHelper.h"
 #endif /* lovehouse_pch */

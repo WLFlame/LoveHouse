@@ -11,7 +11,7 @@
 #import "ECSlidingViewController.h"
 #import "MenuTableViewController.h"
 #import "HouseViewController.h"
-
+#import "LinkNavHelper.h"
 @interface AppDelegate ()
 
 @end
@@ -33,7 +33,7 @@
         HouseViewController *houseVc = [[HouseViewController alloc] init];
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:houseVc];
         ECSlidingViewController *slidingVc = [ECSlidingViewController slidingWithTopViewController:navigationController];
-        self.slidingVc = slidingVc;
+        [LinkNavHelper sharedHelper].slidingVC = slidingVc;
         slidingVc.underLeftViewController = leftMenu;
         [navigationController.view addGestureRecognizer:slidingVc.panGesture];
         slidingVc.anchorRightPeekAmount = [UIScreen mainScreen].bounds.size.width * 0.55;

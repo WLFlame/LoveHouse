@@ -251,6 +251,12 @@
 		D27523C81CD15F0C00A0C013 /* MenuHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27523C61CD15F0C00A0C013 /* MenuHeaderCell.xib */; };
 		D27523CD1CD1601F00A0C013 /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523CB1CD1601F00A0C013 /* MenuItemCell.m */; };
 		D27523CE1CD1601F00A0C013 /* MenuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27523CC1CD1601F00A0C013 /* MenuItemCell.xib */; };
+		D27523D21CD176AB00A0C013 /* LinkNavHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523D11CD176AB00A0C013 /* LinkNavHelper.m */; };
+		D27523DA1CD17AFD00A0C013 /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523D91CD17AFD00A0C013 /* AlbumViewController.m */; };
+		D27523DE1CD17BC500A0C013 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523DD1CD17BC500A0C013 /* SettingViewController.m */; };
+		D27523E31CD17BF000A0C013 /* HouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523E21CD17BF000A0C013 /* HouseDetailViewController.m */; };
+		D27523E81CD17C1B00A0C013 /* ChatRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523E71CD17C1B00A0C013 /* ChatRecordViewController.m */; };
+		D27523ED1CD17E8500A0C013 /* HouseSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523EC1CD17E8500A0C013 /* HouseSummaryViewController.m */; };
 		D28309F11CD14F3200CCD7EF /* UIView+LoadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = D28309F01CD14F3200CCD7EF /* UIView+LoadFromNib.m */; };
 		D28309F61CD1516F00CCD7EF /* SendMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D28309F41CD1516F00CCD7EF /* SendMessageCell.m */; };
 		D28309F71CD1516F00CCD7EF /* SendMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28309F51CD1516F00CCD7EF /* SendMessageCell.xib */; };
@@ -745,6 +751,19 @@
 		D27523CA1CD1601F00A0C013 /* MenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemCell.h; sourceTree = "<group>"; };
 		D27523CB1CD1601F00A0C013 /* MenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemCell.m; sourceTree = "<group>"; };
 		D27523CC1CD1601F00A0C013 /* MenuItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemCell.xib; sourceTree = "<group>"; };
+		D27523D01CD176AB00A0C013 /* LinkNavHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkNavHelper.h; sourceTree = "<group>"; };
+		D27523D11CD176AB00A0C013 /* LinkNavHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkNavHelper.m; sourceTree = "<group>"; };
+		D27523D31CD176CF00A0C013 /* WLSingletonH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLSingletonH.h; sourceTree = "<group>"; };
+		D27523D81CD17AFD00A0C013 /* AlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumViewController.h; sourceTree = "<group>"; };
+		D27523D91CD17AFD00A0C013 /* AlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumViewController.m; sourceTree = "<group>"; };
+		D27523DC1CD17BC500A0C013 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		D27523DD1CD17BC500A0C013 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		D27523E11CD17BF000A0C013 /* HouseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseDetailViewController.h; sourceTree = "<group>"; };
+		D27523E21CD17BF000A0C013 /* HouseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseDetailViewController.m; sourceTree = "<group>"; };
+		D27523E61CD17C1B00A0C013 /* ChatRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRecordViewController.h; sourceTree = "<group>"; };
+		D27523E71CD17C1B00A0C013 /* ChatRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRecordViewController.m; sourceTree = "<group>"; };
+		D27523EB1CD17E8500A0C013 /* HouseSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSummaryViewController.h; sourceTree = "<group>"; };
+		D27523EC1CD17E8500A0C013 /* HouseSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseSummaryViewController.m; sourceTree = "<group>"; };
 		D28309E81CD14E0600CCD7EF /* LoveHouseMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoveHouseMarco.h; sourceTree = "<group>"; };
 		D28309EF1CD14F3200CCD7EF /* UIView+LoadFromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadFromNib.h"; sourceTree = "<group>"; };
 		D28309F01CD14F3200CCD7EF /* UIView+LoadFromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadFromNib.m"; sourceTree = "<group>"; };
@@ -855,6 +874,11 @@
 				D236E83A1CCB4D0000397C19 /* AppDelegate.m */,
 				D236EB461CCB561200397C19 /* lovehouse.pch */,
 				D28309E81CD14E0600CCD7EF /* LoveHouseMarco.h */,
+				D27523CF1CD1767C00A0C013 /* Helper */,
+				D27523E91CD17E6900A0C013 /* HouseSummary */,
+				D27523E41CD17BF500A0C013 /* ChatRecord */,
+				D27523DF1CD17BCD00A0C013 /* HouseDetail */,
+				D27523D41CD17AC400A0C013 /* Album */,
 				D236EB4E1CCB615000397C19 /* ThirdParty */,
 				D236E8641CCB55D600397C19 /* Category */,
 				D236E8551CCB51BB00397C19 /* Main */,
@@ -909,6 +933,7 @@
 		D236E8501CCB4D6C00397C19 /* Set */ = {
 			isa = PBXGroup;
 			children = (
+				D27523DB1CD17BB800A0C013 /* Controller */,
 			);
 			name = Set;
 			sourceTree = "<group>";
@@ -2090,6 +2115,109 @@
 			name = MenuItemCell;
 			sourceTree = "<group>";
 		};
+		D27523CF1CD1767C00A0C013 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D27523D31CD176CF00A0C013 /* WLSingletonH.h */,
+				D27523D01CD176AB00A0C013 /* LinkNavHelper.h */,
+				D27523D11CD176AB00A0C013 /* LinkNavHelper.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		D27523D41CD17AC400A0C013 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				D27523D71CD17AED00A0C013 /* View */,
+				D27523D61CD17AE800A0C013 /* Model */,
+				D27523D51CD17AE100A0C013 /* Controller */,
+			);
+			name = Album;
+			sourceTree = "<group>";
+		};
+		D27523D51CD17AE100A0C013 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D27523D81CD17AFD00A0C013 /* AlbumViewController.h */,
+				D27523D91CD17AFD00A0C013 /* AlbumViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D27523D61CD17AE800A0C013 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D27523D71CD17AED00A0C013 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D27523DB1CD17BB800A0C013 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D27523DC1CD17BC500A0C013 /* SettingViewController.h */,
+				D27523DD1CD17BC500A0C013 /* SettingViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D27523DF1CD17BCD00A0C013 /* HouseDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D27523E01CD17BDF00A0C013 /* Controller */,
+			);
+			name = HouseDetail;
+			sourceTree = "<group>";
+		};
+		D27523E01CD17BDF00A0C013 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D27523E11CD17BF000A0C013 /* HouseDetailViewController.h */,
+				D27523E21CD17BF000A0C013 /* HouseDetailViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D27523E41CD17BF500A0C013 /* ChatRecord */ = {
+			isa = PBXGroup;
+			children = (
+				D27523E51CD17C0E00A0C013 /* Controller */,
+			);
+			name = ChatRecord;
+			sourceTree = "<group>";
+		};
+		D27523E51CD17C0E00A0C013 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D27523E61CD17C1B00A0C013 /* ChatRecordViewController.h */,
+				D27523E71CD17C1B00A0C013 /* ChatRecordViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D27523E91CD17E6900A0C013 /* HouseSummary */ = {
+			isa = PBXGroup;
+			children = (
+				D27523EA1CD17E7A00A0C013 /* Controller */,
+			);
+			name = HouseSummary;
+			sourceTree = "<group>";
+		};
+		D27523EA1CD17E7A00A0C013 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D27523EB1CD17E8500A0C013 /* HouseSummaryViewController.h */,
+				D27523EC1CD17E8500A0C013 /* HouseSummaryViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		D28309F21CD1515B00CCD7EF /* SendMessageCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2262,6 +2390,7 @@
 				D236EB3F1CCB55D600397C19 /* UIWebView+Load.m in Sources */,
 				D236EA881CCB55D600397C19 /* NSDictionary+SafeAccess.m in Sources */,
 				D236EB2E1CCB55D600397C19 /* UIView+Toast.m in Sources */,
+				D27523ED1CD17E8500A0C013 /* HouseSummaryViewController.m in Sources */,
 				D236EB0F1CCB55D600397C19 /* UIScreen+Frame.m in Sources */,
 				D236EABA1CCB55D600397C19 /* NSURL+Param.m in Sources */,
 				D236EB321CCB55D600397C19 /* UIViewController+BackButtonItemTitle.m in Sources */,
@@ -2302,8 +2431,10 @@
 				D236EB0C1CCB55D600397C19 /* UIResponder+Chain.m in Sources */,
 				D236EB241CCB55D600397C19 /* UIView+draggable.m in Sources */,
 				D236EAD11CCB55D600397C19 /* UIBezierPath+Length.m in Sources */,
+				D27523DA1CD17AFD00A0C013 /* AlbumViewController.m in Sources */,
 				D236EB011CCB55D600397C19 /* UILabel+AutomaticWriting.m in Sources */,
 				D236EA6F1CCB55D600397C19 /* NSPersistentStoreCoordinator+Custom.m in Sources */,
+				D27523DE1CD17BC500A0C013 /* SettingViewController.m in Sources */,
 				D236E8621CCB548A00397C19 /* NavigationController.m in Sources */,
 				D236EA9A1CCB55D600397C19 /* NSObject+AssociatedObject.m in Sources */,
 				D236EA941CCB55D600397C19 /* NSDecimalNumber+Extensions.m in Sources */,
@@ -2333,6 +2464,7 @@
 				D236EAE01CCB55D600397C19 /* UIColor+Modify.m in Sources */,
 				D236EB171CCB55D600397C19 /* UITableViewCell+TS_delaysContentTouches.m in Sources */,
 				D236EAE61CCB55D600397C19 /* UIDevice+PasscodeStatus.m in Sources */,
+				D27523E81CD17C1B00A0C013 /* ChatRecordViewController.m in Sources */,
 				D236EB161CCB55D600397C19 /* UITableViewCell+NIB.m in Sources */,
 				D236EAE51CCB55D600397C19 /* UIDevice+Hardware.m in Sources */,
 				D236EA7E1CCB55D600397C19 /* NSDate+Formatter.m in Sources */,
@@ -2373,6 +2505,7 @@
 				D236EA9E1CCB55D600397C19 /* NSObject+GCD.m in Sources */,
 				D236EA871CCB55D600397C19 /* NSDictionary+Merge.m in Sources */,
 				D236EB441CCB55D600397C19 /* WebView+Debug.m in Sources */,
+				D27523D21CD176AB00A0C013 /* LinkNavHelper.m in Sources */,
 				D236EAE41CCB55D600397C19 /* UIControl+Block.m in Sources */,
 				D236EAF41CCB55D600397C19 /* UIImage+Orientation.m in Sources */,
 				D236EA6A1CCB55D600397C19 /* NSManagedObject+Extensions.m in Sources */,
@@ -2425,6 +2558,7 @@
 				D236EB0E1CCB55D600397C19 /* UIResponder+UIAdapt.m in Sources */,
 				D236EAAB1CCB55D600397C19 /* NSString+Hash.m in Sources */,
 				D236EAEF1CCB55D600397C19 /* UIImage+Color.m in Sources */,
+				D27523E31CD17BF000A0C013 /* HouseDetailViewController.m in Sources */,
 				D236EAA91CCB55D600397C19 /* NSString+Emoji.m in Sources */,
 				D23339BC1CCFBF6200436B9A /* HouseViewController.m in Sources */,
 				D236EAB11CCB55D600397C19 /* NSString+Ruby.m in Sources */,

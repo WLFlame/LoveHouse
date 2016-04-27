@@ -30,14 +30,6 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2015 LeanCloud, Inc. See https://leancloud.cn/terms.html</string>
-			<key>Title</key>
-			<string>AVOSCloudIM</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
 			<string>##The MIT License (MIT)
 
 &gt; Copyright (c) 2014-2015 Vicc Alexander

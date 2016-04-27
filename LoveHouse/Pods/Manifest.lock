@@ -2,8 +2,6 @@ PODS:
   - AVOSCloud (3.2.8)
   - AVOSCloudCrashReporting (3.2.8):
     - AVOSCloud
-  - AVOSCloudIM (3.2.8):
-    - AVOSCloud
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
@@ -13,7 +11,6 @@ PODS:
 DEPENDENCIES:
   - AVOSCloud
   - AVOSCloudCrashReporting
-  - AVOSCloudIM
   - ChameleonFramework
   - DGActivityIndicatorView
   - ECSlidingViewController (~> 2.0.3)
@@ -21,7 +18,6 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AVOSCloud: b789619942a4275e615f8f0782e7475675951b95
   AVOSCloudCrashReporting: 2dddc7dfc8ef423492a01c0076b3e97716854701
-  AVOSCloudIM: d2f6a13d64f9676a43e4d68b822bd1be3f96fb76
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   DGActivityIndicatorView: 52875b025a6ccf6a431a905285c12e2bb95eb559
   ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53

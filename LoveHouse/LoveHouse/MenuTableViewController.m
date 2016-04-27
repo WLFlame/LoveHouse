@@ -7,7 +7,9 @@
 //
 
 #import "MenuTableViewController.h"
-
+#import "MenuItemCell.h"
+#import "MenuHeaderCell.h"
+#import <ChameleonFramework/Chameleon.h>
 @interface MenuTableViewController ()
 
 @end
@@ -16,83 +18,87 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupUI];
+}
+
+- (void)setupUI
+{
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    [self.tableView registerNib:[UINib nibWithNibName:@"MenuItemCell" bundle:nil] forCellReuseIdentifier:@"MenuItemCell"];
+     [self.tableView registerNib:[UINib nibWithNibName:@"MenuHeaderCell" bundle:nil] forCellReuseIdentifier:@"MenuHeaderCell"];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 50)];
+    NSArray *colors = [NSArray arrayOfColorsFromImage:[UIImage imageNamed:@"1"] withFlatScheme:YES];
+    self.view.backgroundColor = [UIColor colorWithGradientStyle:UIGradientStyleTopToBottom withFrame:self.view.bounds andColors:colors];
+    self.tableView.separatorColor = [UIColor flatWhiteColor];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 6;
 }
 
-#pragma mark - Table view data source
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+        case 0:
+        {
+            MenuHeaderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuHeaderCell"];
+            return cell;
+        }
+            break;
+        case 1:
+        {
+            MenuItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuItemCell"];
+            cell.lbMenuItem.text = @"小屋";
+            return cell;
+        }
+            break;
+        case 2:
+        {
+            MenuItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuItemCell"];
+            cell.lbMenuItem.text = @"相册";
+            return cell;
+        }
+            break;
+        case 3:
+        {
+            MenuItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuItemCell"];
+            cell.lbMenuItem.text = @"小屋详情";
+            return cell;
+        }
+            break;
+        case 4:
+        {
+            MenuItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuItemCell"];
+            cell.lbMenuItem.text = @"聊天记录";
+            return cell;
+        }
+            break;
+        default:
+        {
+            MenuItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuItemCell"];
+            cell.lbMenuItem.text = @"设置";
+            return cell;
+        }
+            break;
+    }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+   
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        return 90;
+    } else {
+        return 44;
+    }
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

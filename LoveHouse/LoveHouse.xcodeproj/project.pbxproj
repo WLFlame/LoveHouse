@@ -247,6 +247,10 @@
 		D236EB4D1CCB5D7900397C19 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D236EB4C1CCB5D7900397C19 /* BaseViewController.m */; };
 		D236EB541CCB616200397C19 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = D236EB511CCB616200397C19 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		D236EB551CCB616200397C19 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D236EB531CCB616200397C19 /* UIView+SDAutoLayout.m */; };
+		D27523C71CD15F0C00A0C013 /* MenuHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523C51CD15F0C00A0C013 /* MenuHeaderCell.m */; };
+		D27523C81CD15F0C00A0C013 /* MenuHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27523C61CD15F0C00A0C013 /* MenuHeaderCell.xib */; };
+		D27523CD1CD1601F00A0C013 /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523CB1CD1601F00A0C013 /* MenuItemCell.m */; };
+		D27523CE1CD1601F00A0C013 /* MenuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27523CC1CD1601F00A0C013 /* MenuItemCell.xib */; };
 		D28309F11CD14F3200CCD7EF /* UIView+LoadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = D28309F01CD14F3200CCD7EF /* UIView+LoadFromNib.m */; };
 		D28309F61CD1516F00CCD7EF /* SendMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D28309F41CD1516F00CCD7EF /* SendMessageCell.m */; };
 		D28309F71CD1516F00CCD7EF /* SendMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28309F51CD1516F00CCD7EF /* SendMessageCell.xib */; };
@@ -735,6 +739,12 @@
 		D236EB511CCB616200397C19 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
 		D236EB521CCB616200397C19 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
 		D236EB531CCB616200397C19 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		D27523C41CD15F0C00A0C013 /* MenuHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuHeaderCell.h; sourceTree = "<group>"; };
+		D27523C51CD15F0C00A0C013 /* MenuHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuHeaderCell.m; sourceTree = "<group>"; };
+		D27523C61CD15F0C00A0C013 /* MenuHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuHeaderCell.xib; sourceTree = "<group>"; };
+		D27523CA1CD1601F00A0C013 /* MenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemCell.h; sourceTree = "<group>"; };
+		D27523CB1CD1601F00A0C013 /* MenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemCell.m; sourceTree = "<group>"; };
+		D27523CC1CD1601F00A0C013 /* MenuItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemCell.xib; sourceTree = "<group>"; };
 		D28309E81CD14E0600CCD7EF /* LoveHouseMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoveHouseMarco.h; sourceTree = "<group>"; };
 		D28309EF1CD14F3200CCD7EF /* UIView+LoadFromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadFromNib.h"; sourceTree = "<group>"; };
 		D28309F01CD14F3200CCD7EF /* UIView+LoadFromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadFromNib.m"; sourceTree = "<group>"; };
@@ -968,6 +978,8 @@
 		D236E8581CCB52CD00397C19 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D27523C91CD1600A00A0C013 /* MenuItemCell */,
+				D27523C31CD15EEB00A0C013 /* MenuHeaderCell */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -2058,6 +2070,26 @@
 			path = SDAutoLayout;
 			sourceTree = "<group>";
 		};
+		D27523C31CD15EEB00A0C013 /* MenuHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				D27523C41CD15F0C00A0C013 /* MenuHeaderCell.h */,
+				D27523C51CD15F0C00A0C013 /* MenuHeaderCell.m */,
+				D27523C61CD15F0C00A0C013 /* MenuHeaderCell.xib */,
+			);
+			name = MenuHeaderCell;
+			sourceTree = "<group>";
+		};
+		D27523C91CD1600A00A0C013 /* MenuItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				D27523CA1CD1601F00A0C013 /* MenuItemCell.h */,
+				D27523CB1CD1601F00A0C013 /* MenuItemCell.m */,
+				D27523CC1CD1601F00A0C013 /* MenuItemCell.xib */,
+			);
+			name = MenuItemCell;
+			sourceTree = "<group>";
+		};
 		D28309F21CD1515B00CCD7EF /* SendMessageCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2148,8 +2180,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D23339CB1CCFC16400436B9A /* LeftReplyViewCell.xib in Resources */,
+				D27523C81CD15F0C00A0C013 /* MenuHeaderCell.xib in Resources */,
 				D236EA831CCB55D600397C19 /* NSDateTimeAgo.bundle in Resources */,
 				D236E8461CCB4D0000397C19 /* LaunchScreen.storyboard in Resources */,
+				D27523CE1CD1601F00A0C013 /* MenuItemCell.xib in Resources */,
 				D28309F71CD1516F00CCD7EF /* SendMessageCell.xib in Resources */,
 				D23339D81CCFC4C000436B9A /* HeadPhotoView.xib in Resources */,
 				D23339D01CCFC17600436B9A /* RightReplyViewCell.xib in Resources */,
@@ -2325,6 +2359,7 @@
 				D2C172EE1CCBAAE900E9AAB4 /* RegisterContainerView.m in Sources */,
 				D236EA801CCB55D600397C19 /* NSDate+Reporting.m in Sources */,
 				D236EA841CCB55D600397C19 /* NSDateFormatter+Make.m in Sources */,
+				D27523C71CD15F0C00A0C013 /* MenuHeaderCell.m in Sources */,
 				D236EAE71CCB55D600397C19 /* UIFont+DynamicFontControl.m in Sources */,
 				D236EB451CCB55D600397C19 /* UIWindow+Hierarchy.m in Sources */,
 				D236EA851CCB55D600397C19 /* NSDictionary+Block.m in Sources */,
@@ -2436,6 +2471,7 @@
 				D236EAFD1CCB55D600397C19 /* UIImageView+FaceAwareFill.m in Sources */,
 				D236EA861CCB55D600397C19 /* NSDictionary+JSONString.m in Sources */,
 				D23339CA1CCFC16400436B9A /* LeftReplyViewCell.m in Sources */,
+				D27523CD1CD1601F00A0C013 /* MenuItemCell.m in Sources */,
 				D236EAC21CCB55D600397C19 /* MKMapView+MoveLogo.m in Sources */,
 				D236EAA81CCB55D600397C19 /* NSString+DictionaryValue.m in Sources */,
 				D236EAE81CCB55D600397C19 /* UIFont+WDCustomLoader.m in Sources */,

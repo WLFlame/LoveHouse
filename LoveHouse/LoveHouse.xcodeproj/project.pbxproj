@@ -16,8 +16,6 @@
 		D23339D01CCFC17600436B9A /* RightReplyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D23339CE1CCFC17600436B9A /* RightReplyViewCell.xib */; };
 		D23339D61CCFC4B400436B9A /* HeadPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D23339D51CCFC4B400436B9A /* HeadPhotoView.m */; };
 		D23339D81CCFC4C000436B9A /* HeadPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D23339D71CCFC4C000436B9A /* HeadPhotoView.xib */; };
-		D23339DC1CCFCCFA00436B9A /* SendMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D23339DB1CCFCCFA00436B9A /* SendMessageView.m */; };
-		D23339DE1CCFCD0600436B9A /* SendMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D23339DD1CCFCD0600436B9A /* SendMessageView.xib */; };
 		D236E8381CCB4D0000397C19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D236E8371CCB4D0000397C19 /* main.m */; };
 		D236E83B1CCB4D0000397C19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D236E83A1CCB4D0000397C19 /* AppDelegate.m */; };
 		D236E8431CCB4D0000397C19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D236E8421CCB4D0000397C19 /* Assets.xcassets */; };
@@ -249,6 +247,19 @@
 		D236EB4D1CCB5D7900397C19 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D236EB4C1CCB5D7900397C19 /* BaseViewController.m */; };
 		D236EB541CCB616200397C19 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = D236EB511CCB616200397C19 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		D236EB551CCB616200397C19 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D236EB531CCB616200397C19 /* UIView+SDAutoLayout.m */; };
+		D27523C71CD15F0C00A0C013 /* MenuHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523C51CD15F0C00A0C013 /* MenuHeaderCell.m */; };
+		D27523C81CD15F0C00A0C013 /* MenuHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27523C61CD15F0C00A0C013 /* MenuHeaderCell.xib */; };
+		D27523CD1CD1601F00A0C013 /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523CB1CD1601F00A0C013 /* MenuItemCell.m */; };
+		D27523CE1CD1601F00A0C013 /* MenuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27523CC1CD1601F00A0C013 /* MenuItemCell.xib */; };
+		D27523D21CD176AB00A0C013 /* LinkNavHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523D11CD176AB00A0C013 /* LinkNavHelper.m */; };
+		D27523DA1CD17AFD00A0C013 /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523D91CD17AFD00A0C013 /* AlbumViewController.m */; };
+		D27523DE1CD17BC500A0C013 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523DD1CD17BC500A0C013 /* SettingViewController.m */; };
+		D27523E31CD17BF000A0C013 /* HouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523E21CD17BF000A0C013 /* HouseDetailViewController.m */; };
+		D27523E81CD17C1B00A0C013 /* ChatRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523E71CD17C1B00A0C013 /* ChatRecordViewController.m */; };
+		D27523ED1CD17E8500A0C013 /* HouseSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523EC1CD17E8500A0C013 /* HouseSummaryViewController.m */; };
+		D28309F11CD14F3200CCD7EF /* UIView+LoadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = D28309F01CD14F3200CCD7EF /* UIView+LoadFromNib.m */; };
+		D28309F61CD1516F00CCD7EF /* SendMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D28309F41CD1516F00CCD7EF /* SendMessageCell.m */; };
+		D28309F71CD1516F00CCD7EF /* SendMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28309F51CD1516F00CCD7EF /* SendMessageCell.xib */; };
 		D2C172EE1CCBAAE900E9AAB4 /* RegisterContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C172ED1CCBAAE900E9AAB4 /* RegisterContainerView.m */; };
 		D2C172F11CCBAB2B00E9AAB4 /* ForgetPasswordContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C172F01CCBAB2B00E9AAB4 /* ForgetPasswordContainerView.m */; };
 		D2EB702B1CCBDD570069C726 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EB702A1CCBDD570069C726 /* Foundation+Log.m */; };
@@ -273,9 +284,6 @@
 		D23339D41CCFC4B400436B9A /* HeadPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadPhotoView.h; sourceTree = "<group>"; };
 		D23339D51CCFC4B400436B9A /* HeadPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadPhotoView.m; sourceTree = "<group>"; };
 		D23339D71CCFC4C000436B9A /* HeadPhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeadPhotoView.xib; sourceTree = "<group>"; };
-		D23339DA1CCFCCFA00436B9A /* SendMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageView.h; sourceTree = "<group>"; };
-		D23339DB1CCFCCFA00436B9A /* SendMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageView.m; sourceTree = "<group>"; };
-		D23339DD1CCFCD0600436B9A /* SendMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendMessageView.xib; sourceTree = "<group>"; };
 		D236E8331CCB4D0000397C19 /* LoveHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D236E8371CCB4D0000397C19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D236E8391CCB4D0000397C19 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -737,6 +745,31 @@
 		D236EB511CCB616200397C19 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
 		D236EB521CCB616200397C19 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
 		D236EB531CCB616200397C19 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		D27523C41CD15F0C00A0C013 /* MenuHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuHeaderCell.h; sourceTree = "<group>"; };
+		D27523C51CD15F0C00A0C013 /* MenuHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuHeaderCell.m; sourceTree = "<group>"; };
+		D27523C61CD15F0C00A0C013 /* MenuHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuHeaderCell.xib; sourceTree = "<group>"; };
+		D27523CA1CD1601F00A0C013 /* MenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemCell.h; sourceTree = "<group>"; };
+		D27523CB1CD1601F00A0C013 /* MenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemCell.m; sourceTree = "<group>"; };
+		D27523CC1CD1601F00A0C013 /* MenuItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemCell.xib; sourceTree = "<group>"; };
+		D27523D01CD176AB00A0C013 /* LinkNavHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkNavHelper.h; sourceTree = "<group>"; };
+		D27523D11CD176AB00A0C013 /* LinkNavHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkNavHelper.m; sourceTree = "<group>"; };
+		D27523D31CD176CF00A0C013 /* WLSingletonH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLSingletonH.h; sourceTree = "<group>"; };
+		D27523D81CD17AFD00A0C013 /* AlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumViewController.h; sourceTree = "<group>"; };
+		D27523D91CD17AFD00A0C013 /* AlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumViewController.m; sourceTree = "<group>"; };
+		D27523DC1CD17BC500A0C013 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		D27523DD1CD17BC500A0C013 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		D27523E11CD17BF000A0C013 /* HouseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseDetailViewController.h; sourceTree = "<group>"; };
+		D27523E21CD17BF000A0C013 /* HouseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseDetailViewController.m; sourceTree = "<group>"; };
+		D27523E61CD17C1B00A0C013 /* ChatRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRecordViewController.h; sourceTree = "<group>"; };
+		D27523E71CD17C1B00A0C013 /* ChatRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRecordViewController.m; sourceTree = "<group>"; };
+		D27523EB1CD17E8500A0C013 /* HouseSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSummaryViewController.h; sourceTree = "<group>"; };
+		D27523EC1CD17E8500A0C013 /* HouseSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseSummaryViewController.m; sourceTree = "<group>"; };
+		D28309E81CD14E0600CCD7EF /* LoveHouseMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoveHouseMarco.h; sourceTree = "<group>"; };
+		D28309EF1CD14F3200CCD7EF /* UIView+LoadFromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadFromNib.h"; sourceTree = "<group>"; };
+		D28309F01CD14F3200CCD7EF /* UIView+LoadFromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadFromNib.m"; sourceTree = "<group>"; };
+		D28309F31CD1516F00CCD7EF /* SendMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageCell.h; sourceTree = "<group>"; };
+		D28309F41CD1516F00CCD7EF /* SendMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageCell.m; sourceTree = "<group>"; };
+		D28309F51CD1516F00CCD7EF /* SendMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendMessageCell.xib; sourceTree = "<group>"; };
 		D2C172EC1CCBAAE900E9AAB4 /* RegisterContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterContainerView.h; sourceTree = "<group>"; };
 		D2C172ED1CCBAAE900E9AAB4 /* RegisterContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterContainerView.m; sourceTree = "<group>"; };
 		D2C172EF1CCBAB2B00E9AAB4 /* ForgetPasswordContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordContainerView.h; sourceTree = "<group>"; };
@@ -746,7 +779,6 @@
 		D2EFC3001CCBCFEA000BFFE9 /* TTGlobalUICommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGlobalUICommon.m; sourceTree = "<group>"; };
 		D2EFC3021CCBD618000BFFE9 /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
 		D2EFC3031CCBD618000BFFE9 /* UIView+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HUD.m"; sourceTree = "<group>"; };
-		F61707931CD0CEFB00656A0A /* PrefixMarco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixMarco.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -817,16 +849,6 @@
 			name = HeadPhotoView;
 			sourceTree = "<group>";
 		};
-		D23339D91CCFCCE600436B9A /* SendMessageView */ = {
-			isa = PBXGroup;
-			children = (
-				D23339DA1CCFCCFA00436B9A /* SendMessageView.h */,
-				D23339DB1CCFCCFA00436B9A /* SendMessageView.m */,
-				D23339DD1CCFCD0600436B9A /* SendMessageView.xib */,
-			);
-			name = SendMessageView;
-			sourceTree = "<group>";
-		};
 		D236E82A1CCB4D0000397C19 = {
 			isa = PBXGroup;
 			children = (
@@ -851,7 +873,12 @@
 				D236E8391CCB4D0000397C19 /* AppDelegate.h */,
 				D236E83A1CCB4D0000397C19 /* AppDelegate.m */,
 				D236EB461CCB561200397C19 /* lovehouse.pch */,
-				F61707931CD0CEFB00656A0A /* PrefixMarco.h */,
+				D28309E81CD14E0600CCD7EF /* LoveHouseMarco.h */,
+				D27523CF1CD1767C00A0C013 /* Helper */,
+				D27523E91CD17E6900A0C013 /* HouseSummary */,
+				D27523E41CD17BF500A0C013 /* ChatRecord */,
+				D27523DF1CD17BCD00A0C013 /* HouseDetail */,
+				D27523D41CD17AC400A0C013 /* Album */,
 				D236EB4E1CCB615000397C19 /* ThirdParty */,
 				D236E8641CCB55D600397C19 /* Category */,
 				D236E8551CCB51BB00397C19 /* Main */,
@@ -906,6 +933,7 @@
 		D236E8501CCB4D6C00397C19 /* Set */ = {
 			isa = PBXGroup;
 			children = (
+				D27523DB1CD17BB800A0C013 /* Controller */,
 			);
 			name = Set;
 			sourceTree = "<group>";
@@ -975,6 +1003,8 @@
 		D236E8581CCB52CD00397C19 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D27523C91CD1600A00A0C013 /* MenuItemCell */,
+				D27523C31CD15EEB00A0C013 /* MenuHeaderCell */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -990,7 +1020,7 @@
 		D236E85E1CCB53CB00397C19 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D23339D91CCFCCE600436B9A /* SendMessageView */,
+				D28309F21CD1515B00CCD7EF /* SendMessageCell */,
 				D23339D31CCFC49300436B9A /* HeadPhotoView */,
 				D23339D21CCFC42E00436B9A /* RightReplyViewCell */,
 				D23339D11CCFC42100436B9A /* LeftReplyViewCell */,
@@ -1016,6 +1046,8 @@
 				D236E9501CCB55D600397C19 /* UIKit */,
 				D2EFC3021CCBD618000BFFE9 /* UIView+HUD.h */,
 				D2EFC3031CCBD618000BFFE9 /* UIView+HUD.m */,
+				D28309EF1CD14F3200CCD7EF /* UIView+LoadFromNib.h */,
+				D28309F01CD14F3200CCD7EF /* UIView+LoadFromNib.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -2063,6 +2095,139 @@
 			path = SDAutoLayout;
 			sourceTree = "<group>";
 		};
+		D27523C31CD15EEB00A0C013 /* MenuHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				D27523C41CD15F0C00A0C013 /* MenuHeaderCell.h */,
+				D27523C51CD15F0C00A0C013 /* MenuHeaderCell.m */,
+				D27523C61CD15F0C00A0C013 /* MenuHeaderCell.xib */,
+			);
+			name = MenuHeaderCell;
+			sourceTree = "<group>";
+		};
+		D27523C91CD1600A00A0C013 /* MenuItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				D27523CA1CD1601F00A0C013 /* MenuItemCell.h */,
+				D27523CB1CD1601F00A0C013 /* MenuItemCell.m */,
+				D27523CC1CD1601F00A0C013 /* MenuItemCell.xib */,
+			);
+			name = MenuItemCell;
+			sourceTree = "<group>";
+		};
+		D27523CF1CD1767C00A0C013 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D27523D31CD176CF00A0C013 /* WLSingletonH.h */,
+				D27523D01CD176AB00A0C013 /* LinkNavHelper.h */,
+				D27523D11CD176AB00A0C013 /* LinkNavHelper.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		D27523D41CD17AC400A0C013 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				D27523D71CD17AED00A0C013 /* View */,
+				D27523D61CD17AE800A0C013 /* Model */,
+				D27523D51CD17AE100A0C013 /* Controller */,
+			);
+			name = Album;
+			sourceTree = "<group>";
+		};
+		D27523D51CD17AE100A0C013 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D27523D81CD17AFD00A0C013 /* AlbumViewController.h */,
+				D27523D91CD17AFD00A0C013 /* AlbumViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D27523D61CD17AE800A0C013 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D27523D71CD17AED00A0C013 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D27523DB1CD17BB800A0C013 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D27523DC1CD17BC500A0C013 /* SettingViewController.h */,
+				D27523DD1CD17BC500A0C013 /* SettingViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D27523DF1CD17BCD00A0C013 /* HouseDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D27523E01CD17BDF00A0C013 /* Controller */,
+			);
+			name = HouseDetail;
+			sourceTree = "<group>";
+		};
+		D27523E01CD17BDF00A0C013 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D27523E11CD17BF000A0C013 /* HouseDetailViewController.h */,
+				D27523E21CD17BF000A0C013 /* HouseDetailViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D27523E41CD17BF500A0C013 /* ChatRecord */ = {
+			isa = PBXGroup;
+			children = (
+				D27523E51CD17C0E00A0C013 /* Controller */,
+			);
+			name = ChatRecord;
+			sourceTree = "<group>";
+		};
+		D27523E51CD17C0E00A0C013 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D27523E61CD17C1B00A0C013 /* ChatRecordViewController.h */,
+				D27523E71CD17C1B00A0C013 /* ChatRecordViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D27523E91CD17E6900A0C013 /* HouseSummary */ = {
+			isa = PBXGroup;
+			children = (
+				D27523EA1CD17E7A00A0C013 /* Controller */,
+			);
+			name = HouseSummary;
+			sourceTree = "<group>";
+		};
+		D27523EA1CD17E7A00A0C013 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D27523EB1CD17E8500A0C013 /* HouseSummaryViewController.h */,
+				D27523EC1CD17E8500A0C013 /* HouseSummaryViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D28309F21CD1515B00CCD7EF /* SendMessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				D28309F31CD1516F00CCD7EF /* SendMessageCell.h */,
+				D28309F41CD1516F00CCD7EF /* SendMessageCell.m */,
+				D28309F51CD1516F00CCD7EF /* SendMessageCell.xib */,
+			);
+			name = SendMessageCell;
+			sourceTree = "<group>";
+		};
 		D2EFC2FE1CCBCFDE000BFFE9 /* TTGlobalUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -2143,10 +2308,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D23339CB1CCFC16400436B9A /* LeftReplyViewCell.xib in Resources */,
+				D27523C81CD15F0C00A0C013 /* MenuHeaderCell.xib in Resources */,
 				D236EA831CCB55D600397C19 /* NSDateTimeAgo.bundle in Resources */,
 				D236E8461CCB4D0000397C19 /* LaunchScreen.storyboard in Resources */,
+				D27523CE1CD1601F00A0C013 /* MenuItemCell.xib in Resources */,
+				D28309F71CD1516F00CCD7EF /* SendMessageCell.xib in Resources */,
 				D23339D81CCFC4C000436B9A /* HeadPhotoView.xib in Resources */,
-				D23339DE1CCFCD0600436B9A /* SendMessageView.xib in Resources */,
 				D23339D01CCFC17600436B9A /* RightReplyViewCell.xib in Resources */,
 				D236E8431CCB4D0000397C19 /* Assets.xcassets in Resources */,
 			);
@@ -2223,6 +2390,7 @@
 				D236EB3F1CCB55D600397C19 /* UIWebView+Load.m in Sources */,
 				D236EA881CCB55D600397C19 /* NSDictionary+SafeAccess.m in Sources */,
 				D236EB2E1CCB55D600397C19 /* UIView+Toast.m in Sources */,
+				D27523ED1CD17E8500A0C013 /* HouseSummaryViewController.m in Sources */,
 				D236EB0F1CCB55D600397C19 /* UIScreen+Frame.m in Sources */,
 				D236EABA1CCB55D600397C19 /* NSURL+Param.m in Sources */,
 				D236EB321CCB55D600397C19 /* UIViewController+BackButtonItemTitle.m in Sources */,
@@ -2263,8 +2431,10 @@
 				D236EB0C1CCB55D600397C19 /* UIResponder+Chain.m in Sources */,
 				D236EB241CCB55D600397C19 /* UIView+draggable.m in Sources */,
 				D236EAD11CCB55D600397C19 /* UIBezierPath+Length.m in Sources */,
+				D27523DA1CD17AFD00A0C013 /* AlbumViewController.m in Sources */,
 				D236EB011CCB55D600397C19 /* UILabel+AutomaticWriting.m in Sources */,
 				D236EA6F1CCB55D600397C19 /* NSPersistentStoreCoordinator+Custom.m in Sources */,
+				D27523DE1CD17BC500A0C013 /* SettingViewController.m in Sources */,
 				D236E8621CCB548A00397C19 /* NavigationController.m in Sources */,
 				D236EA9A1CCB55D600397C19 /* NSObject+AssociatedObject.m in Sources */,
 				D236EA941CCB55D600397C19 /* NSDecimalNumber+Extensions.m in Sources */,
@@ -2294,7 +2464,7 @@
 				D236EAE01CCB55D600397C19 /* UIColor+Modify.m in Sources */,
 				D236EB171CCB55D600397C19 /* UITableViewCell+TS_delaysContentTouches.m in Sources */,
 				D236EAE61CCB55D600397C19 /* UIDevice+PasscodeStatus.m in Sources */,
-				D23339DC1CCFCCFA00436B9A /* SendMessageView.m in Sources */,
+				D27523E81CD17C1B00A0C013 /* ChatRecordViewController.m in Sources */,
 				D236EB161CCB55D600397C19 /* UITableViewCell+NIB.m in Sources */,
 				D236EAE51CCB55D600397C19 /* UIDevice+Hardware.m in Sources */,
 				D236EA7E1CCB55D600397C19 /* NSDate+Formatter.m in Sources */,
@@ -2321,6 +2491,7 @@
 				D2C172EE1CCBAAE900E9AAB4 /* RegisterContainerView.m in Sources */,
 				D236EA801CCB55D600397C19 /* NSDate+Reporting.m in Sources */,
 				D236EA841CCB55D600397C19 /* NSDateFormatter+Make.m in Sources */,
+				D27523C71CD15F0C00A0C013 /* MenuHeaderCell.m in Sources */,
 				D236EAE71CCB55D600397C19 /* UIFont+DynamicFontControl.m in Sources */,
 				D236EB451CCB55D600397C19 /* UIWindow+Hierarchy.m in Sources */,
 				D236EA851CCB55D600397C19 /* NSDictionary+Block.m in Sources */,
@@ -2334,6 +2505,7 @@
 				D236EA9E1CCB55D600397C19 /* NSObject+GCD.m in Sources */,
 				D236EA871CCB55D600397C19 /* NSDictionary+Merge.m in Sources */,
 				D236EB441CCB55D600397C19 /* WebView+Debug.m in Sources */,
+				D27523D21CD176AB00A0C013 /* LinkNavHelper.m in Sources */,
 				D236EAE41CCB55D600397C19 /* UIControl+Block.m in Sources */,
 				D236EAF41CCB55D600397C19 /* UIImage+Orientation.m in Sources */,
 				D236EA6A1CCB55D600397C19 /* NSManagedObject+Extensions.m in Sources */,
@@ -2357,6 +2529,7 @@
 				D236EA9F1CCB55D600397C19 /* NSObject+KVOBlocks.m in Sources */,
 				D236EAD01CCB55D600397C19 /* UIBezierPath+BasicShapes.m in Sources */,
 				D236EB2B1CCB55D600397C19 /* UIView+RecursiveDescription.m in Sources */,
+				D28309F61CD1516F00CCD7EF /* SendMessageCell.m in Sources */,
 				D236EB371CCB55D600397C19 /* UIViewController+RecursiveDescription.m in Sources */,
 				D236EB231CCB55D600397C19 /* UIView+Debug.m in Sources */,
 				D236EA8D1CCB55D600397C19 /* NSFileManager+Paths.m in Sources */,
@@ -2385,6 +2558,7 @@
 				D236EB0E1CCB55D600397C19 /* UIResponder+UIAdapt.m in Sources */,
 				D236EAAB1CCB55D600397C19 /* NSString+Hash.m in Sources */,
 				D236EAEF1CCB55D600397C19 /* UIImage+Color.m in Sources */,
+				D27523E31CD17BF000A0C013 /* HouseDetailViewController.m in Sources */,
 				D236EAA91CCB55D600397C19 /* NSString+Emoji.m in Sources */,
 				D23339BC1CCFBF6200436B9A /* HouseViewController.m in Sources */,
 				D236EAB11CCB55D600397C19 /* NSString+Ruby.m in Sources */,
@@ -2431,11 +2605,13 @@
 				D236EAFD1CCB55D600397C19 /* UIImageView+FaceAwareFill.m in Sources */,
 				D236EA861CCB55D600397C19 /* NSDictionary+JSONString.m in Sources */,
 				D23339CA1CCFC16400436B9A /* LeftReplyViewCell.m in Sources */,
+				D27523CD1CD1601F00A0C013 /* MenuItemCell.m in Sources */,
 				D236EAC21CCB55D600397C19 /* MKMapView+MoveLogo.m in Sources */,
 				D236EAA81CCB55D600397C19 /* NSString+DictionaryValue.m in Sources */,
 				D236EAE81CCB55D600397C19 /* UIFont+WDCustomLoader.m in Sources */,
 				D236EA7D1CCB55D600397C19 /* NSDate+Extension.m in Sources */,
 				D236EA9B1CCB55D600397C19 /* NSObject+AutoCoding.m in Sources */,
+				D28309F11CD14F3200CCD7EF /* UIView+LoadFromNib.m in Sources */,
 				D236EB021CCB55D600397C19 /* UILabel+AutoSize.m in Sources */,
 				D236EB381CCB55D600397C19 /* UIViewController+StoreKit.m in Sources */,
 				D236EAE91CCB55D600397C19 /* UIFont-TTF.m in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,13 +7,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeadPhotoView">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="418" height="121"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="dz5-gc-chS">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="dz5-gc-chS">
                     <rect key="frame" x="0.0" y="0.0" width="418" height="121"/>
                 </imageView>
+                <view alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJI-9e-svd">
+                    <rect key="frame" x="0.0" y="0.0" width="418" height="121"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yqz-Hs-FKW">
                     <rect key="frame" x="0.0" y="0.0" width="418" height="121"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iTl-QZ-JLp">
@@ -45,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6646" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrg-wW-e1F">
-                                <rect key="frame" x="97" y="67.5" width="33" height="16"/>
+                                <rect key="frame" x="97" y="67" width="33" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -63,7 +67,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还要254温馨才能到下一阶段" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oB5-pO-qpa">
-                                <rect key="frame" x="145" y="67.5" width="168" height="16"/>
+                                <rect key="frame" x="145" y="67" width="168" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -111,7 +115,11 @@
                 <constraint firstItem="Yqz-Hs-FKW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="59u-j0-IDp"/>
                 <constraint firstAttribute="trailing" secondItem="dz5-gc-chS" secondAttribute="trailing" id="6ri-f1-PRL"/>
                 <constraint firstItem="Yqz-Hs-FKW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="B0P-mL-9Ht"/>
+                <constraint firstAttribute="trailing" secondItem="aJI-9e-svd" secondAttribute="trailing" id="Cb9-Au-5ZX"/>
                 <constraint firstAttribute="bottom" secondItem="Yqz-Hs-FKW" secondAttribute="bottom" id="FTs-nh-e2R"/>
+                <constraint firstItem="aJI-9e-svd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="M6G-op-OVk"/>
+                <constraint firstItem="aJI-9e-svd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="N2K-Ep-cnH"/>
+                <constraint firstAttribute="bottom" secondItem="aJI-9e-svd" secondAttribute="bottom" id="RfM-Nn-ttc"/>
                 <constraint firstItem="dz5-gc-chS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fU7-J1-N2c"/>
                 <constraint firstAttribute="trailing" secondItem="Yqz-Hs-FKW" secondAttribute="trailing" id="hI2-7i-RuF"/>
                 <constraint firstAttribute="bottom" secondItem="dz5-gc-chS" secondAttribute="bottom" id="ueK-HL-ljh"/>

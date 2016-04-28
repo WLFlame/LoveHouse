@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SendMessageCell" rowHeight="64" id="KGk-i7-Jjw" customClass="SendMessageCell">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="388" height="63.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="给ta留言" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zGZ-AT-T9T">
+                        <rect key="frame" x="30" y="0.0" width="243" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="We5-7P-gv3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIF-6P-jkp">
+                        <rect key="frame" x="288" y="0.0" width="70" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="W6y-fB-jSc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="发布">
+                            <color key="titleColor" red="1" green="0.44554103969999997" blue="0.48705690730000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X6C-Q8-Kxd">
+                        <rect key="frame" x="30" y="27" width="243" height="1"/>
+                        <color key="backgroundColor" red="1" green="0.44554103969999997" blue="0.48705690730000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="DWQ-Zd-Q0c"/>
+                            <constraint firstAttribute="height" constant="1" id="vkK-ak-MBL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="X6C-Q8-Kxd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="3kZ-GJ-bbi"/>
+                    <constraint firstItem="X6C-Q8-Kxd" firstAttribute="top" secondItem="zGZ-AT-T9T" secondAttribute="bottom" id="Cvs-Sf-YoP"/>
+                    <constraint firstAttribute="bottom" secondItem="wIF-6P-jkp" secondAttribute="bottom" id="HxD-bI-Mjj"/>
+                    <constraint firstItem="wIF-6P-jkp" firstAttribute="leading" secondItem="zGZ-AT-T9T" secondAttribute="trailing" constant="15" id="Li9-D5-VuX"/>
+                    <constraint firstItem="zGZ-AT-T9T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="RjK-xy-iZG"/>
+                    <constraint firstItem="wIF-6P-jkp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Wzx-Ka-VxQ"/>
+                    <constraint firstAttribute="bottom" secondItem="X6C-Q8-Kxd" secondAttribute="bottom" id="aYD-D3-hmb"/>
+                    <constraint firstAttribute="trailing" secondItem="wIF-6P-jkp" secondAttribute="trailing" constant="30" id="iuL-QW-iUN"/>
+                    <constraint firstItem="zGZ-AT-T9T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="pV1-Sa-uPL"/>
+                    <constraint firstItem="X6C-Q8-Kxd" firstAttribute="trailing" secondItem="zGZ-AT-T9T" secondAttribute="trailing" id="zTT-bT-vQl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="151" y="208"/>
+        </tableViewCell>
+    </objects>
+</document>

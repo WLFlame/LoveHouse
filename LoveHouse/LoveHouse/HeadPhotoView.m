@@ -10,8 +10,5 @@
 
 @implementation HeadPhotoView
 
-+ (instancetype)create
-{
-    return LoadViewFromNib(@"HeadPhotoView");
-}
+
 @end

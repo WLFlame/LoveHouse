@@ -1,12 +1,13 @@
 //
-//  HeadPhotoView.h
+//  SendMessageCell.h
 //  LoveHouse
 //
-//  Created by wanli.yang on 16/4/26.
+//  Created by wanli.yang on 16/4/28.
 //  Copyright © 2016年 wanli.yang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface HeadPhotoView : UIView
+@interface SendMessageCell : UITableViewCell
+
 @end

@@ -9,7 +9,10 @@
 #import "HouseViewController.h"
 #import "LeftReplyViewCell.h"
 #import "RightReplyViewCell.h"
-
+#import "HeadPhotoView.h"
+#import "SendMessageView.h"
+#import "RightReplyViewCell.h"
+#import "LeftReplyViewCell.h"
 @interface HouseViewController ()
 
 @end
@@ -25,6 +28,10 @@
 - (void)setupUI
 {
     self.title = @"爱情小屋";
+    HeadPhotoView *head = [HeadPhotoView create];
+    head.frame = CGRectMake(0, 0, self.view.width, 200);
+    self.tableView.tableHeaderView = head;
+
 }
 
 

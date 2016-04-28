@@ -10,6 +10,7 @@
 #import <ChameleonFramework/Chameleon.h>
 #import "ForgetPasswordContainerView.h"
 #import "RegisterContainerView.h"
+#import "HouseViewController.h"
 
 typedef NS_ENUM(NSUInteger, LoginState) {
     LoginStateLogin = 0,
@@ -328,8 +329,8 @@ typedef NS_ENUM(NSUInteger, LoginState) {
     [AVUser logInWithUsernameInBackground:self.fieldUsername.text password:self.fieldPassword.text block:^(AVUser *user, NSError *error) {
         [ws.view hideHUD];
         if (user != nil) {
-//            HouseViewController *houseVc = [[HouseViewController alloc] init];
-//            [UIApplication sharedApplication].keyWindow.rootViewController = [[UINavigationController alloc] initWithRootViewController:houseVc];
+            HouseViewController *houseVc = [[HouseViewController alloc] init];
+            [UIApplication sharedApplication].keyWindow.rootViewController = [[UINavigationController alloc] initWithRootViewController:houseVc];
         } else {
             TTAlertError(error);
             TTAlert(@"用户名或密码错误");

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HeadPhotoView : UIView
-
++ (instancetype)create;
 @end

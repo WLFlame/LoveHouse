@@ -31,6 +31,7 @@
     self.photoView = [HeadPhotoView create];
     self.photoView.frame = CGRectMake(0, 0, self.view.width, 200);
     self.tableView.tableHeaderView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, self.view.width, 200)];
+    self.tableView.bounces = NO;
     [self.tableView.tableHeaderView addSubview:self.photoView];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.estimatedRowHeight = 70;

@@ -72,7 +72,8 @@
 - (UINavigationController *)settingVc
 {
     if (!_settingVc) {
-        _settingVc = [[UINavigationController alloc] initWithRootViewController:[[SettingViewController alloc] init]];
+        SettingViewController *settingVc = [[UIStoryboard storyboardWithName:@"LoveHouse" bundle:nil] instantiateViewControllerWithIdentifier:@"SettingViewController"];
+        _settingVc = [[UINavigationController alloc] initWithRootViewController:settingVc];
     }
     return _settingVc;
 }

@@ -257,6 +257,8 @@
 		D27523E31CD17BF000A0C013 /* HouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523E21CD17BF000A0C013 /* HouseDetailViewController.m */; };
 		D27523E81CD17C1B00A0C013 /* ChatRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523E71CD17C1B00A0C013 /* ChatRecordViewController.m */; };
 		D27523ED1CD17E8500A0C013 /* HouseSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523EC1CD17E8500A0C013 /* HouseSummaryViewController.m */; };
+		D27523F11CD2670200A0C013 /* LoveHouse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27523F01CD2670200A0C013 /* LoveHouse.storyboard */; };
+		D27523F51CD26F8900A0C013 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523F41CD26F8900A0C013 /* CHTCollectionViewWaterfallLayout.m */; };
 		D28309F11CD14F3200CCD7EF /* UIView+LoadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = D28309F01CD14F3200CCD7EF /* UIView+LoadFromNib.m */; };
 		D28309F61CD1516F00CCD7EF /* SendMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D28309F41CD1516F00CCD7EF /* SendMessageCell.m */; };
 		D28309F71CD1516F00CCD7EF /* SendMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28309F51CD1516F00CCD7EF /* SendMessageCell.xib */; };
@@ -764,6 +766,9 @@
 		D27523E71CD17C1B00A0C013 /* ChatRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRecordViewController.m; sourceTree = "<group>"; };
 		D27523EB1CD17E8500A0C013 /* HouseSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSummaryViewController.h; sourceTree = "<group>"; };
 		D27523EC1CD17E8500A0C013 /* HouseSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseSummaryViewController.m; sourceTree = "<group>"; };
+		D27523F01CD2670200A0C013 /* LoveHouse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoveHouse.storyboard; sourceTree = "<group>"; };
+		D27523F31CD26F8900A0C013 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		D27523F41CD26F8900A0C013 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 		D28309E81CD14E0600CCD7EF /* LoveHouseMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoveHouseMarco.h; sourceTree = "<group>"; };
 		D28309EF1CD14F3200CCD7EF /* UIView+LoadFromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadFromNib.h"; sourceTree = "<group>"; };
 		D28309F01CD14F3200CCD7EF /* UIView+LoadFromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadFromNib.m"; sourceTree = "<group>"; };
@@ -891,6 +896,7 @@
 				D236E8441CCB4D0000397C19 /* LaunchScreen.storyboard */,
 				D236E8471CCB4D0000397C19 /* Info.plist */,
 				D236E8361CCB4D0000397C19 /* Supporting Files */,
+				D27523F01CD2670200A0C013 /* LoveHouse.storyboard */,
 			);
 			path = LoveHouse;
 			sourceTree = "<group>";
@@ -2077,6 +2083,7 @@
 		D236EB4E1CCB615000397C19 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				D27523F21CD26F1D00A0C013 /* CHTCollectionViewWaterfallLayout */,
 				D2EB702A1CCBDD570069C726 /* Foundation+Log.m */,
 				D2EFC2FE1CCBCFDE000BFFE9 /* TTGlobalUI */,
 				D236EB4F1CCB616200397C19 /* SDAutoLayout */,
@@ -2218,6 +2225,15 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		D27523F21CD26F1D00A0C013 /* CHTCollectionViewWaterfallLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D27523F31CD26F8900A0C013 /* CHTCollectionViewWaterfallLayout.h */,
+				D27523F41CD26F8900A0C013 /* CHTCollectionViewWaterfallLayout.m */,
+			);
+			name = CHTCollectionViewWaterfallLayout;
+			sourceTree = "<group>";
+		};
 		D28309F21CD1515B00CCD7EF /* SendMessageCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2310,6 +2326,7 @@
 				D23339CB1CCFC16400436B9A /* LeftReplyViewCell.xib in Resources */,
 				D27523C81CD15F0C00A0C013 /* MenuHeaderCell.xib in Resources */,
 				D236EA831CCB55D600397C19 /* NSDateTimeAgo.bundle in Resources */,
+				D27523F11CD2670200A0C013 /* LoveHouse.storyboard in Resources */,
 				D236E8461CCB4D0000397C19 /* LaunchScreen.storyboard in Resources */,
 				D27523CE1CD1601F00A0C013 /* MenuItemCell.xib in Resources */,
 				D28309F71CD1516F00CCD7EF /* SendMessageCell.xib in Resources */,
@@ -2489,6 +2506,7 @@
 				D236EB071CCB55D600397C19 /* UINavigationController+StackManager.m in Sources */,
 				D236EADC1CCB55D600397C19 /* UIButton+TouchAreaInsets.m in Sources */,
 				D2C172EE1CCBAAE900E9AAB4 /* RegisterContainerView.m in Sources */,
+				D27523F51CD26F8900A0C013 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				D236EA801CCB55D600397C19 /* NSDate+Reporting.m in Sources */,
 				D236EA841CCB55D600397C19 /* NSDateFormatter+Make.m in Sources */,
 				D27523C71CD15F0C00A0C013 /* MenuHeaderCell.m in Sources */,

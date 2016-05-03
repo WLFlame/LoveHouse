@@ -210,9 +210,9 @@ static CGFloat CHTFloorCGFloat(CGFloat value) {
         return;
     }
     
-    NSAssert([self.delegate conformsToProtocol:@protocol(CHTCollectionViewDelegateWaterfallLayout)], @"UICollectionView's delegate should conform to CHTCollectionViewDelegateWaterfallLayout protocol");
-    NSAssert(self.columnCount > 0 || [self.delegate respondsToSelector:@selector(collectionView:layout:columnCountForSection:)], @"UICollectionViewWaterfallLayout's columnCount should be greater than 0, or delegate must implement columnCountForSection:");
-    
+//    NSAssert([self.delegate conformsToProtocol:@protocol(CHTCollectionViewWaterfallLayoutDelegate)], @"UICollectionView's delegate should conform to CHTCollectionViewDelegateWaterfallLayout protocol");
+//    NSAssert(self.columnCount > 0 || [self.delegate respondsToSelector:@selector(collectionView:layout:columCountForSection:)], @"UICollectionViewWaterfallLayout's columnCount should be greater than 0, or delegate must implement columnCountForSection:");
+//    
     // Initialize variables
     NSInteger idx = 0;
     

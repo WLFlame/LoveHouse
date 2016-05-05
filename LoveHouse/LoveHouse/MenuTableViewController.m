@@ -32,7 +32,8 @@
 - (UINavigationController *)houseSummaryVc
 {
     if (!_houseSummaryVc) {
-        _houseSummaryVc = [[UINavigationController alloc] initWithRootViewController:[[HouseSummaryViewController alloc] init]];
+        HouseSummaryViewController *summaryVc = [[UIStoryboard storyboardWithName:@"LoveHouse" bundle:nil] instantiateViewControllerWithIdentifier:@"HouseSummaryViewController"];
+        _houseSummaryVc = [[UINavigationController alloc] initWithRootViewController:summaryVc];
     }
     return _houseSummaryVc;
 }
@@ -109,28 +110,28 @@
         case 1:
         {
             MenuItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuItemCell"];
-            cell.lbMenuItem.text = @"小屋";
+            cell.lbMenuItem.text = @"日记本";
             return cell;
         }
             break;
         case 2:
         {
             MenuItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuItemCell"];
-            cell.lbMenuItem.text = @"相册";
+            cell.lbMenuItem.text = @"私密相册";
             return cell;
         }
             break;
         case 3:
         {
             MenuItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuItemCell"];
-            cell.lbMenuItem.text = @"小屋详情";
+            cell.lbMenuItem.text = @"纪念日";
             return cell;
         }
             break;
         case 4:
         {
             MenuItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuItemCell"];
-            cell.lbMenuItem.text = @"聊天记录";
+            cell.lbMenuItem.text = @"小屋详情";
             return cell;
         }
             break;
@@ -161,31 +162,37 @@
     switch (indexPath.row) {
         case 0:
         {
-            [[LinkNavHelper sharedHelper] linkToMiddleVc:self.houseSummaryVc];
+            // 小屋
+            [[LinkNavHelper sharedHelper] linkToMiddleVc:self.houseVc];
         }
             break;
         case 1:
         {
-            [[LinkNavHelper sharedHelper] linkToMiddleVc:self.houseVc];
+            // 日记本
+            [[LinkNavHelper sharedHelper] linkToMiddleVc:self.chatRecordVc];
         }
             break;
         case 2:
         {
+            // 私密相册
             [[LinkNavHelper sharedHelper] linkToMiddleVc:self.albumVc];
         }
             break;
         case 3:
         {
+            // 纪念日
             [[LinkNavHelper sharedHelper] linkToMiddleVc:self.houseDetailVc];
         }
             break;
         case 4:
         {
-            [[LinkNavHelper sharedHelper] linkToMiddleVc:self.chatRecordVc];
+            // 小屋详情
+            [[LinkNavHelper sharedHelper] linkToMiddleVc:self.houseSummaryVc];
         }
             break;
         default:
         {
+            // 设置
             [[LinkNavHelper sharedHelper] linkToMiddleVc:self.settingVc];
         }
             break;

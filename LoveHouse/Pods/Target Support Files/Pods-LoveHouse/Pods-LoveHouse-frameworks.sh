@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-LoveHouse/ChameleonFramework.framework"
   install_framework "Pods-LoveHouse/DGActivityIndicatorView.framework"
   install_framework "Pods-LoveHouse/ECSlidingViewController.framework"
+  install_framework "Pods-LoveHouse/Masonry.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-LoveHouse/ChameleonFramework.framework"
   install_framework "Pods-LoveHouse/DGActivityIndicatorView.framework"
   install_framework "Pods-LoveHouse/ECSlidingViewController.framework"
+  install_framework "Pods-LoveHouse/Masonry.framework"
 fi

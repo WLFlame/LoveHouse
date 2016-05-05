@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HouseSummaryViewController : UIViewController
+@interface HouseSummaryViewController : UITableViewController
 
 @end

@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		205A8FC4892B4C4C659F32DF /* Pods_LoveHouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4AB94D318DAD9605038E01 /* Pods_LoveHouse.framework */; };
+		D20BBAE01CD46285008A1A78 /* fake1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D20BBADA1CD46285008A1A78 /* fake1.jpg */; };
+		D20BBAE11CD46285008A1A78 /* fake2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D20BBADB1CD46285008A1A78 /* fake2.jpg */; };
+		D20BBAE21CD46285008A1A78 /* fake3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D20BBADC1CD46285008A1A78 /* fake3.jpg */; };
+		D20BBAE31CD46285008A1A78 /* fake4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D20BBADD1CD46285008A1A78 /* fake4.jpg */; };
+		D20BBAE41CD46285008A1A78 /* fake5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D20BBADE1CD46285008A1A78 /* fake5.jpg */; };
+		D20BBAE51CD46285008A1A78 /* fake6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D20BBADF1CD46285008A1A78 /* fake6.jpg */; };
+		D20BBAE91CD462AE008A1A78 /* AlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D20BBAE81CD462AE008A1A78 /* AlbumCell.m */; };
+		D20BBAED1CD468AC008A1A78 /* AlbumReusableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D20BBAEC1CD468AC008A1A78 /* AlbumReusableHeader.m */; };
+		D20BBAF61CD46B1B008A1A78 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D20BBAF51CD46B1B008A1A78 /* CHTCollectionViewWaterfallLayout.m */; };
 		D23339B81CCFBF4400436B9A /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D23339B71CCFBF4400436B9A /* MenuTableViewController.m */; };
 		D23339BC1CCFBF6200436B9A /* HouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D23339BB1CCFBF6200436B9A /* HouseViewController.m */; };
 		D23339CA1CCFC16400436B9A /* LeftReplyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D23339C81CCFC16400436B9A /* LeftReplyViewCell.m */; };
@@ -247,6 +256,10 @@
 		D236EB4D1CCB5D7900397C19 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D236EB4C1CCB5D7900397C19 /* BaseViewController.m */; };
 		D236EB541CCB616200397C19 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = D236EB511CCB616200397C19 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		D236EB551CCB616200397C19 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D236EB531CCB616200397C19 /* UIView+SDAutoLayout.m */; };
+		D26783271CD5201E00509FC1 /* HouseDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D26783261CD5201E00509FC1 /* HouseDetailHeaderView.m */; };
+		D26783291CD5205C00509FC1 /* HouseDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26783281CD5205C00509FC1 /* HouseDetailHeaderView.xib */; };
+		D267832D1CD5242D00509FC1 /* TimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D267832B1CD5242D00509FC1 /* TimeLineCell.m */; };
+		D267832E1CD5242D00509FC1 /* TimeLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D267832C1CD5242D00509FC1 /* TimeLineCell.xib */; };
 		D27523C71CD15F0C00A0C013 /* MenuHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523C51CD15F0C00A0C013 /* MenuHeaderCell.m */; };
 		D27523C81CD15F0C00A0C013 /* MenuHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27523C61CD15F0C00A0C013 /* MenuHeaderCell.xib */; };
 		D27523CD1CD1601F00A0C013 /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523CB1CD1601F00A0C013 /* MenuItemCell.m */; };
@@ -258,7 +271,6 @@
 		D27523E81CD17C1B00A0C013 /* ChatRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523E71CD17C1B00A0C013 /* ChatRecordViewController.m */; };
 		D27523ED1CD17E8500A0C013 /* HouseSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523EC1CD17E8500A0C013 /* HouseSummaryViewController.m */; };
 		D27523F11CD2670200A0C013 /* LoveHouse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27523F01CD2670200A0C013 /* LoveHouse.storyboard */; };
-		D27523F51CD26F8900A0C013 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523F41CD26F8900A0C013 /* CHTCollectionViewWaterfallLayout.m */; };
 		D28309F11CD14F3200CCD7EF /* UIView+LoadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = D28309F01CD14F3200CCD7EF /* UIView+LoadFromNib.m */; };
 		D28309F61CD1516F00CCD7EF /* SendMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D28309F41CD1516F00CCD7EF /* SendMessageCell.m */; };
 		D28309F71CD1516F00CCD7EF /* SendMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D28309F51CD1516F00CCD7EF /* SendMessageCell.xib */; };
@@ -267,12 +279,26 @@
 		D2EB702B1CCBDD570069C726 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EB702A1CCBDD570069C726 /* Foundation+Log.m */; };
 		D2EFC3011CCBCFEA000BFFE9 /* TTGlobalUICommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EFC3001CCBCFEA000BFFE9 /* TTGlobalUICommon.m */; };
 		D2EFC3041CCBD618000BFFE9 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EFC3031CCBD618000BFFE9 /* UIView+HUD.m */; };
+		D2F23B021CD64DFD008E7E88 /* DiaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F23B001CD64DFD008E7E88 /* DiaryTableViewCell.m */; };
+		D2F23B051CD657E2008E7E88 /* DiaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F23B041CD657E2008E7E88 /* DiaryTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		45E27D631C66D37BCCB2EE1D /* Pods-LoveHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveHouse/Pods-LoveHouse.debug.xcconfig"; sourceTree = "<group>"; };
 		7F4AB94D318DAD9605038E01 /* Pods_LoveHouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveHouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0113F062158C964861713F /* Pods-LoveHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoveHouse/Pods-LoveHouse.release.xcconfig"; sourceTree = "<group>"; };
+		D20BBADA1CD46285008A1A78 /* fake1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fake1.jpg; sourceTree = "<group>"; };
+		D20BBADB1CD46285008A1A78 /* fake2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fake2.jpg; sourceTree = "<group>"; };
+		D20BBADC1CD46285008A1A78 /* fake3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fake3.jpg; sourceTree = "<group>"; };
+		D20BBADD1CD46285008A1A78 /* fake4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fake4.jpg; sourceTree = "<group>"; };
+		D20BBADE1CD46285008A1A78 /* fake5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fake5.jpg; sourceTree = "<group>"; };
+		D20BBADF1CD46285008A1A78 /* fake6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fake6.jpg; sourceTree = "<group>"; };
+		D20BBAE71CD462AE008A1A78 /* AlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCell.h; sourceTree = "<group>"; };
+		D20BBAE81CD462AE008A1A78 /* AlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCell.m; sourceTree = "<group>"; };
+		D20BBAEB1CD468AC008A1A78 /* AlbumReusableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumReusableHeader.h; sourceTree = "<group>"; };
+		D20BBAEC1CD468AC008A1A78 /* AlbumReusableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumReusableHeader.m; sourceTree = "<group>"; };
+		D20BBAF41CD46B1B008A1A78 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		D20BBAF51CD46B1B008A1A78 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 		D23339B61CCFBF4400436B9A /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
 		D23339B71CCFBF4400436B9A /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		D23339BA1CCFBF6200436B9A /* HouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseViewController.h; sourceTree = "<group>"; };
@@ -747,6 +773,12 @@
 		D236EB511CCB616200397C19 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
 		D236EB521CCB616200397C19 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
 		D236EB531CCB616200397C19 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		D26783251CD5201E00509FC1 /* HouseDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseDetailHeaderView.h; sourceTree = "<group>"; };
+		D26783261CD5201E00509FC1 /* HouseDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseDetailHeaderView.m; sourceTree = "<group>"; };
+		D26783281CD5205C00509FC1 /* HouseDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseDetailHeaderView.xib; sourceTree = "<group>"; };
+		D267832A1CD5242D00509FC1 /* TimeLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineCell.h; sourceTree = "<group>"; };
+		D267832B1CD5242D00509FC1 /* TimeLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineCell.m; sourceTree = "<group>"; };
+		D267832C1CD5242D00509FC1 /* TimeLineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLineCell.xib; sourceTree = "<group>"; };
 		D27523C41CD15F0C00A0C013 /* MenuHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuHeaderCell.h; sourceTree = "<group>"; };
 		D27523C51CD15F0C00A0C013 /* MenuHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuHeaderCell.m; sourceTree = "<group>"; };
 		D27523C61CD15F0C00A0C013 /* MenuHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuHeaderCell.xib; sourceTree = "<group>"; };
@@ -767,8 +799,6 @@
 		D27523EB1CD17E8500A0C013 /* HouseSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseSummaryViewController.h; sourceTree = "<group>"; };
 		D27523EC1CD17E8500A0C013 /* HouseSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseSummaryViewController.m; sourceTree = "<group>"; };
 		D27523F01CD2670200A0C013 /* LoveHouse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoveHouse.storyboard; sourceTree = "<group>"; };
-		D27523F31CD26F8900A0C013 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
-		D27523F41CD26F8900A0C013 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 		D28309E81CD14E0600CCD7EF /* LoveHouseMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoveHouseMarco.h; sourceTree = "<group>"; };
 		D28309EF1CD14F3200CCD7EF /* UIView+LoadFromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadFromNib.h"; sourceTree = "<group>"; };
 		D28309F01CD14F3200CCD7EF /* UIView+LoadFromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadFromNib.m"; sourceTree = "<group>"; };
@@ -784,6 +814,9 @@
 		D2EFC3001CCBCFEA000BFFE9 /* TTGlobalUICommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGlobalUICommon.m; sourceTree = "<group>"; };
 		D2EFC3021CCBD618000BFFE9 /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
 		D2EFC3031CCBD618000BFFE9 /* UIView+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HUD.m"; sourceTree = "<group>"; };
+		D2F23AFF1CD64DFD008E7E88 /* DiaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryTableViewCell.h; sourceTree = "<group>"; };
+		D2F23B001CD64DFD008E7E88 /* DiaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryTableViewCell.m; sourceTree = "<group>"; };
+		D2F23B041CD657E2008E7E88 /* DiaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -804,6 +837,37 @@
 				7F4AB94D318DAD9605038E01 /* Pods_LoveHouse.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D20BBAD91CD46285008A1A78 /* fake */ = {
+			isa = PBXGroup;
+			children = (
+				D20BBADA1CD46285008A1A78 /* fake1.jpg */,
+				D20BBADB1CD46285008A1A78 /* fake2.jpg */,
+				D20BBADC1CD46285008A1A78 /* fake3.jpg */,
+				D20BBADD1CD46285008A1A78 /* fake4.jpg */,
+				D20BBADE1CD46285008A1A78 /* fake5.jpg */,
+				D20BBADF1CD46285008A1A78 /* fake6.jpg */,
+			);
+			path = fake;
+			sourceTree = "<group>";
+		};
+		D20BBAE61CD4629C008A1A78 /* AlbumCell */ = {
+			isa = PBXGroup;
+			children = (
+				D20BBAE71CD462AE008A1A78 /* AlbumCell.h */,
+				D20BBAE81CD462AE008A1A78 /* AlbumCell.m */,
+			);
+			name = AlbumCell;
+			sourceTree = "<group>";
+		};
+		D20BBAEA1CD4688E008A1A78 /* AlbumHeader */ = {
+			isa = PBXGroup;
+			children = (
+				D20BBAEB1CD468AC008A1A78 /* AlbumReusableHeader.h */,
+				D20BBAEC1CD468AC008A1A78 /* AlbumReusableHeader.m */,
+			);
+			name = AlbumHeader;
 			sourceTree = "<group>";
 		};
 		D23339B21CCFBEFF00436B9A /* MenumTableViewController */ = {
@@ -904,6 +968,7 @@
 		D236E8361CCB4D0000397C19 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D20BBAD91CD46285008A1A78 /* fake */,
 				D236E8371CCB4D0000397C19 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -2083,7 +2148,8 @@
 		D236EB4E1CCB615000397C19 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				D27523F21CD26F1D00A0C013 /* CHTCollectionViewWaterfallLayout */,
+				D20BBAF41CD46B1B008A1A78 /* CHTCollectionViewWaterfallLayout.h */,
+				D20BBAF51CD46B1B008A1A78 /* CHTCollectionViewWaterfallLayout.m */,
 				D2EB702A1CCBDD570069C726 /* Foundation+Log.m */,
 				D2EFC2FE1CCBCFDE000BFFE9 /* TTGlobalUI */,
 				D236EB4F1CCB616200397C19 /* SDAutoLayout */,
@@ -2100,6 +2166,19 @@
 				D236EB531CCB616200397C19 /* UIView+SDAutoLayout.m */,
 			);
 			path = SDAutoLayout;
+			sourceTree = "<group>";
+		};
+		D26783241CD5200E00509FC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D26783251CD5201E00509FC1 /* HouseDetailHeaderView.h */,
+				D26783261CD5201E00509FC1 /* HouseDetailHeaderView.m */,
+				D26783281CD5205C00509FC1 /* HouseDetailHeaderView.xib */,
+				D267832A1CD5242D00509FC1 /* TimeLineCell.h */,
+				D267832B1CD5242D00509FC1 /* TimeLineCell.m */,
+				D267832C1CD5242D00509FC1 /* TimeLineCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		D27523C31CD15EEB00A0C013 /* MenuHeaderCell */ = {
@@ -2161,6 +2240,8 @@
 		D27523D71CD17AED00A0C013 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D20BBAEA1CD4688E008A1A78 /* AlbumHeader */,
+				D20BBAE61CD4629C008A1A78 /* AlbumCell */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -2177,6 +2258,7 @@
 		D27523DF1CD17BCD00A0C013 /* HouseDetail */ = {
 			isa = PBXGroup;
 			children = (
+				D26783241CD5200E00509FC1 /* View */,
 				D27523E01CD17BDF00A0C013 /* Controller */,
 			);
 			name = HouseDetail;
@@ -2194,6 +2276,8 @@
 		D27523E41CD17BF500A0C013 /* ChatRecord */ = {
 			isa = PBXGroup;
 			children = (
+				D2F23AFE1CD64DB9008E7E88 /* Model */,
+				D2F23AFD1CD64DB2008E7E88 /* view */,
 				D27523E51CD17C0E00A0C013 /* Controller */,
 			);
 			name = ChatRecord;
@@ -2225,15 +2309,6 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		D27523F21CD26F1D00A0C013 /* CHTCollectionViewWaterfallLayout */ = {
-			isa = PBXGroup;
-			children = (
-				D27523F31CD26F8900A0C013 /* CHTCollectionViewWaterfallLayout.h */,
-				D27523F41CD26F8900A0C013 /* CHTCollectionViewWaterfallLayout.m */,
-			);
-			name = CHTCollectionViewWaterfallLayout;
-			sourceTree = "<group>";
-		};
 		D28309F21CD1515B00CCD7EF /* SendMessageCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2251,6 +2326,23 @@
 				D2EFC3001CCBCFEA000BFFE9 /* TTGlobalUICommon.m */,
 			);
 			name = TTGlobalUI;
+			sourceTree = "<group>";
+		};
+		D2F23AFD1CD64DB2008E7E88 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D2F23AFF1CD64DFD008E7E88 /* DiaryTableViewCell.h */,
+				D2F23B001CD64DFD008E7E88 /* DiaryTableViewCell.m */,
+				D2F23B041CD657E2008E7E88 /* DiaryTableViewCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		D2F23AFE1CD64DB9008E7E88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		F30321470B673ED47903001A /* Pods */ = {
@@ -2323,11 +2415,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D267832E1CD5242D00509FC1 /* TimeLineCell.xib in Resources */,
+				D20BBAE01CD46285008A1A78 /* fake1.jpg in Resources */,
 				D23339CB1CCFC16400436B9A /* LeftReplyViewCell.xib in Resources */,
 				D27523C81CD15F0C00A0C013 /* MenuHeaderCell.xib in Resources */,
 				D236EA831CCB55D600397C19 /* NSDateTimeAgo.bundle in Resources */,
+				D20BBAE21CD46285008A1A78 /* fake3.jpg in Resources */,
 				D27523F11CD2670200A0C013 /* LoveHouse.storyboard in Resources */,
+				D20BBAE41CD46285008A1A78 /* fake5.jpg in Resources */,
 				D236E8461CCB4D0000397C19 /* LaunchScreen.storyboard in Resources */,
+				D26783291CD5205C00509FC1 /* HouseDetailHeaderView.xib in Resources */,
+				D20BBAE11CD46285008A1A78 /* fake2.jpg in Resources */,
+				D2F23B051CD657E2008E7E88 /* DiaryTableViewCell.xib in Resources */,
+				D20BBAE31CD46285008A1A78 /* fake4.jpg in Resources */,
+				D20BBAE51CD46285008A1A78 /* fake6.jpg in Resources */,
 				D27523CE1CD1601F00A0C013 /* MenuItemCell.xib in Resources */,
 				D28309F71CD1516F00CCD7EF /* SendMessageCell.xib in Resources */,
 				D23339D81CCFC4C000436B9A /* HeadPhotoView.xib in Resources */,
@@ -2425,6 +2526,7 @@
 				D236EAF51CCB55D600397C19 /* UIImage+PDF.m in Sources */,
 				D236EB2D1CCB55D600397C19 /* UIView+Shake.m in Sources */,
 				D236EA911CCB55D600397C19 /* NSInvocation+Block.m in Sources */,
+				D267832D1CD5242D00509FC1 /* TimeLineCell.m in Sources */,
 				D236EB301CCB55D600397C19 /* UIView+Visuals.m in Sources */,
 				D23339B81CCFBF4400436B9A /* MenuTableViewController.m in Sources */,
 				D236EB431CCB55D600397C19 /* UIWebView+TS_JavaScriptContext.m in Sources */,
@@ -2452,12 +2554,14 @@
 				D236EB011CCB55D600397C19 /* UILabel+AutomaticWriting.m in Sources */,
 				D236EA6F1CCB55D600397C19 /* NSPersistentStoreCoordinator+Custom.m in Sources */,
 				D27523DE1CD17BC500A0C013 /* SettingViewController.m in Sources */,
+				D20BBAED1CD468AC008A1A78 /* AlbumReusableHeader.m in Sources */,
 				D236E8621CCB548A00397C19 /* NavigationController.m in Sources */,
 				D236EA9A1CCB55D600397C19 /* NSObject+AssociatedObject.m in Sources */,
 				D236EA941CCB55D600397C19 /* NSDecimalNumber+Extensions.m in Sources */,
 				D236EB091CCB55D600397C19 /* UINavigationItem+Lock.m in Sources */,
 				D236EADB1CCB55D600397C19 /* UIButton+Submitting.m in Sources */,
 				D236EAD41CCB55D600397C19 /* UIBezierPath+Symbol.m in Sources */,
+				D2F23B021CD64DFD008E7E88 /* DiaryTableViewCell.m in Sources */,
 				D236EB221CCB55D600397C19 /* UIView+CustomBorder.m in Sources */,
 				D2C172F11CCBAB2B00E9AAB4 /* ForgetPasswordContainerView.m in Sources */,
 				D236EAF81CCB55D600397C19 /* UIImage+RoundedCorner.m in Sources */,
@@ -2491,6 +2595,7 @@
 				D236EA971CCB55D600397C19 /* NSNumber+Round.m in Sources */,
 				D236EA8C1CCB55D600397C19 /* NSFileHandle+readLine.m in Sources */,
 				D236EABF1CCB55D600397C19 /* NSUserDefaults+iCloudSync.m in Sources */,
+				D26783271CD5201E00509FC1 /* HouseDetailHeaderView.m in Sources */,
 				D236EB281CCB55D600397C19 /* UIView+GestureCallback.m in Sources */,
 				D236EA991CCB55D600397C19 /* NSObject+AppInfo.m in Sources */,
 				D236EAD61CCB55D600397C19 /* UIButton+Block.m in Sources */,
@@ -2506,7 +2611,6 @@
 				D236EB071CCB55D600397C19 /* UINavigationController+StackManager.m in Sources */,
 				D236EADC1CCB55D600397C19 /* UIButton+TouchAreaInsets.m in Sources */,
 				D2C172EE1CCBAAE900E9AAB4 /* RegisterContainerView.m in Sources */,
-				D27523F51CD26F8900A0C013 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				D236EA801CCB55D600397C19 /* NSDate+Reporting.m in Sources */,
 				D236EA841CCB55D600397C19 /* NSDateFormatter+Make.m in Sources */,
 				D27523C71CD15F0C00A0C013 /* MenuHeaderCell.m in Sources */,
@@ -2542,6 +2646,7 @@
 				D236EAAE1CCB55D600397C19 /* NSString+Pinyin.m in Sources */,
 				D236EB2F1CCB55D600397C19 /* UIView+ViewController.m in Sources */,
 				D236EA961CCB55D600397C19 /* NSNumber+RomanNumerals.m in Sources */,
+				D20BBAE91CD462AE008A1A78 /* AlbumCell.m in Sources */,
 				D236EAE31CCB55D600397C19 /* UIControl+ActionBlocks.m in Sources */,
 				D236EABC1CCB55D600397C19 /* NSURLConnection+SelfSigned.m in Sources */,
 				D236EA9F1CCB55D600397C19 /* NSObject+KVOBlocks.m in Sources */,
@@ -2566,6 +2671,7 @@
 				D236EB3A1CCB55D600397C19 /* UIViewController+Visible.m in Sources */,
 				D236EB001CCB55D600397C19 /* UIImageView+Reflect.m in Sources */,
 				D236EACA1CCB55D600397C19 /* UIAlertView+Block.m in Sources */,
+				D20BBAF61CD46B1B008A1A78 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				D236EABD1CCB55D600397C19 /* NSMutableURLRequest+Upload.m in Sources */,
 				D236EAC91CCB55D600397C19 /* CATransaction+AnimateWithDuration.m in Sources */,
 				D236EB181CCB55D600397C19 /* UITextField+Blocks.m in Sources */,

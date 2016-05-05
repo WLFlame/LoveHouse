@@ -7,33 +7,67 @@
 //
 
 #import "ChatRecordViewController.h"
-
-@interface ChatRecordViewController ()
-
+#import "DiaryTableViewCell.h"
+@interface ChatRecordViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) UITableView *table;
 @end
 
 @implementation ChatRecordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.title = @"聊天记录";
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self configureUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)configureUI
+{
+    self.title = @"日记本";
+    
+    UITableView *table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    table.backgroundColor = [UIColor flatWhiteColor];
+    table.rowHeight = 70;
+    table.tableFooterView = [[UIView alloc] init];
+    table.delegate = self;
+    table.dataSource = self;
+    table.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.table = table;
+    [table registerNib:[UINib nibWithNibName:@"DiaryTableViewCell" bundle:nil] forCellReuseIdentifier:@"DiaryTableViewCell"];
+    [self.view addSubview:self.table];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+
+#pragma mark --- UITableViewDataSource Method
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DiaryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DiaryTableViewCell"];
+    return cell;
+}
+#pragma mark --- UITableViewDelegate Method
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+//- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return UITableViewCellEditingStyleDelete;
+//}
+//
+//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return YES;
+//}
+//
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    
+//}
 
 @end

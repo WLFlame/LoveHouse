@@ -10,6 +10,9 @@
 #import <ChameleonFramework/Chameleon.h>
 #import "ForgetPasswordContainerView.h"
 #import "RegisterContainerView.h"
+#import "MenuTableViewController.h"
+#import "HouseViewController.h"
+#import "ECSlidingViewController.h"
 
 typedef NS_ENUM(NSUInteger, LoginState) {
     LoginStateLogin = 0,
@@ -69,7 +72,7 @@ typedef NS_ENUM(NSUInteger, LoginState) {
         forgetContainerView.sd_layout
         .leftSpaceToView(self.view, -(self.view.width - 60))
         .rightSpaceToView(self.view, self.view.width)
-        .heightIs(self.view.height / 2 - 40)
+        .heightIs(self.view.height / 2 + 40)
         .topSpaceToView(self.view, self.view.height / 4);
     }
    
@@ -328,8 +331,15 @@ typedef NS_ENUM(NSUInteger, LoginState) {
     [AVUser logInWithUsernameInBackground:self.fieldUsername.text password:self.fieldPassword.text block:^(AVUser *user, NSError *error) {
         [ws.view hideHUD];
         if (user != nil) {
-//            HouseViewController *houseVc = [[HouseViewController alloc] init];
-//            [UIApplication sharedApplication].keyWindow.rootViewController = [[UINavigationController alloc] initWithRootViewController:houseVc];
+            MenuTableViewController *leftMenu = [[MenuTableViewController alloc] init];
+            HouseViewController *houseVc = [[HouseViewController alloc] init];
+            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:houseVc];
+            ECSlidingViewController *slidingVc = [ECSlidingViewController slidingWithTopViewController:navigationController];
+            [LinkNavHelper sharedHelper].slidingVC = slidingVc;
+            slidingVc.underLeftViewController = leftMenu;
+            [navigationController.view addGestureRecognizer:slidingVc.panGesture];
+            slidingVc.anchorRightPeekAmount = [UIScreen mainScreen].bounds.size.width * 0.55;
+            [UIApplication sharedApplication].keyWindow.rootViewController = slidingVc;
         } else {
             TTAlertError(error);
             TTAlert(@"用户名或密码错误");

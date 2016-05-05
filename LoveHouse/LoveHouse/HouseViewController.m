@@ -37,8 +37,8 @@
     self.tableView.estimatedRowHeight = 70;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView registerNib:[UINib nibWithNibName:@"SendMessageCell" bundle:nil] forCellReuseIdentifier:@"SendMessageCell"];
-     [self.tableView registerNib:[UINib nibWithNibName:@"RightReplyViewCell" bundle:nil] forCellReuseIdentifier:@"RightReplyViewCell"];
-     [self.tableView registerNib:[UINib nibWithNibName:@"LeftReplyViewCell" bundle:nil] forCellReuseIdentifier:@"LeftReplyViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"RightReplyViewCell" bundle:nil] forCellReuseIdentifier:@"RightReplyViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"LeftReplyViewCell" bundle:nil] forCellReuseIdentifier:@"LeftReplyViewCell"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

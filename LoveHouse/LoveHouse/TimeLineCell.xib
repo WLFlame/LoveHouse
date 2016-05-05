@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLineCell" rowHeight="44" id="KGk-i7-Jjw" customClass="TimeLineCell">
+            <rect key="frame" x="0.0" y="0.0" width="395" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="395" height="84.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeline" translatesAutoresizingMaskIntoConstraints="NO" id="zS7-ih-tzf">
+                        <rect key="frame" x="70" y="0.0" width="16" height="84.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-04-12 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUp-NP-F3A">
+                        <rect key="frame" x="0.0" y="36" width="65.5" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zS7-ih-tzf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="70" id="7Ei-aV-3R4"/>
+                    <constraint firstItem="zS7-ih-tzf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Hl1-1r-eXJ"/>
+                    <constraint firstItem="wUp-NP-F3A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="IlM-Pi-xSN"/>
+                    <constraint firstItem="wUp-NP-F3A" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="MtV-5L-8g8"/>
+                    <constraint firstAttribute="bottom" secondItem="zS7-ih-tzf" secondAttribute="bottom" id="qoN-Yj-hLU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgTimeLine" destination="zS7-ih-tzf" id="cad-iV-hnA"/>
+                <outlet property="lbTime" destination="wUp-NP-F3A" id="Obg-3J-a60"/>
+            </connections>
+            <point key="canvasLocation" x="-49.5" y="222.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="timeline" width="16" height="44"/>
+    </resources>
+</document>

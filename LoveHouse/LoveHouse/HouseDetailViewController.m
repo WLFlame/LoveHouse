@@ -7,33 +7,81 @@
 //
 
 #import "HouseDetailViewController.h"
-
-@interface HouseDetailViewController ()
-
+#import "HouseDetailHeaderView.h"
+#import "TimeLineCell.h"
+@interface HouseDetailViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) HouseDetailHeaderView *headerView;
+@property (nonatomic, strong) UITableView *memoryTableView;
 @end
 
 @implementation HouseDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.title = @"小屋详情";
+    [self configureUI];
+}
+
+- (HouseDetailHeaderView *)headerView
+{
+    if (!_headerView) {
+        _headerView = LoadViewFromNib(@"HouseDetailHeaderView");
+        _headerView.frame = CGRectMake(0, 64, self.view.width, 140);
+    }
+    return _headerView;
+}
+
+- (UITableView *)memoryTableView
+{
+    if (!_memoryTableView) {
+        _memoryTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 204, self.view.width, self.view.height - 204) style:UITableViewStylePlain];
+        _memoryTableView.delegate = self;
+        _memoryTableView.dataSource = self;
+        _memoryTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _memoryTableView.rowHeight = 60;
+        [_memoryTableView registerNib:[UINib nibWithNibName:@"TimeLineCell" bundle:nil] forCellReuseIdentifier:@"TimeLineCell"];
+    }
+    return _memoryTableView;
+}
+
+- (void)configureUI
+{
+    self.title = @"纪念日";
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.headerView];
+    [self.view addSubview:self.memoryTableView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark --- UITableViewDataSource Method
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 20;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TimeLineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimeLineCell"];
+    cell.text = @"老婆，我爱你，今天是我们的纪念日";
+    return cell;
 }
-*/
+
+#pragma mark --- UITableViewDelegate Method
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

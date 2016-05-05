@@ -7,6 +7,7 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - DGActivityIndicatorView (2.0)
   - ECSlidingViewController (2.0.3)
+  - Masonry (1.0.0)
 
 DEPENDENCIES:
   - AVOSCloud
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - ChameleonFramework
   - DGActivityIndicatorView
   - ECSlidingViewController (~> 2.0.3)
+  - Masonry
 
 SPEC CHECKSUMS:
   AVOSCloud: b789619942a4275e615f8f0782e7475675951b95
@@ -21,5 +23,6 @@ SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   DGActivityIndicatorView: 52875b025a6ccf6a431a905285c12e2bb95eb559
   ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
+  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
 
 COCOAPODS: 0.39.0

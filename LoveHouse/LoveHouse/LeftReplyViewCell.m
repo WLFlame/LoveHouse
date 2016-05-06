@@ -7,6 +7,12 @@
 //
 
 #import "LeftReplyViewCell.h"
+#import "Message.h"
+@interface LeftReplyViewCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *lbReply;
+
+@end
 
 @implementation LeftReplyViewCell
 
@@ -15,10 +21,10 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setMessage:(Message *)message
+{
+    _message = message;
+    self.lbReply.text = message.textContent;
 }
 
 @end

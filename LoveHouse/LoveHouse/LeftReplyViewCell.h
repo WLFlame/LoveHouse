@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class Message;
 @interface LeftReplyViewCell : UITableViewCell
-
+@property (nonatomic, strong) Message *message;
 @end

@@ -281,6 +281,7 @@
 		D2EFC3041CCBD618000BFFE9 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EFC3031CCBD618000BFFE9 /* UIView+HUD.m */; };
 		D2F23B021CD64DFD008E7E88 /* DiaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F23B001CD64DFD008E7E88 /* DiaryTableViewCell.m */; };
 		D2F23B051CD657E2008E7E88 /* DiaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F23B041CD657E2008E7E88 /* DiaryTableViewCell.xib */; };
+		F69002F81CDC6AF20001736A /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = F69002F71CDC6AF20001736A /* Message.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -817,6 +818,8 @@
 		D2F23AFF1CD64DFD008E7E88 /* DiaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryTableViewCell.h; sourceTree = "<group>"; };
 		D2F23B001CD64DFD008E7E88 /* DiaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryTableViewCell.m; sourceTree = "<group>"; };
 		D2F23B041CD657E2008E7E88 /* DiaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryTableViewCell.xib; sourceTree = "<group>"; };
+		F69002F61CDC6AF20001736A /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		F69002F71CDC6AF20001736A /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1102,6 +1105,8 @@
 		D236E85F1CCB53CF00397C19 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F69002F61CDC6AF20001736A /* Message.h */,
+				F69002F71CDC6AF20001736A /* Message.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -2709,6 +2714,7 @@
 				D236EA701CCB55D600397C19 /* CLLocation+CH1903.m in Sources */,
 				D236EA731CCB55D600397C19 /* NSArray+SafeAccess.m in Sources */,
 				D236EB1A1CCB55D600397C19 /* UITextField+Select.m in Sources */,
+				F69002F81CDC6AF20001736A /* Message.m in Sources */,
 				D236EAFB1CCB55D600397C19 /* UIImageView+Addition.m in Sources */,
 				D236EAEE1CCB55D600397C19 /* UIImage+Capture.m in Sources */,
 				D236EB0B1CCB55D600397C19 /* UIPopoverController+iPhone.m in Sources */,

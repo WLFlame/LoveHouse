@@ -8,6 +8,7 @@
 
 #import "ChatRecordViewController.h"
 #import "DiaryTableViewCell.h"
+#import "EditDiaryViewController.h"
 @interface ChatRecordViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *table;
 @end
@@ -53,6 +54,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    EditDiaryViewController *editDiary = [[EditDiaryViewController alloc] init];
+    [self.navigationController pushViewController:editDiary animated:YES];
 }
 
 //- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath

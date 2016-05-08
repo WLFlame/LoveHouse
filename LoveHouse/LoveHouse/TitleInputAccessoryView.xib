@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="z5T-Hj-315" customClass="TitleInputAccessoryView">
+            <rect key="frame" x="0.0" y="0.0" width="436" height="52"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入30个字以内" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WL-zz-Q3H">
+                    <rect key="frame" x="8" y="0.0" width="101.5" height="52"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erF-Ut-8EE">
+                    <rect key="frame" x="366" y="0.0" width="70" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="umK-J4-FAr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="完成">
+                        <color key="titleColor" red="1" green="0.19607843137254902" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClickComplete:" destination="z5T-Hj-315" eventType="touchUpInside" id="qJi-8d-5Ag"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0WL-zz-Q3H" firstAttribute="top" secondItem="z5T-Hj-315" secondAttribute="top" id="U96-9v-S81"/>
+                <constraint firstAttribute="bottom" secondItem="0WL-zz-Q3H" secondAttribute="bottom" id="VZl-BW-Wpn"/>
+                <constraint firstAttribute="bottom" secondItem="erF-Ut-8EE" secondAttribute="bottom" id="bQ5-QB-EXo"/>
+                <constraint firstItem="0WL-zz-Q3H" firstAttribute="leading" secondItem="z5T-Hj-315" secondAttribute="leading" constant="8" id="jlz-iK-gbg"/>
+                <constraint firstAttribute="trailing" secondItem="erF-Ut-8EE" secondAttribute="trailing" id="tJ7-L6-3SH"/>
+                <constraint firstItem="erF-Ut-8EE" firstAttribute="top" secondItem="z5T-Hj-315" secondAttribute="top" id="v0Y-Dd-rxP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lbSummary" destination="0WL-zz-Q3H" id="sia-2p-jXo"/>
+            </connections>
+            <point key="canvasLocation" x="678" y="83"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="I3s-q3-IcZ" customClass="DiaryBottomCompleteView">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="57"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHo-Hc-QRz">
+                    <rect key="frame" x="57" y="0.0" width="365" height="57"/>
+                    <color key="backgroundColor" red="0.96862745098039216" green="0.39215686274509803" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClickSave:" destination="I3s-q3-IcZ" eventType="touchUpInside" id="cGA-7T-2iT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISk-dx-8cz">
+                    <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
+                    <color key="backgroundColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ISk-dx-8cz" secondAttribute="height" multiplier="1:1" id="iCJ-ya-ZQM"/>
+                    </constraints>
+                    <state key="normal" image="back"/>
+                    <connections>
+                        <action selector="btnClickBack:" destination="I3s-q3-IcZ" eventType="touchUpInside" id="H6A-TX-mhm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hHo-Hc-QRz" firstAttribute="top" secondItem="I3s-q3-IcZ" secondAttribute="top" id="1JT-ud-bVd"/>
+                <constraint firstItem="hHo-Hc-QRz" firstAttribute="leading" secondItem="ISk-dx-8cz" secondAttribute="trailing" id="3OF-Oz-HEW"/>
+                <constraint firstItem="ISk-dx-8cz" firstAttribute="top" secondItem="I3s-q3-IcZ" secondAttribute="top" id="6K7-bg-ZY5"/>
+                <constraint firstAttribute="bottom" secondItem="ISk-dx-8cz" secondAttribute="bottom" id="AS8-hy-Krd"/>
+                <constraint firstAttribute="trailing" secondItem="hHo-Hc-QRz" secondAttribute="trailing" id="I0Z-yy-w7k"/>
+                <constraint firstAttribute="bottom" secondItem="hHo-Hc-QRz" secondAttribute="bottom" id="kbF-3p-bUB"/>
+                <constraint firstItem="ISk-dx-8cz" firstAttribute="leading" secondItem="I3s-q3-IcZ" secondAttribute="leading" id="lhu-vv-Sdk"/>
+                <constraint firstItem="hHo-Hc-QRz" firstAttribute="leading" secondItem="ISk-dx-8cz" secondAttribute="trailing" id="vaC-qg-lYL"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="469" y="134.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="9" height="16"/>
+    </resources>
+</document>

@@ -60,7 +60,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TimeLineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimeLineCell"];
-    cell.text = @"老婆，我爱你，今天是我们的纪念日";
+    cell.text = @"今天是我们的纪念日";
     return cell;
 }
 

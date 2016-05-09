@@ -314,6 +314,8 @@
 		D2EFC3041CCBD618000BFFE9 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EFC3031CCBD618000BFFE9 /* UIView+HUD.m */; };
 		D2F23B021CD64DFD008E7E88 /* DiaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F23B001CD64DFD008E7E88 /* DiaryTableViewCell.m */; };
 		D2F23B051CD657E2008E7E88 /* DiaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F23B041CD657E2008E7E88 /* DiaryTableViewCell.xib */; };
+		F65A403B1CE0A77C005E4A1F /* ChoseCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = F65A403A1CE0A77C005E4A1F /* ChoseCropView.m */; };
+		F65A403D1CE0A7DC005E4A1F /* ChoseCropView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F65A403C1CE0A7DC005E4A1F /* ChoseCropView.xib */; };
 		F69002F81CDC6AF20001736A /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = F69002F71CDC6AF20001736A /* Message.m */; };
 /* End PBXBuildFile section */
 
@@ -915,6 +917,9 @@
 		D2F23AFF1CD64DFD008E7E88 /* DiaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryTableViewCell.h; sourceTree = "<group>"; };
 		D2F23B001CD64DFD008E7E88 /* DiaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryTableViewCell.m; sourceTree = "<group>"; };
 		D2F23B041CD657E2008E7E88 /* DiaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryTableViewCell.xib; sourceTree = "<group>"; };
+		F65A40391CE0A77C005E4A1F /* ChoseCropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoseCropView.h; sourceTree = "<group>"; };
+		F65A403A1CE0A77C005E4A1F /* ChoseCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoseCropView.m; sourceTree = "<group>"; };
+		F65A403C1CE0A7DC005E4A1F /* ChoseCropView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoseCropView.xib; sourceTree = "<group>"; };
 		F69002F61CDC6AF20001736A /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		F69002F71CDC6AF20001736A /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2591,6 +2596,7 @@
 		D2F23AFD1CD64DB2008E7E88 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				F65A40381CE0A76C005E4A1F /* ChoseCropView */,
 				D2B698C01CDF630A004D6914 /* DiaryBottomCompleteView */,
 				D2B698BA1CDF19D8004D6914 /* DiaryContentAccessoryView */,
 				D2B698B41CDF167E004D6914 /* TitleInputAccessoryView */,
@@ -2614,6 +2620,16 @@
 				CC0113F062158C964861713F /* Pods-LoveHouse.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F65A40381CE0A76C005E4A1F /* ChoseCropView */ = {
+			isa = PBXGroup;
+			children = (
+				F65A40391CE0A77C005E4A1F /* ChoseCropView.h */,
+				F65A403A1CE0A77C005E4A1F /* ChoseCropView.m */,
+				F65A403C1CE0A7DC005E4A1F /* ChoseCropView.xib */,
+			);
+			name = ChoseCropView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2693,6 +2709,7 @@
 				D20BBAE31CD46285008A1A78 /* fake4.jpg in Resources */,
 				D2B698BF1CDF1F4B004D6914 /* DiaryContentAccessoryView.xib in Resources */,
 				D2B698B91CDF17DA004D6914 /* TitleInputAccessoryView.xib in Resources */,
+				F65A403D1CE0A7DC005E4A1F /* ChoseCropView.xib in Resources */,
 				D20BBAE51CD46285008A1A78 /* fake6.jpg in Resources */,
 				D27523CE1CD1601F00A0C013 /* MenuItemCell.xib in Resources */,
 				D28309F71CD1516F00CCD7EF /* SendMessageCell.xib in Resources */,
@@ -2932,6 +2949,7 @@
 				D20BBAE91CD462AE008A1A78 /* AlbumCell.m in Sources */,
 				D236EAE31CCB55D600397C19 /* UIControl+ActionBlocks.m in Sources */,
 				D236EABC1CCB55D600397C19 /* NSURLConnection+SelfSigned.m in Sources */,
+				F65A403B1CE0A77C005E4A1F /* ChoseCropView.m in Sources */,
 				D236EA9F1CCB55D600397C19 /* NSObject+KVOBlocks.m in Sources */,
 				D236EAD01CCB55D600397C19 /* UIBezierPath+BasicShapes.m in Sources */,
 				D236EB2B1CCB55D600397C19 /* UIView+RecursiveDescription.m in Sources */,

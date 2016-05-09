@@ -262,6 +262,13 @@
 		D26783291CD5205C00509FC1 /* HouseDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26783281CD5205C00509FC1 /* HouseDetailHeaderView.xib */; };
 		D267832D1CD5242D00509FC1 /* TimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D267832B1CD5242D00509FC1 /* TimeLineCell.m */; };
 		D267832E1CD5242D00509FC1 /* TimeLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D267832C1CD5242D00509FC1 /* TimeLineCell.xib */; };
+		D27253D01CE0D1C900C18DB0 /* UIColor+Alaways.m in Sources */ = {isa = PBXBuildFile; fileRef = D27253CF1CE0D1C900C18DB0 /* UIColor+Alaways.m */; };
+		D27253DD1CE0ECDC00C18DB0 /* Animated image support.txt in Resources */ = {isa = PBXBuildFile; fileRef = D27253D11CE0ECDC00C18DB0 /* Animated image support.txt */; };
+		D27253DE1CE0ECDC00C18DB0 /* YYAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D27253D31CE0ECDC00C18DB0 /* YYAnimatedImageView.m */; };
+		D27253DF1CE0ECDC00C18DB0 /* YYFrameImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D27253D51CE0ECDC00C18DB0 /* YYFrameImage.m */; };
+		D27253E01CE0ECDC00C18DB0 /* YYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D27253D71CE0ECDC00C18DB0 /* YYImage.m */; };
+		D27253E11CE0ECDC00C18DB0 /* YYImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = D27253D91CE0ECDC00C18DB0 /* YYImageCoder.m */; };
+		D27253E21CE0ECDC00C18DB0 /* YYSpriteSheetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D27253DB1CE0ECDC00C18DB0 /* YYSpriteSheetImage.m */; };
 		D27523C71CD15F0C00A0C013 /* MenuHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523C51CD15F0C00A0C013 /* MenuHeaderCell.m */; };
 		D27523C81CD15F0C00A0C013 /* MenuHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D27523C61CD15F0C00A0C013 /* MenuHeaderCell.xib */; };
 		D27523CD1CD1601F00A0C013 /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D27523CB1CD1601F00A0C013 /* MenuItemCell.m */; };
@@ -315,7 +322,6 @@
 		D2F23B021CD64DFD008E7E88 /* DiaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F23B001CD64DFD008E7E88 /* DiaryTableViewCell.m */; };
 		D2F23B051CD657E2008E7E88 /* DiaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F23B041CD657E2008E7E88 /* DiaryTableViewCell.xib */; };
 		F65A403B1CE0A77C005E4A1F /* ChoseCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = F65A403A1CE0A77C005E4A1F /* ChoseCropView.m */; };
-		F65A403D1CE0A7DC005E4A1F /* ChoseCropView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F65A403C1CE0A7DC005E4A1F /* ChoseCropView.xib */; };
 		F69002F81CDC6AF20001736A /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = F69002F71CDC6AF20001736A /* Message.m */; };
 /* End PBXBuildFile section */
 
@@ -819,6 +825,19 @@
 		D267832A1CD5242D00509FC1 /* TimeLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineCell.h; sourceTree = "<group>"; };
 		D267832B1CD5242D00509FC1 /* TimeLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineCell.m; sourceTree = "<group>"; };
 		D267832C1CD5242D00509FC1 /* TimeLineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLineCell.xib; sourceTree = "<group>"; };
+		D27253CE1CE0D1C900C18DB0 /* UIColor+Alaways.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Alaways.h"; sourceTree = "<group>"; };
+		D27253CF1CE0D1C900C18DB0 /* UIColor+Alaways.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Alaways.m"; sourceTree = "<group>"; };
+		D27253D11CE0ECDC00C18DB0 /* Animated image support.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Animated image support.txt"; sourceTree = "<group>"; };
+		D27253D21CE0ECDC00C18DB0 /* YYAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAnimatedImageView.h; sourceTree = "<group>"; };
+		D27253D31CE0ECDC00C18DB0 /* YYAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAnimatedImageView.m; sourceTree = "<group>"; };
+		D27253D41CE0ECDC00C18DB0 /* YYFrameImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFrameImage.h; sourceTree = "<group>"; };
+		D27253D51CE0ECDC00C18DB0 /* YYFrameImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFrameImage.m; sourceTree = "<group>"; };
+		D27253D61CE0ECDC00C18DB0 /* YYImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImage.h; sourceTree = "<group>"; };
+		D27253D71CE0ECDC00C18DB0 /* YYImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImage.m; sourceTree = "<group>"; };
+		D27253D81CE0ECDC00C18DB0 /* YYImageCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImageCoder.h; sourceTree = "<group>"; };
+		D27253D91CE0ECDC00C18DB0 /* YYImageCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImageCoder.m; sourceTree = "<group>"; };
+		D27253DA1CE0ECDC00C18DB0 /* YYSpriteSheetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSpriteSheetImage.h; sourceTree = "<group>"; };
+		D27253DB1CE0ECDC00C18DB0 /* YYSpriteSheetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSpriteSheetImage.m; sourceTree = "<group>"; };
 		D27523C41CD15F0C00A0C013 /* MenuHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuHeaderCell.h; sourceTree = "<group>"; };
 		D27523C51CD15F0C00A0C013 /* MenuHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuHeaderCell.m; sourceTree = "<group>"; };
 		D27523C61CD15F0C00A0C013 /* MenuHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuHeaderCell.xib; sourceTree = "<group>"; };
@@ -919,7 +938,6 @@
 		D2F23B041CD657E2008E7E88 /* DiaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryTableViewCell.xib; sourceTree = "<group>"; };
 		F65A40391CE0A77C005E4A1F /* ChoseCropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoseCropView.h; sourceTree = "<group>"; };
 		F65A403A1CE0A77C005E4A1F /* ChoseCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoseCropView.m; sourceTree = "<group>"; };
-		F65A403C1CE0A7DC005E4A1F /* ChoseCropView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoseCropView.xib; sourceTree = "<group>"; };
 		F69002F61CDC6AF20001736A /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		F69002F71CDC6AF20001736A /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1234,6 +1252,7 @@
 		D236E8641CCB55D600397C19 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				D27253CD1CE0D1B200C18DB0 /* MyCategory */,
 				D236E8651CCB55D600397C19 /* CoreData */,
 				D236E87A1CCB55D600397C19 /* CoreLocation */,
 				D236E8811CCB55D600397C19 /* Foundation */,
@@ -2273,6 +2292,7 @@
 		D236EB4E1CCB615000397C19 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				D27253DC1CE0ECDC00C18DB0 /* YYImage */,
 				D2B698C61CDF7E30004D6914 /* YYText */,
 				D20BBAF41CD46B1B008A1A78 /* CHTCollectionViewWaterfallLayout.h */,
 				D20BBAF51CD46B1B008A1A78 /* CHTCollectionViewWaterfallLayout.m */,
@@ -2305,6 +2325,34 @@
 				D267832C1CD5242D00509FC1 /* TimeLineCell.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		D27253CD1CE0D1B200C18DB0 /* MyCategory */ = {
+			isa = PBXGroup;
+			children = (
+				D27253CE1CE0D1C900C18DB0 /* UIColor+Alaways.h */,
+				D27253CF1CE0D1C900C18DB0 /* UIColor+Alaways.m */,
+			);
+			name = MyCategory;
+			sourceTree = "<group>";
+		};
+		D27253DC1CE0ECDC00C18DB0 /* YYImage */ = {
+			isa = PBXGroup;
+			children = (
+				D27253D11CE0ECDC00C18DB0 /* Animated image support.txt */,
+				D27253D21CE0ECDC00C18DB0 /* YYAnimatedImageView.h */,
+				D27253D31CE0ECDC00C18DB0 /* YYAnimatedImageView.m */,
+				D27253D41CE0ECDC00C18DB0 /* YYFrameImage.h */,
+				D27253D51CE0ECDC00C18DB0 /* YYFrameImage.m */,
+				D27253D61CE0ECDC00C18DB0 /* YYImage.h */,
+				D27253D71CE0ECDC00C18DB0 /* YYImage.m */,
+				D27253D81CE0ECDC00C18DB0 /* YYImageCoder.h */,
+				D27253D91CE0ECDC00C18DB0 /* YYImageCoder.m */,
+				D27253DA1CE0ECDC00C18DB0 /* YYSpriteSheetImage.h */,
+				D27253DB1CE0ECDC00C18DB0 /* YYSpriteSheetImage.m */,
+			);
+			name = YYImage;
+			path = "../../../../Downloads/YYText-master/Demo/YYTextDemo/YYImage";
 			sourceTree = "<group>";
 		};
 		D27523C31CD15EEB00A0C013 /* MenuHeaderCell */ = {
@@ -2627,7 +2675,6 @@
 			children = (
 				F65A40391CE0A77C005E4A1F /* ChoseCropView.h */,
 				F65A403A1CE0A77C005E4A1F /* ChoseCropView.m */,
-				F65A403C1CE0A7DC005E4A1F /* ChoseCropView.xib */,
 			);
 			name = ChoseCropView;
 			sourceTree = "<group>";
@@ -2699,6 +2746,7 @@
 				D27523C81CD15F0C00A0C013 /* MenuHeaderCell.xib in Resources */,
 				D2B698C51CDF632A004D6914 /* DiaryBottomCompleteView.xib in Resources */,
 				D236EA831CCB55D600397C19 /* NSDateTimeAgo.bundle in Resources */,
+				D27253DD1CE0ECDC00C18DB0 /* Animated image support.txt in Resources */,
 				D20BBAE21CD46285008A1A78 /* fake3.jpg in Resources */,
 				D27523F11CD2670200A0C013 /* LoveHouse.storyboard in Resources */,
 				D20BBAE41CD46285008A1A78 /* fake5.jpg in Resources */,
@@ -2709,7 +2757,6 @@
 				D20BBAE31CD46285008A1A78 /* fake4.jpg in Resources */,
 				D2B698BF1CDF1F4B004D6914 /* DiaryContentAccessoryView.xib in Resources */,
 				D2B698B91CDF17DA004D6914 /* TitleInputAccessoryView.xib in Resources */,
-				F65A403D1CE0A7DC005E4A1F /* ChoseCropView.xib in Resources */,
 				D20BBAE51CD46285008A1A78 /* fake6.jpg in Resources */,
 				D27523CE1CD1601F00A0C013 /* MenuItemCell.xib in Resources */,
 				D28309F71CD1516F00CCD7EF /* SendMessageCell.xib in Resources */,
@@ -2775,8 +2822,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D236EA821CCB55D600397C19 /* NSDate+Utilities.m in Sources */,
+				D27253DF1CE0ECDC00C18DB0 /* YYFrameImage.m in Sources */,
 				D236EA8E1CCB55D600397C19 /* NSHTTPCookieStorage+FreezeDry.m in Sources */,
 				D236EA7A1CCB55D600397C19 /* NSData+SDDataCache.m in Sources */,
+				D27253DE1CE0ECDC00C18DB0 /* YYAnimatedImageView.m in Sources */,
 				D236EA761CCB55D600397C19 /* NSData+Base64.m in Sources */,
 				D236EAAC1CCB55D600397C19 /* NSString+Matcher.m in Sources */,
 				D236EA9D1CCB55D600397C19 /* NSObject+EasyCopy.m in Sources */,
@@ -2844,12 +2893,14 @@
 				D27523DE1CD17BC500A0C013 /* SettingViewController.m in Sources */,
 				D20BBAED1CD468AC008A1A78 /* AlbumReusableHeader.m in Sources */,
 				D236E8621CCB548A00397C19 /* NavigationController.m in Sources */,
+				D27253E21CE0ECDC00C18DB0 /* YYSpriteSheetImage.m in Sources */,
 				D236EA9A1CCB55D600397C19 /* NSObject+AssociatedObject.m in Sources */,
 				D236EA941CCB55D600397C19 /* NSDecimalNumber+Extensions.m in Sources */,
 				D236EB091CCB55D600397C19 /* UINavigationItem+Lock.m in Sources */,
 				D236EADB1CCB55D600397C19 /* UIButton+Submitting.m in Sources */,
 				D236EAD41CCB55D600397C19 /* UIBezierPath+Symbol.m in Sources */,
 				D2F23B021CD64DFD008E7E88 /* DiaryTableViewCell.m in Sources */,
+				D27253E11CE0ECDC00C18DB0 /* YYImageCoder.m in Sources */,
 				D236EB221CCB55D600397C19 /* UIView+CustomBorder.m in Sources */,
 				D2C172F11CCBAB2B00E9AAB4 /* ForgetPasswordContainerView.m in Sources */,
 				D236EAF81CCB55D600397C19 /* UIImage+RoundedCorner.m in Sources */,
@@ -3000,6 +3051,8 @@
 				D236EAEB1CCB55D600397C19 /* UIImage+animatedGIF.m in Sources */,
 				D236EAEC1CCB55D600397C19 /* UIImage+BetterFace.m in Sources */,
 				D236EB2A1CCB55D600397C19 /* UIView+Recursion.m in Sources */,
+				D27253D01CE0D1C900C18DB0 /* UIColor+Alaways.m in Sources */,
+				D27253E01CE0ECDC00C18DB0 /* YYImage.m in Sources */,
 				D236EA8F1CCB55D600397C19 /* NSIndexPath+Offset.m in Sources */,
 				D236EAB61CCB55D600397C19 /* NSString+UUID.m in Sources */,
 				D236EA891CCB55D600397C19 /* NSDictionary+URL.m in Sources */,

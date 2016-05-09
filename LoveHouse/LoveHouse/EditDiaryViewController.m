@@ -12,6 +12,7 @@
 #import "DiaryBottomCompleteView.h"
 #import "DiaryContentAccessoryView.h"
 #import "YYText.h"
+#import "YYImage.h"
 #import "CropImageViewController.h"
 @interface EditDiaryViewController () <DiaryContentAccessoryViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, DiaryBottomCompleteViewDelegate>
 @property (nonatomic, strong) UITextField *titleHeaderField;
@@ -203,10 +204,20 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
     Log(@"%@", info);
+    __weak typeof(self) ws = self;
     [picker dismissViewControllerAnimated:YES completion:^{
-        CropImageViewController *corpImageVc = [[CropImageViewController alloc] init];
-        corpImageVc.corpImage = info[UIImagePickerControllerOriginalImage];
-        [self presentViewController:corpImageVc animated:YES completion:nil];
+        UIImage *originImage = info[UIImagePickerControllerOriginalImage];
+        CGFloat imageW = [self.contentTextView sizeThatFits:CGSizeMake(self.contentTextView.width, self.contentTextView.height)].width;
+        CGFloat imageH = imageW / originImage.size.width * originImage.size.height;
+        UIImageView *imageView = [[YYAnimatedImageView alloc] initWithImage:originImage];
+        NSMutableAttributedString *attributeStr = [NSMutableAttributedString yy_attachmentStringWithContent:originImage contentMode:UIViewContentModeCenter attachmentSize:CGSizeMake(imageW, imageH) alignToFont:self.contentTextView.font alignment:YYTextVerticalAlignmentCenter];
+        self.contentTextView.attributedText = [attributeStr copy];
+//        CGSize maxSize = CGSizeMake(imageW, CGFLOAT_MAX);
+//        CGRect rect = [self.contentTextView.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.contentTextView.font} context:nil];
+//        imageView.frame = CGRectMake(0, rect.size.height + 10, imageW, imageH);
+//        [ws.contentTextView addSubview:imageView];
+//        UIBezierPath *path = [UIBezierPath bezierPathWithRect:imageView.frame];
+//        self.contentTextView.exclusionPaths = @[path];
     }];
 }
 

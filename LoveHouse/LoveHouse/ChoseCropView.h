@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChoseCropView : UIView
+typedef NS_ENUM(NSInteger, CropShapeStyle) {
+    CropShapeStyleCircle,
+    CropShapeStyleRect,
+    CropShapeStyleRoundRect,
+    CropShapeStyleStart,
+    CropShapeStyleTaoxin,
+    CropShapeStyleTrangle
+};
 
+@interface ChoseCropView : UIView
+@property (nonatomic, copy) void(^didChoseImage)(UIImage *image, CropShapeStyle shape);
 @end

@@ -22,4 +22,5 @@
 #import <ChameleonFramework/Chameleon.h>
 #import "Masonry.h"
 #import "UIView+Frame.h"
+#import "UIColor+Alaways.h"
 #endif /* lovehouse_pch */

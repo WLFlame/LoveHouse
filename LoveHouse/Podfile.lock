@@ -5,24 +5,41 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
   - DGActivityIndicatorView (2.0)
   - ECSlidingViewController (2.0.3)
   - Masonry (1.0.0)
+  - WordPress-iOS-Shared (0.5.9):
+    - CocoaLumberjack (~> 2.2.0)
+  - WordPressCom-Analytics-iOS (0.1.11)
 
 DEPENDENCIES:
   - AVOSCloud
   - AVOSCloudCrashReporting
   - ChameleonFramework
+  - CocoaLumberjack (~> 2.2.0)
   - DGActivityIndicatorView
   - ECSlidingViewController (~> 2.0.3)
   - Masonry
+  - WordPress-iOS-Shared (~> 0.5.0)
+  - WordPressCom-Analytics-iOS
 
 SPEC CHECKSUMS:
   AVOSCloud: b789619942a4275e615f8f0782e7475675951b95
   AVOSCloudCrashReporting: 2dddc7dfc8ef423492a01c0076b3e97716854701
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
   DGActivityIndicatorView: 52875b025a6ccf6a431a905285c12e2bb95eb559
   ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
+  WordPress-iOS-Shared: 50a7bd7056b8721e86c3cbe167eab49ef85ec07b
+  WordPressCom-Analytics-iOS: a844ac791b2627dbb64ba62090654f43dd2abc1c
 
 COCOAPODS: 0.39.0

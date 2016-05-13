@@ -5,7 +5,9 @@
 //  Created by wanli.yang on 16/5/8.
 //  Copyright © 2016年 wanli.yang. All rights reserved.
 //
-
+@import Photos;
+@import AVFoundation;
+@import MobileCoreServices;
 #import "EditDiaryViewController.h"
 #import "PlaceholderTextView.h"
 #import "TitleInputAccessoryView.h"
@@ -14,6 +16,12 @@
 #import "YYText.h"
 #import "YYImage.h"
 #import "CropImageViewController.h"
+
+#import <WordPressShared/WPStyleGuide.h>
+#import <WordPressShared/WPFontManager.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#import "WPEditorField.h"
+#import "WPEditorView.h"
 @interface EditDiaryViewController () <DiaryContentAccessoryViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, DiaryBottomCompleteViewDelegate>
 @property (nonatomic, strong) UITextField *titleHeaderField;
 @property (nonatomic, strong) UILabel *timeLabel;
@@ -211,7 +219,21 @@
         CGFloat imageH = imageW / originImage.size.width * originImage.size.height;
         UIImageView *imageView = [[YYAnimatedImageView alloc] initWithImage:originImage];
         NSMutableAttributedString *attributeStr = [NSMutableAttributedString yy_attachmentStringWithContent:originImage contentMode:UIViewContentModeCenter attachmentSize:CGSizeMake(imageW, imageH) alignToFont:self.contentTextView.font alignment:YYTextVerticalAlignmentCenter];
-        self.contentTextView.attributedText = [attributeStr copy];
+        NSMutableAttributedString *origin = [[NSMutableAttributedString alloc] initWithAttributedString:self.contentTextView.attributedText];
+        [origin appendAttributedString:attributeStr];
+        self.contentTextView.attributedText = [origin copy];
+//        self.contentTextView.selectedRange
+//        NSUInteger endPosition = _selectedTextRange.start.offset + atr.length;
+//        NSMutableAttributedString *text = _innerText.mutableCopy;
+//        [text replaceCharactersInRange:_selectedTextRange.asRange withAttributedString:atr];
+//        self.attributedText = text;
+//        YYTextPosition *pos = [self _correctedTextPosition:[YYTextPosition positionWithOffset:endPosition]];
+//        YYTextRange *range = [_innerLayout textRangeByExtendingPosition:pos];
+//        range = [self _correctedTextRange:range];
+//        if (range) {
+//            self.selectedRange = NSMakeRange(range.end.offset, 0);
+//        }
+        
 //        CGSize maxSize = CGSizeMake(imageW, CGFLOAT_MAX);
 //        CGRect rect = [self.contentTextView.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.contentTextView.font} context:nil];
 //        imageView.frame = CGRectMake(0, rect.size.height + 10, imageW, imageH);

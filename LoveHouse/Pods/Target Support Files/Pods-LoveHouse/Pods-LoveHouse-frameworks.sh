@@ -85,13 +85,19 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-LoveHouse/ChameleonFramework.framework"
+  install_framework "Pods-LoveHouse/CocoaLumberjack.framework"
   install_framework "Pods-LoveHouse/DGActivityIndicatorView.framework"
   install_framework "Pods-LoveHouse/ECSlidingViewController.framework"
   install_framework "Pods-LoveHouse/Masonry.framework"
+  install_framework "Pods-LoveHouse/WordPressShared.framework"
+  install_framework "Pods-LoveHouse/WordPressComAnalytics.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-LoveHouse/ChameleonFramework.framework"
+  install_framework "Pods-LoveHouse/CocoaLumberjack.framework"
   install_framework "Pods-LoveHouse/DGActivityIndicatorView.framework"
   install_framework "Pods-LoveHouse/ECSlidingViewController.framework"
   install_framework "Pods-LoveHouse/Masonry.framework"
+  install_framework "Pods-LoveHouse/WordPressShared.framework"
+  install_framework "Pods-LoveHouse/WordPressComAnalytics.framework"
 fi

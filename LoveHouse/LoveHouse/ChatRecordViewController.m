@@ -8,7 +8,8 @@
 
 #import "ChatRecordViewController.h"
 #import "DiaryTableViewCell.h"
-#import "EditDiaryViewController.h"
+#import "WPViewController.h"
+
 @interface ChatRecordViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *table;
 @end
@@ -34,8 +35,15 @@
     self.table = table;
     [table registerNib:[UINib nibWithNibName:@"DiaryTableViewCell" bundle:nil] forCellReuseIdentifier:@"DiaryTableViewCell"];
     [self.view addSubview:self.table];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarItemClick)];
 }
 
+- (void)rightBarItemClick
+{
+    WPViewController *editVc = [[WPViewController alloc] initWithMode:kWPEditorViewControllerModeEdit];
+    [self presentViewController:editVc animated:YES completion:nil];
+}
 
 
 
@@ -54,7 +62,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    EditDiaryViewController *editDiary = [[EditDiaryViewController alloc] init];
+    WPViewController *editDiary = [[WPViewController alloc] initWithMode:kWPEditorViewControllerModeEdit];
     [self.navigationController pushViewController:editDiary animated:YES];
 }
 

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WPEditorViewController.h"
 
-@interface EditDiaryViewController : UIViewController
+@interface EditDiaryViewController : WPEditorViewController <WPEditorViewControllerDelegate>
 
 @end

@@ -11,4 +11,8 @@ pod 'ChameleonFramework'
 pod 'ECSlidingViewController', '~> 2.0.3'
 pod 'Masonry'
 
+pod 'CocoaLumberjack', '~>2.2.0'
+pod 'WordPress-iOS-Shared', '~>0.5.0'
+pod 'WordPressCom-Analytics-iOS'
+
 end

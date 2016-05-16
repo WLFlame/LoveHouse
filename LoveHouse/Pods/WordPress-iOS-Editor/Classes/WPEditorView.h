@@ -288,6 +288,8 @@ stylesForCurrentSelection:(NSArray*)styles;
  */
 - (void)replaceLocalImageWithRemoteImage:(NSString*)url uniqueId:(NSString*)uniqueId;
 
+- (void)replaceLocalImageWithRemoteImage:(NSString*)url uniqueId:(NSString*)uniqueId mediaId:(NSString *)mediaId;
+
 - (void)updateImage:(NSString *)url alt:(NSString *)alt;
 
 - (void)updateCurrentImageMeta:(WPImageMeta *)imageMeta;

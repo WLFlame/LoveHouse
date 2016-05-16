@@ -208,134 +208,134 @@ NSInteger const WPLinkAlertViewTag = 92;
 		if ([self canShowInsertImageBarButton]) {
 			[items addObject:[self insertImageBarButton]];
 		}
-		
-		if ([self canShowBoldBarButton]) {
-			[items addObject:[self boldBarButton]];
-		}
-		
-		if ([self canShowItalicBarButton]) {
-			[items addObject:[self italicBarButton]];
-		}
-		
-		if ([self canShowSubscriptBarButton]) {
-			[items addObject:[self subscriptBarButton]];
-		}
-		
-		if ([self canShowSuperscriptBarButton]) {
-			[items addObject:[self superscriptBarButton]];
-		}
-		
-		if ([self canShowStrikeThroughBarButton]) {
-			[items addObject:[self strikeThroughBarButton]];
-		}
-		
-		if ([self canShowUnderlineBarButton]) {
-			[items addObject:[self underlineBarButton]];
-		}
-		
-		if (!IS_IPAD && [self canShowBlockQuoteBarButton]) {
-			[items addObject:[self blockQuoteBarButton]];
-		}
-		
-		if ([self canShowRemoveFormatBarButton]) {
-			[items addObject:[self removeFormatBarButton]];
-		}
-		
-		if ([self canShowUndoBarButton]) {
-			[items addObject:[self undoBarButton]];
-		}
-		
-		if ([self canShowRedoBarButton]) {
-			[items addObject:[self redoBarButton]];
-		}
-		
-		if ([self canShowAlignLeftBarButton]) {
-			[items addObject:[self alignLeftBarButton]];
-		}
-		
-		if ([self canShowAlignCenterBarButton]) {
-			[items addObject:[self alignCenterBarButton]];
-		}
-		
-		if ([self canShowAlignRightBarButton]) {
-			[items addObject:[self alignRightBarButton]];
-		}
-		
-		if ([self canShowAlignFullBarButton]) {
-			[items addObject:[self alignFullBarButton]];
-		}
-		
-		if ([self canShowHeader1BarButton]) {
-			[items addObject:[self header1BarButton]];
-		}
-		
-		if ([self canShowHeader2BarButton]) {
-			[items addObject:[self header2BarButton]];
-		}
-		
-		if ([self canShowHeader3BarButton]) {
-			[items addObject:[self header3BarButton]];
-		}
-		
-		if ([self canShowHeader4BarButton]) {
-			[items addObject:[self header4BarButton]];
-		}
-		
-		if ([self canShowHeader5BarButton]) {
-			[items addObject:[self header5BarButton]];
-		}
-		
-		if ([self canShowHeader6BarButton]) {
-			[items addObject:[self header6BarButton]];
-		}
-		
-		if ([self canShowTextColorBarButton]) {
-			[items addObject:[self textColorBarButton]];
-		}
-		
-		if ([self canShowBackgroundColorBarButton]) {
-			[items addObject:[self backgroundColorBarButton]];
-		}
-        
-        if (IS_IPAD && [self canShowInsertLinkBarButton]) {
-            [items addObject:[self inserLinkBarButton]];
-        }
-		
-		if ([self canShowUnorderedListBarButton]) {
-			[items addObject:[self unorderedListBarButton]];
-		}
-		
-		if ([self canShowOrderedListBarButton]) {
-			[items addObject:[self orderedListBarButton]];
-		}
-		
-		if ([self canShowHorizontalRuleBarButton]) {
-			[items addObject:[self horizontalRuleBarButton]];
-		}
-		
-		if ([self canShowIndentBarButton]) {
-			[items addObject:[self indentBarButton]];
-		}
-		
-		if ([self canShowOutdentBarButton]) {
-			[items addObject:[self outdentBarButton]];
-		}
-		
-		if (!IS_IPAD && [self canShowInsertLinkBarButton]) {
-			[items addObject:[self inserLinkBarButton]];
-		}
-        
-        if (IS_IPAD && [self canShowBlockQuoteBarButton]) {
-            [items addObject:[self blockQuoteBarButton]];
-        }
-		
-		if ([self canShowRemoveLinkBarButton]) {
-			[items addObject:[self removeLinkBarButton]];
-		}
-		
-		if ([self canShowQuickLinkBarButton]) {
-			[items addObject:[self quickLinkBarButton]];
-		}
+//		
+//		if ([self canShowBoldBarButton]) {
+//			[items addObject:[self boldBarButton]];
+//		}
+//		
+//		if ([self canShowItalicBarButton]) {
+//			[items addObject:[self italicBarButton]];
+//		}
+//		
+//		if ([self canShowSubscriptBarButton]) {
+//			[items addObject:[self subscriptBarButton]];
+//		}
+//		
+//		if ([self canShowSuperscriptBarButton]) {
+//			[items addObject:[self superscriptBarButton]];
+//		}
+//		
+//		if ([self canShowStrikeThroughBarButton]) {
+//			[items addObject:[self strikeThroughBarButton]];
+//		}
+//		
+//		if ([self canShowUnderlineBarButton]) {
+//			[items addObject:[self underlineBarButton]];
+//		}
+//		
+//		if (!IS_IPAD && [self canShowBlockQuoteBarButton]) {
+//			[items addObject:[self blockQuoteBarButton]];
+//		}
+//		
+//		if ([self canShowRemoveFormatBarButton]) {
+//			[items addObject:[self removeFormatBarButton]];
+//		}
+//		
+//		if ([self canShowUndoBarButton]) {
+//			[items addObject:[self undoBarButton]];
+//		}
+//		
+//		if ([self canShowRedoBarButton]) {
+//			[items addObject:[self redoBarButton]];
+//		}
+//		
+//		if ([self canShowAlignLeftBarButton]) {
+//			[items addObject:[self alignLeftBarButton]];
+//		}
+//		
+//		if ([self canShowAlignCenterBarButton]) {
+//			[items addObject:[self alignCenterBarButton]];
+//		}
+//		
+//		if ([self canShowAlignRightBarButton]) {
+//			[items addObject:[self alignRightBarButton]];
+//		}
+//		
+//		if ([self canShowAlignFullBarButton]) {
+//			[items addObject:[self alignFullBarButton]];
+//		}
+//		
+//		if ([self canShowHeader1BarButton]) {
+//			[items addObject:[self header1BarButton]];
+//		}
+//		
+//		if ([self canShowHeader2BarButton]) {
+//			[items addObject:[self header2BarButton]];
+//		}
+//		
+//		if ([self canShowHeader3BarButton]) {
+//			[items addObject:[self header3BarButton]];
+//		}
+//		
+//		if ([self canShowHeader4BarButton]) {
+//			[items addObject:[self header4BarButton]];
+//		}
+//		
+//		if ([self canShowHeader5BarButton]) {
+//			[items addObject:[self header5BarButton]];
+//		}
+//		
+//		if ([self canShowHeader6BarButton]) {
+//			[items addObject:[self header6BarButton]];
+//		}
+//		
+//		if ([self canShowTextColorBarButton]) {
+//			[items addObject:[self textColorBarButton]];
+//		}
+//		
+//		if ([self canShowBackgroundColorBarButton]) {
+//			[items addObject:[self backgroundColorBarButton]];
+//		}
+//        
+//        if (IS_IPAD && [self canShowInsertLinkBarButton]) {
+//            [items addObject:[self inserLinkBarButton]];
+//        }
+//		
+//		if ([self canShowUnorderedListBarButton]) {
+//			[items addObject:[self unorderedListBarButton]];
+//		}
+//		
+//		if ([self canShowOrderedListBarButton]) {
+//			[items addObject:[self orderedListBarButton]];
+//		}
+//		
+//		if ([self canShowHorizontalRuleBarButton]) {
+//			[items addObject:[self horizontalRuleBarButton]];
+//		}
+//		
+//		if ([self canShowIndentBarButton]) {
+//			[items addObject:[self indentBarButton]];
+//		}
+//		
+//		if ([self canShowOutdentBarButton]) {
+//			[items addObject:[self outdentBarButton]];
+//		}
+//		
+//		if (!IS_IPAD && [self canShowInsertLinkBarButton]) {
+//			[items addObject:[self inserLinkBarButton]];
+//		}
+//        
+//        if (IS_IPAD && [self canShowBlockQuoteBarButton]) {
+//            [items addObject:[self blockQuoteBarButton]];
+//        }
+//		
+//		if ([self canShowRemoveLinkBarButton]) {
+//			[items addObject:[self removeLinkBarButton]];
+//		}
+//		
+//		if ([self canShowQuickLinkBarButton]) {
+//			[items addObject:[self quickLinkBarButton]];
+//		}
 		
 		if ([self canShowSourceBarButton]) {
 			[items addObject:[self showSourceBarButton]];
@@ -729,7 +729,7 @@ NSInteger const WPLinkAlertViewTag = 92;
 	
 	ZSSBarButtonItem *barButtonItem = [self barButtonItemWithTag:kWPEditorViewControllerElementTagInsertImageBarButton
 													htmlProperty:@"image"
-													   imageName:@"icon_format_media"
+													   imageName:@"chosePhoto"
 														  target:self
 														selector:@selector(didTouchMediaOptions)
 											  accessibilityLabel:accessibilityLabel];
@@ -851,8 +851,8 @@ NSInteger const WPLinkAlertViewTag = 92;
                                                      @"Accessibility label for HTML button on formatting toolbar.");
     
     ZSSBarButtonItem *barButtonItem = [self barButtonItemWithTag:kWPEditorViewControllerElementShowSourceBarButton
-													htmlProperty:@"source"
-													   imageName:@"icon_format_html"
+													htmlProperty:@"image"
+													   imageName:@"tragle"
 														  target:self
 														selector:@selector(showHTMLSource:)
 											  accessibilityLabel:accessibilityLabel];
@@ -973,7 +973,8 @@ NSInteger const WPLinkAlertViewTag = 92;
         
         // Default placeholder text
         self.titlePlaceholderText = NSLocalizedString(@"Post title",  @"Placeholder for the post title.");
-        self.bodyPlaceholderText = NSLocalizedString(@"Share your story here...", @"Placeholder for the post body.");
+//        self.bodyPlaceholderText = NSLocalizedString(@"Share your story here...", @"Placeholder for the post body.");
+        self.bodyPlaceholderText = @"记下你的心情...";
     }
 	
     [self.view addSubview:self.editorView];
@@ -1080,7 +1081,6 @@ NSInteger const WPLinkAlertViewTag = 92;
 - (void)disableEditing
 {
 	self.editingEnabled = NO;
-	
 	if (self.didFinishLoadingEditor)
 	{
 		[self.editorView disableEditing];
@@ -1132,7 +1132,6 @@ NSInteger const WPLinkAlertViewTag = 92;
 - (void)stopEditing
 {
 	self.editing = NO;
-	
 	[self disableEditing];
 	[self tellOurDelegateEditingDidEnd];
 }
@@ -1148,22 +1147,24 @@ NSInteger const WPLinkAlertViewTag = 92;
 #pragma mark - Editor Interaction
 
 - (void)showHTMLSource:(UIBarButtonItem *)barButtonItem
-{	
-    if ([self.editorView isInVisualMode]) {
-        if ([self askOurDelegateShouldDisplaySourceView]) {
-            [self.editorView showHTMLSource];
-            barButtonItem.tintColor = [self barButtonItemSelectedDefaultColor];
-        } else {
-            // Deselect the HTML button so it is in the proper state
-            [(UIButton *)barButtonItem setSelected:NO];
-        }
-    } else {
-		[self.editorView showVisualEditor];
-		
-        barButtonItem.tintColor = [self.toolbarView itemTintColor];
-    }
-    
-    [WPAnalytics track:WPAnalyticsStatEditorTappedHTML];
+{
+    [self stopEditing];
+
+//    if ([self.editorView isInVisualMode]) {
+//        if ([self askOurDelegateShouldDisplaySourceView]) {
+//            [self.editorView showHTMLSource];
+//            barButtonItem.tintColor = [self barButtonItemSelectedDefaultColor];
+//        } else {
+//            // Deselect the HTML button so it is in the proper state
+//            [(UIButton *)barButtonItem setSelected:NO];
+//        }
+//    } else {
+//		[self.editorView showVisualEditor];
+//		
+//        barButtonItem.tintColor = [self.toolbarView itemTintColor];
+//    }
+//    
+//    [WPAnalytics track:WPAnalyticsStatEditorTappedHTML];
 }
 
 - (void)removeFormat

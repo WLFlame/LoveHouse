@@ -286,6 +286,7 @@
 		D2B699161CDF832F004D6914 /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B699151CDF832F004D6914 /* CropImageViewController.m */; };
 		D2C172EE1CCBAAE900E9AAB4 /* RegisterContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C172ED1CCBAAE900E9AAB4 /* RegisterContainerView.m */; };
 		D2C172F11CCBAB2B00E9AAB4 /* ForgetPasswordContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C172F01CCBAB2B00E9AAB4 /* ForgetPasswordContainerView.m */; };
+		D2CE35E01CEA2AFA00D135CF /* WPImageMetaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CE35DF1CEA2AFA00D135CF /* WPImageMetaViewController.m */; };
 		D2EB702B1CCBDD570069C726 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EB702A1CCBDD570069C726 /* Foundation+Log.m */; };
 		D2EFC3011CCBCFEA000BFFE9 /* TTGlobalUICommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EFC3001CCBCFEA000BFFE9 /* TTGlobalUICommon.m */; };
 		D2EFC3041CCBD618000BFFE9 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EFC3031CCBD618000BFFE9 /* UIView+HUD.m */; };
@@ -839,6 +840,8 @@
 		D2C172ED1CCBAAE900E9AAB4 /* RegisterContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterContainerView.m; sourceTree = "<group>"; };
 		D2C172EF1CCBAB2B00E9AAB4 /* ForgetPasswordContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordContainerView.h; sourceTree = "<group>"; };
 		D2C172F01CCBAB2B00E9AAB4 /* ForgetPasswordContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordContainerView.m; sourceTree = "<group>"; };
+		D2CE35DE1CEA2AFA00D135CF /* WPImageMetaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPImageMetaViewController.h; sourceTree = "<group>"; };
+		D2CE35DF1CEA2AFA00D135CF /* WPImageMetaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPImageMetaViewController.m; sourceTree = "<group>"; };
 		D2EB702A1CCBDD570069C726 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		D2EFC2FF1CCBCFEA000BFFE9 /* TTGlobalUICommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGlobalUICommon.h; sourceTree = "<group>"; };
 		D2EFC3001CCBCFEA000BFFE9 /* TTGlobalUICommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGlobalUICommon.m; sourceTree = "<group>"; };
@@ -2352,6 +2355,8 @@
 		D27523E51CD17C0E00A0C013 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D2CE35DE1CEA2AFA00D135CF /* WPImageMetaViewController.h */,
+				D2CE35DF1CEA2AFA00D135CF /* WPImageMetaViewController.m */,
 				F6DD01DF1CE9D1E800246D8D /* EditArticleViewController */,
 				D2B699131CDF8310004D6914 /* CropImageViewController */,
 				D22E72721CDF02700029577C /* EditDiaryViewController */,
@@ -2899,6 +2904,7 @@
 				D2B698C31CDF6322004D6914 /* DiaryBottomCompleteView.m in Sources */,
 				D236EAE91CCB55D600397C19 /* UIFont-TTF.m in Sources */,
 				D236EAC41CCB55D600397C19 /* CAAnimation+Blocks.m in Sources */,
+				D2CE35E01CEA2AFA00D135CF /* WPImageMetaViewController.m in Sources */,
 				D2B698BD1CDF1F3E004D6914 /* DiaryContentAccessoryView.m in Sources */,
 				D236EB031CCB55D600397C19 /* UILabel+ESAdjustableLabel.m in Sources */,
 				D236EA711CCB55D600397C19 /* CLLocationManager+Blocks.m in Sources */,

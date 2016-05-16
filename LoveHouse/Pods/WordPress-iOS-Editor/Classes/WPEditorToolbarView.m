@@ -352,7 +352,7 @@ static const CGFloat WPEditorToolbarDividerLineWidth = 0.6;
         
         ZSSBarButtonItem *htmlButton = [self barButtonItemWithTag:kWPEditorViewControllerElementiPhoneShowSourceBarButton
                                                         htmlProperty:@""
-                                                           imageName:@"icon_format_html"
+                                                           imageName:@"tragle"
                                                               target:self
                                                             selector:@selector(showHTMLSource:)
                                                   accessibilityLabel:accessibilityLabel];

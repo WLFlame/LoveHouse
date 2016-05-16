@@ -1494,6 +1494,12 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     [self.webView stringByEvaluatingJavaScriptFromString:trigger];
 }
 
+- (void)replaceLocalImageWithRemoteImage:(NSString*)url uniqueId:(NSString*)uniqueId mediaId:(NSString *)mediaId
+{
+    NSString *trigger = [NSString stringWithFormat:@"ZSSEditor.replaceLocalImageWithRemoteImage(\"%@\", \"%@\", %@);", uniqueId, url, mediaId];
+    [self.webView stringByEvaluatingJavaScriptFromString:trigger];
+}
+
 - (void)updateImage:(NSString *)url alt:(NSString *)alt
 {
     NSString *trigger = [NSString stringWithFormat:@"ZSSEditor.updateImage(\"%@\", \"%@\");", url, alt];
@@ -1758,6 +1764,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     [self.titleField disableEditing];
     [self.contentField disableEditing];
     [self.sourceViewTitleField setEnabled:NO];
+    
     [self.sourceView setEditable:NO];
 }
 

@@ -3,7 +3,6 @@
 #import "WPStyleGuide.h"
 #import "WPNUXUtility.h"
 #import "WPFontManager.h"
-#import "WPDeviceIdentification.h"
 
 @interface WPNoResultsView ()
 @property (nonatomic, strong) UILabel   *titleLabel;
@@ -42,7 +41,7 @@
         
         // Message Label
         _messageLabel               = [[UILabel alloc] init];
-        _messageLabel.font          = [WPFontManager systemRegularFontOfSize:14.0];
+        _messageLabel.font          = [WPFontManager openSansRegularFontOfSize:14.0];
         _messageLabel.textColor     = [WPStyleGuide allTAllShadeGrey];
         _messageLabel.numberOfLines = 0;
         _messageLabel.textAlignment = NSTextAlignmentCenter;
@@ -75,8 +74,6 @@
 - (void)layoutSubviews {
     
     CGFloat width = 250.0f;
-    
-    [self hideAccessoryViewIfNecessary];
     
     // Layout views
     _accessoryView.frame = CGRectMake((width - CGRectGetWidth(_accessoryView.frame)) / 2, 0, CGRectGetWidth(_accessoryView.frame), CGRectGetHeight(_accessoryView.frame));
@@ -111,16 +108,6 @@
     if (self.superview) {
         [self centerInSuperview];
     }
-}
-
-#pragma mark - Accessory View
-
-/// Hide the accessory view in landscape orientation on iPhone to ensure entire view fits on screen
-///
-- (void)hideAccessoryViewIfNecessary
-{
-    UIDevice *device = [UIDevice currentDevice];
-    self.accessoryView.hidden = (UIDeviceOrientationIsLandscape(device.orientation) && [WPDeviceIdentification isiPhone]);
 }
 
 #pragma mark Helper Methods
@@ -232,9 +219,15 @@
     self.frame = frame;
 }
 
+
 #pragma mark - Notification Hanlders
 
 - (void)orientationDidChange:(NSNotification *)notification {
+    
+    // Hide the accessory view in landscape orientation on iPhone to ensure entire view fits on screen
+    UIDevice *device        = notification.object;
+    _accessoryView.hidden   = (UIDeviceOrientationIsLandscape(device.orientation) && IS_IPHONE);
+    
     [self setNeedsLayout];
 }
 

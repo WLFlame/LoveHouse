@@ -26,7 +26,7 @@
 #import <mach/host_info.h>
 #import <libkern/OSAtomic.h>
 #import <Availability.h>
-#if TARGET_OS_IOS
+#if TARGET_OS_IPHONE
     #import <UIKit/UIDevice.h>
 #endif
 
@@ -42,9 +42,7 @@
 // So we use a primitive logging macro around NSLog.
 // We maintain the NS prefix on the macros to be explicit about the fact that we're using NSLog.
 
-#ifndef DD_DEBUG
-    #define DD_DEBUG NO
-#endif
+#define DD_DEBUG NO
 
 #define NSLogDebug(frmt, ...) do{ if(DD_DEBUG) NSLog((frmt), ##__VA_ARGS__); } while(0)
 
@@ -139,13 +137,22 @@ static NSUInteger _numProcessors;
 
         // Figure out how many processors are available.
         // This may be used later for an optimization on uniprocessor machines.
-        
-        _numProcessors = MAX([NSProcessInfo processInfo].processorCount, 1);
+
+        host_basic_info_data_t hostInfo;
+        mach_msg_type_number_t infoCount;
+
+        infoCount = HOST_BASIC_INFO_COUNT;
+        host_info(mach_host_self(), HOST_BASIC_INFO, (host_info_t)&hostInfo, &infoCount);
+
+        NSUInteger result = (NSUInteger)hostInfo.max_cpus;
+        NSUInteger one    = (NSUInteger)1;
+
+        _numProcessors = MAX(result, one);
 
         NSLogDebug(@"DDLog: numProcessors = %@", @(_numProcessors));
 
 
-#if TARGET_OS_IOS
+#if TARGET_OS_IPHONE
         NSString *notificationName = @"UIApplicationWillTerminateNotification";
 #else
         NSString *notificationName = nil;
@@ -167,7 +174,7 @@ static NSUInteger _numProcessors;
             });
         }
 
-#endif /* if TARGET_OS_IOS */
+#endif /* if TARGET_OS_IPHONE */
 
         if (notificationName) {
             [[NSNotificationCenter defaultCenter] addObserver:self
@@ -189,7 +196,7 @@ static NSUInteger _numProcessors;
 #pragma mark Notifications
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-+ (void)applicationWillTerminate:(NSNotification * __attribute__((unused)))notification {
++ (void)applicationWillTerminate:(NSNotification *)notification {
     [self flushLog];
 }
 
@@ -395,7 +402,7 @@ static NSUInteger _numProcessors;
     SEL getterSel = @selector(ddLogLevel);
     SEL setterSel = @selector(ddSetLogLevel:);
 
-#if TARGET_OS_IPHONE && !TARGET_OS_SIMULATOR
+#if TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR
 
     // Issue #6 (GoogleCode) - Crashes on iOS 4.2.1 and iPhone 4
     //
@@ -434,7 +441,7 @@ static NSUInteger _numProcessors;
 
     return result;
 
-#else /* if TARGET_OS_IPHONE && !TARGET_OS_SIMULATOR */
+#else /* if TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR */
 
     // Issue #24 (GitHub) - Crashing in in ARC+Simulator
     //
@@ -450,7 +457,7 @@ static NSUInteger _numProcessors;
 
     return NO;
 
-#endif /* if TARGET_OS_IPHONE && !TARGET_OS_SIMULATOR */
+#endif /* if TARGET_OS_IPHONE && !TARGET_IPHONE_SIMULATOR */
 }
 
 + (NSArray *)registeredClasses {
@@ -847,19 +854,12 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy) {
 //    dispatch_get_current_queue(void);
 //      __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_6,__MAC_10_9,__IPHONE_4_0,__IPHONE_6_0)
 
-#if TARGET_OS_IOS
+#if TARGET_OS_IPHONE
 
 // Compiling for iOS
 
     #define USE_DISPATCH_CURRENT_QUEUE_LABEL ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
     #define USE_DISPATCH_GET_CURRENT_QUEUE   ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.1)
-
-#elif TARGET_OS_WATCH || TARGET_OS_TV
-
-// Compiling for watchOS, tvOS
-
-#define USE_DISPATCH_CURRENT_QUEUE_LABEL YES
-#define USE_DISPATCH_GET_CURRENT_QUEUE   YES
 
 #else
 
@@ -881,38 +881,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy) {
 
   #endif
 
-#endif /* if TARGET_OS_IOS */
-
-// Should we use pthread_threadid_np ?
-// With iOS 8+/OSX 10.10+ NSLog uses pthread_threadid_np instead of pthread_mach_thread_np
-
-#if TARGET_OS_IOS
-
-// Compiling for iOS
-
-  #ifndef kCFCoreFoundationVersionNumber_iOS_8_0
-    #define kCFCoreFoundationVersionNumber_iOS_8_0 1140.10
-  #endif
-
-    #define USE_PTHREAD_THREADID_NP                (kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_8_0)
-
-#elif TARGET_OS_WATCH || TARGET_OS_TV
-
-// Compiling for watchOS, tvOS
-
-#define USE_PTHREAD_THREADID_NP                    YES
-
-#else
-
-// Compiling for Mac OS X
-
-  #ifndef kCFCoreFoundationVersionNumber10_10
-    #define kCFCoreFoundationVersionNumber10_10    1151.16
-  #endif
-
-    #define USE_PTHREAD_THREADID_NP                (kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber10_10)
-
-#endif /* if TARGET_OS_IOS */
+#endif /* if TARGET_OS_IPHONE */
 
 - (instancetype)initWithMessage:(NSString *)message
                           level:(DDLogLevel)level
@@ -929,25 +898,14 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy) {
         _level        = level;
         _flag         = flag;
         _context      = context;
-
-        BOOL copyFile = (options & DDLogMessageCopyFile) == DDLogMessageCopyFile;
-        _file = copyFile ? [file copy] : file;
-
-        BOOL copyFunction = (options & DDLogMessageCopyFunction) == DDLogMessageCopyFunction;
-        _function = copyFunction ? [function copy] : function;
-
+        _file         = file;
+        _function     = function;
         _line         = line;
         _tag          = tag;
         _options      = options;
         _timestamp    = timestamp ?: [NSDate new];
-
-        if (USE_PTHREAD_THREADID_NP) {
-            __uint64_t tid;
-            pthread_threadid_np(NULL, &tid);
-            _threadID = [[NSString alloc] initWithFormat:@"%llu", tid];
-        } else {
-            _threadID = [[NSString alloc] initWithFormat:@"%x", pthread_mach_thread_np(pthread_self())];
-        }
+        
+        _threadID     = [[NSString alloc] initWithFormat:@"%x", pthread_mach_thread_np(pthread_self())];
         _threadName   = NSThread.currentThread.name;
 
         // Get the file name without extension
@@ -974,7 +932,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy) {
     return self;
 }
 
-- (id)copyWithZone:(NSZone * __attribute__((unused)))zone {
+- (id)copyWithZone:(NSZone *)zone {
     DDLogMessage *newMessage = [DDLogMessage new];
     
     newMessage->_message = _message;
@@ -1047,7 +1005,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy) {
     #endif
 }
 
-- (void)logMessage:(DDLogMessage * __attribute__((unused)))logMessage {
+- (void)logMessage:(DDLogMessage *)logMessage {
     // Override me
 }
 

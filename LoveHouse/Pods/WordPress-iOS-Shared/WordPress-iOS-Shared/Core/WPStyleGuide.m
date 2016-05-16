@@ -2,7 +2,6 @@
 #import "WPTextFieldTableViewCell.h"
 #import "UIColor+Helpers.h"
 #import "WPFontManager.h"
-#import "WPDeviceIdentification.h"
 
 @implementation WPStyleGuide
 
@@ -10,7 +9,7 @@
 
 + (UIFont *)largePostTitleFont
 {
-    return [WPFontManager systemLightFontOfSize:32.0];
+    return [WPFontManager openSansLightFontOfSize:32.0];
 }
 
 + (NSDictionary *)largePostTitleAttributes
@@ -23,12 +22,12 @@
 
 + (UIFont *)postTitleFont
 {
-    return [WPFontManager systemRegularFontOfSize:16.0];
+    return [WPFontManager openSansRegularFontOfSize:16.0];
 }
 
 + (UIFont *)postTitleFontBold
 {
-    return [WPFontManager systemBoldFontOfSize:16.0];
+    return [WPFontManager openSansBoldFontOfSize:16.0];
 }
 
 + (NSDictionary *)postTitleAttributes
@@ -48,7 +47,7 @@
 
 + (UIFont *)subtitleFont
 {
-    return [WPFontManager systemRegularFontOfSize:12.0];
+    return [WPFontManager openSansRegularFontOfSize:12.0];
 }
 
 + (NSDictionary *)subtitleAttributes
@@ -61,7 +60,7 @@
 
 + (UIFont *)subtitleFontItalic
 {
-    return [WPFontManager systemItalicFontOfSize:12.0];
+    return [WPFontManager openSansItalicFontOfSize:12.0];
 }
 
 + (NSDictionary *)subtitleItalicAttributes
@@ -74,7 +73,7 @@
 
 + (UIFont *)subtitleFontBold
 {
-    return [WPFontManager systemBoldFontOfSize:12.0];
+    return [WPFontManager openSansBoldFontOfSize:12.0];
 }
 
 + (NSDictionary *)subtitleAttributesBold
@@ -87,12 +86,12 @@
 
 + (UIFont *)labelFont
 {
-    return [WPFontManager systemBoldFontOfSize:10.0];
+    return [WPFontManager openSansBoldFontOfSize:10.0];
 }
 
 + (UIFont *)labelFontNormal
 {
-    return [WPFontManager systemRegularFontOfSize:10.0];
+    return [WPFontManager openSansRegularFontOfSize:10.0];
 }
 
 + (NSDictionary *)labelAttributes
@@ -105,17 +104,17 @@
 
 + (UIFont *)regularTextFont
 {
-    return [WPFontManager systemRegularFontOfSize:16.0];
+    return [WPFontManager openSansRegularFontOfSize:16.0];
 }
 
 + (UIFont *)regularTextFontSemiBold
 {
-    return [WPFontManager systemSemiBoldFontOfSize:16.0];
+    return [WPFontManager openSansSemiBoldFontOfSize:16.0];
 }
 
 + (UIFont *)regularTextFontBold
 {
-    return [WPFontManager systemBoldFontOfSize:16.0];
+    return [WPFontManager openSansBoldFontOfSize:16.0];
 }
 
 + (NSDictionary *)regularTextAttributes
@@ -128,17 +127,17 @@
 
 + (UIFont *)tableviewTextFont
 {
-    return [WPFontManager systemRegularFontOfSize:17.0];
+    return [WPFontManager openSansRegularFontOfSize:17.0];
 }
 
 + (UIFont *)tableviewSubtitleFont
 {
-    return [WPFontManager systemRegularFontOfSize:17.0];
+    return [WPFontManager openSansRegularFontOfSize:17.0];
 }
 
 + (UIFont *)tableviewSectionHeaderFont
 {
-    return [WPFontManager systemRegularFontOfSize:13.0];
+    return [WPFontManager openSansRegularFontOfSize:13.0];
 }
 
 
@@ -279,14 +278,14 @@
     BOOL hasLighterKeyboard = [versionStr compare:@"7.1" options:NSNumericSearch] == NSOrderedAscending;
 
     if (hasLighterKeyboard) {
-        if ([WPDeviceIdentification isiPad]) {
+        if (IS_IPAD) {
             return [UIColor colorWithRed:207.0f/255.0f green:210.0f/255.0f blue:213.0f/255.0f alpha:1.0];
         } else {
             return [UIColor colorWithRed:220.0f/255.0f green:223.0f/255.0f blue:226.0f/255.0f alpha:1.0];
         }
     }
 
-    if ([WPDeviceIdentification isiPad]) {
+    if (IS_IPAD) {
         return [UIColor colorWithRed:217.0f/255.0f green:220.0f/255.0f blue:223.0f/255.0f alpha:1.0];
     } else {
         return [UIColor colorWithRed:204.0f/255.0f green:208.0f/255.0f blue:214.0f/255.0f alpha:1.0];
@@ -377,8 +376,6 @@
     
     cell.textLabel.textColor = [self darkGrey];
     cell.detailTextLabel.textColor = [self grey];
-    
-    cell.imageView.tintColor = [self greyLighten10];
 }
 
 + (void)configureTableViewSmallSubtitleCell:(UITableViewCell *)cell

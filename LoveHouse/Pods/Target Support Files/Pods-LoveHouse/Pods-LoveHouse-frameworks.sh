@@ -84,20 +84,30 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-LoveHouse/AFNetworking.framework"
   install_framework "Pods-LoveHouse/ChameleonFramework.framework"
   install_framework "Pods-LoveHouse/CocoaLumberjack.framework"
   install_framework "Pods-LoveHouse/DGActivityIndicatorView.framework"
   install_framework "Pods-LoveHouse/ECSlidingViewController.framework"
   install_framework "Pods-LoveHouse/Masonry.framework"
+  install_framework "Pods-LoveHouse/NSObject_SafeExpectations.framework"
+  install_framework "Pods-LoveHouse/UIAlertView_Blocks.framework"
+  install_framework "Pods-LoveHouse/WordPress_iOS_Editor.framework"
   install_framework "Pods-LoveHouse/WordPressShared.framework"
-  install_framework "Pods-LoveHouse/WordPressComAnalytics.framework"
+  install_framework "Pods-LoveHouse/WordPressCom_Analytics_iOS.framework"
+  install_framework "Pods-LoveHouse/YYText.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-LoveHouse/AFNetworking.framework"
   install_framework "Pods-LoveHouse/ChameleonFramework.framework"
   install_framework "Pods-LoveHouse/CocoaLumberjack.framework"
   install_framework "Pods-LoveHouse/DGActivityIndicatorView.framework"
   install_framework "Pods-LoveHouse/ECSlidingViewController.framework"
   install_framework "Pods-LoveHouse/Masonry.framework"
+  install_framework "Pods-LoveHouse/NSObject_SafeExpectations.framework"
+  install_framework "Pods-LoveHouse/UIAlertView_Blocks.framework"
+  install_framework "Pods-LoveHouse/WordPress_iOS_Editor.framework"
   install_framework "Pods-LoveHouse/WordPressShared.framework"
-  install_framework "Pods-LoveHouse/WordPressComAnalytics.framework"
+  install_framework "Pods-LoveHouse/WordPressCom_Analytics_iOS.framework"
+  install_framework "Pods-LoveHouse/YYText.framework"
 fi

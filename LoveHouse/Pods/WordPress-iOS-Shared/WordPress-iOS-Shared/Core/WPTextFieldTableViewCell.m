@@ -1,5 +1,4 @@
 #import "WPTextFieldTableViewCell.h"
-#import "WPDeviceIdentification.h"
 
 CGFloat const AccessoryPadding = 15.0f;
 CGFloat const iPadLeftMargin = 60.0f;
@@ -50,7 +49,7 @@ CGFloat const iPhoneRightMargin = 50.0f;
     if (!self.accessoryView && self.accessoryType != UITableViewCellAccessoryNone) {
         rightMargin = AccessoryPadding;
     }
-    if ([WPDeviceIdentification isiPad]) {
+    if (IS_IPAD) {
         leftMargin  = iPadLeftMargin;
         rightMargin += iPadRightMargin;
     } else {

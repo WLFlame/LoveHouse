@@ -27,6 +27,7 @@
  * All that is needed for a concrete database logger is to extend this class
  * and override the methods in the implementation file that are prefixed with "db_".
  **/
+
 @interface DDAbstractDatabaseLogger : DDAbstractLogger {
     
 @protected
@@ -66,10 +67,6 @@
  * The default saveInterval is 60 seconds.
  **/
 @property (assign, readwrite) NSUInteger saveThreshold;
-
-/**
- *  See the description for the `saveThreshold` property
- */
 @property (assign, readwrite) NSTimeInterval saveInterval;
 
 /**
@@ -99,15 +96,7 @@
  * The default deleteOnEverySave is NO.
  **/
 @property (assign, readwrite) NSTimeInterval maxAge;
-
-/**
- *  See the description for the `maxAge` property
- */
 @property (assign, readwrite) NSTimeInterval deleteInterval;
-
-/**
- *  See the description for the `maxAge` property
- */
 @property (assign, readwrite) BOOL deleteOnEverySave;
 
 /**

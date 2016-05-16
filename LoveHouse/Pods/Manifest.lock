@@ -1,45 +1,80 @@
 PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
   - AVOSCloud (3.2.8)
   - AVOSCloudCrashReporting (3.2.8):
     - AVOSCloud
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
-  - CocoaLumberjack (2.2.0):
-    - CocoaLumberjack/Default (= 2.2.0)
-    - CocoaLumberjack/Extensions (= 2.2.0)
-  - CocoaLumberjack/Core (2.2.0)
-  - CocoaLumberjack/Default (2.2.0):
+  - CocoaLumberjack (2.0.0):
+    - CocoaLumberjack/Default (= 2.0.0)
+    - CocoaLumberjack/Extensions (= 2.0.0)
+  - CocoaLumberjack/Core (2.0.0)
+  - CocoaLumberjack/Default (2.0.0):
     - CocoaLumberjack/Core
-  - CocoaLumberjack/Extensions (2.2.0):
+  - CocoaLumberjack/Extensions (2.0.0):
     - CocoaLumberjack/Default
   - DGActivityIndicatorView (2.0)
   - ECSlidingViewController (2.0.3)
   - Masonry (1.0.0)
-  - WordPress-iOS-Shared (0.5.9):
-    - CocoaLumberjack (~> 2.2.0)
-  - WordPressCom-Analytics-iOS (0.1.11)
+  - NSObject-SafeExpectations (0.0.2)
+  - UIAlertView+Blocks (0.8.1)
+  - WordPress-iOS-Editor (0.9.1):
+    - CocoaLumberjack (= 2.0.0)
+    - NSObject-SafeExpectations (~> 0.0.2)
+    - UIAlertView+Blocks (~> 0.8.1)
+    - WordPress-iOS-Shared (~> 0.3)
+    - WordPressCom-Analytics-iOS (~> 0.0.30)
+  - WordPress-iOS-Shared (0.5.0):
+    - AFNetworking (~> 2.5)
+    - CocoaLumberjack (= 2.0.0)
+  - WordPressCom-Analytics-iOS (0.0.41)
+  - YYText (1.0.5)
 
 DEPENDENCIES:
   - AVOSCloud
   - AVOSCloudCrashReporting
   - ChameleonFramework
-  - CocoaLumberjack (~> 2.2.0)
   - DGActivityIndicatorView
   - ECSlidingViewController (~> 2.0.3)
   - Masonry
-  - WordPress-iOS-Shared (~> 0.5.0)
-  - WordPressCom-Analytics-iOS
+  - WordPress-iOS-Editor
+  - YYText (~> 1.0.5)
 
 SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   AVOSCloud: b789619942a4275e615f8f0782e7475675951b95
   AVOSCloudCrashReporting: 2dddc7dfc8ef423492a01c0076b3e97716854701
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  CocoaLumberjack: a6f77d987d65dc7ba86b0f84db7d0b9084f77bcb
   DGActivityIndicatorView: 52875b025a6ccf6a431a905285c12e2bb95eb559
   ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
-  WordPress-iOS-Shared: 50a7bd7056b8721e86c3cbe167eab49ef85ec07b
-  WordPressCom-Analytics-iOS: a844ac791b2627dbb64ba62090654f43dd2abc1c
+  NSObject-SafeExpectations: 7d7f48df90df4e11da7cfe86b64f45eff7a7f521
+  UIAlertView+Blocks: 45c3d3b7194906702d3e9a14c7ece5581505646d
+  WordPress-iOS-Editor: 31c09f96f7af2b9c908e11e847ce7a0f74b2fff0
+  WordPress-iOS-Shared: 5480e7b5c9c55158ea22c89ff44fca5597852224
+  WordPressCom-Analytics-iOS: 73de8c9a0f1a43bac03fd2fcd881389be73ee820
+  YYText: ac09660c9ccd9b817f409a20caa6f5587444d2ae
 
 COCOAPODS: 0.39.0

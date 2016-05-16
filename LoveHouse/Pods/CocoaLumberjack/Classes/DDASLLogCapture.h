@@ -22,27 +22,11 @@
  */
 @interface DDASLLogCapture : NSObject
 
-/**
- *  Start capturing logs
- */
 + (void)start;
-
-/**
- *  Stop capturing logs
- */
 + (void)stop;
 
-/**
- *  Returns the current capture level.
- *  @note Default log level: DDLogLevelVerbose (i.e. capture all ASL messages).
- */
+// Default log level: DDLogLevelVerbose (i.e. capture all ASL messages).
 + (DDLogLevel)captureLevel;
-
-/**
- *  Set the capture level
- *
- *  @param level new level
- */
 + (void)setCaptureLevel:(DDLogLevel)level;
 
 @end

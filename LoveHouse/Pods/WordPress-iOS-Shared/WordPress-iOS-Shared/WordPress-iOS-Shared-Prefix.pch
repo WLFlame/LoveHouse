@@ -5,7 +5,19 @@
 //
 
 #ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <CocoaLumberjack/CocoaLumberjack.h>
+    extern int ddLogLevel;
 
-#import <Foundation/Foundation.h>
+#ifndef IS_IPAD
+#define IS_IPAD   ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
+#endif
+#ifndef IS_IPHONE
+#define IS_IPHONE   (!IS_IPAD)
+#endif
+#ifndef IS_RETINA
+#define IS_RETINA ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] && [[UIScreen mainScreen] scale] == 2)
+#endif
+
 
 #endif

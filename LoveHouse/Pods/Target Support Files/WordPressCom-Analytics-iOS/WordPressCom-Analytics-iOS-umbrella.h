@@ -2,6 +2,6 @@
 
 #import "WPAnalytics.h"
 
-FOUNDATION_EXPORT double WordPressComAnalyticsVersionNumber;
-FOUNDATION_EXPORT const unsigned char WordPressComAnalyticsVersionString[];
+FOUNDATION_EXPORT double WordPressCom_Analytics_iOSVersionNumber;
+FOUNDATION_EXPORT const unsigned char WordPressCom_Analytics_iOSVersionString[];
 

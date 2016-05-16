@@ -10,9 +10,8 @@ pod 'DGActivityIndicatorView'
 pod 'ChameleonFramework'
 pod 'ECSlidingViewController', '~> 2.0.3'
 pod 'Masonry'
+pod 'WordPress-iOS-Editor'
 
-pod 'CocoaLumberjack', '~>2.2.0'
-pod 'WordPress-iOS-Shared', '~>0.5.0'
-pod 'WordPressCom-Analytics-iOS'
+pod 'YYText', '~> 1.0.5'
 
 end

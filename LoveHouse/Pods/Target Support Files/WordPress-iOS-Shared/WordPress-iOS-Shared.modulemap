@@ -3,6 +3,4 @@ framework module WordPressShared {
 
   export *
   module * { export * }
-
-  private header "WPSharedLoggingPrivate.h"
 }

@@ -5,30 +5,23 @@
 //  Created by wanli.yang on 16/5/8.
 //  Copyright © 2016年 wanli.yang. All rights reserved.
 //
-@import Photos;
-@import AVFoundation;
-@import MobileCoreServices;
+
 #import "EditDiaryViewController.h"
 #import "PlaceholderTextView.h"
 #import "TitleInputAccessoryView.h"
 #import "DiaryBottomCompleteView.h"
 #import "DiaryContentAccessoryView.h"
-#import "YYText.h"
-#import "YYImage.h"
+#import "PlaceholderTextView.h"
 #import "CropImageViewController.h"
 
-#import <WordPressShared/WPStyleGuide.h>
-#import <WordPressShared/WPFontManager.h>
-#import <CocoaLumberjack/CocoaLumberjack.h>
-#import "WPEditorField.h"
-#import "WPEditorView.h"
 @interface EditDiaryViewController () <DiaryContentAccessoryViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, DiaryBottomCompleteViewDelegate>
 @property (nonatomic, strong) UITextField *titleHeaderField;
 @property (nonatomic, strong) UILabel *timeLabel;
-@property (nonatomic, strong) YYTextView *contentTextView;
+@property (nonatomic, strong) PlaceholderTextView *contentTextView;
 @property (nonatomic, strong) DiaryContentAccessoryView *diaryContentAccessoryView;
 @property (nonatomic, strong) UIImagePickerController *pickerController;
 @property (nonatomic, strong) DiaryBottomCompleteView *completeView;
+@property (nonatomic, strong) NSMutableAttributedString *muAttributeStr;
 @end
 
 @implementation EditDiaryViewController
@@ -94,6 +87,7 @@
         self.titleHeaderField = field;
         field.font = [UIFont boldSystemFontOfSize:20];
         NSMutableAttributedString *placeholderAttr = [[NSMutableAttributedString alloc] initWithString:@"标题(30字以内)"];
+       
         [placeholderAttr addAttributes:@{
                                         NSFontAttributeName : [UIFont boldSystemFontOfSize:17],
                                         NSForegroundColorAttributeName : placeColor
@@ -117,13 +111,32 @@
     }
     
     {
-        YYTextView *contentTextView = [[YYTextView alloc] init];
+        PlaceholderTextView *contentTextView = [[PlaceholderTextView alloc] init];
         self.contentTextView = contentTextView;
+        self.contentTextView.font = [UIFont systemFontOfSize:15];
         [self.view addSubview:contentTextView];
-        contentTextView.placeholderText = @"输入日记...";
-        contentTextView.placeholderTextColor = placeColor;
-        contentTextView.placeholderFont = [UIFont systemFontOfSize:14];
-        contentTextView.font = [UIFont systemFontOfSize:14];
+        
+        NSMutableParagraphStyle *paragraph      = [[NSMutableParagraphStyle alloc] init];
+        paragraph.lineSpacing                   = 10;
+        paragraph.paragraphSpacing              = 20;
+        paragraph.alignment                     = NSTextAlignmentLeft;
+        paragraph.firstLineHeadIndent           = 10;
+        paragraph.lineBreakMode                 = NSLineBreakByCharWrapping;
+        paragraph.baseWritingDirection          = NSWritingDirectionLeftToRight;
+        paragraph.paragraphSpacingBefore        = 10;
+        NSDictionary *attrs = @{
+                                // 字体样式
+                                NSFontAttributeName : [UIFont systemFontOfSize:15],
+                                // 段落样式
+                                NSParagraphStyleAttributeName : [paragraph copy],
+                                // 字色
+                                NSForegroundColorAttributeName : [UIColor colorWithHexString:@"303030"],
+                                // 字间距
+                                NSKernAttributeName : @2
+                                };
+        
+        contentTextView.attributedText = [[NSAttributedString alloc] initWithString:@" " attributes:attrs];
+       
         contentTextView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
         contentTextView.translatesAutoresizingMaskIntoConstraints = NO;
         [contentTextView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -214,32 +227,44 @@
     Log(@"%@", info);
     __weak typeof(self) ws = self;
     [picker dismissViewControllerAnimated:YES completion:^{
-        UIImage *originImage = info[UIImagePickerControllerOriginalImage];
-        CGFloat imageW = [self.contentTextView sizeThatFits:CGSizeMake(self.contentTextView.width, self.contentTextView.height)].width;
-        CGFloat imageH = imageW / originImage.size.width * originImage.size.height;
-        UIImageView *imageView = [[YYAnimatedImageView alloc] initWithImage:originImage];
-        NSMutableAttributedString *attributeStr = [NSMutableAttributedString yy_attachmentStringWithContent:originImage contentMode:UIViewContentModeCenter attachmentSize:CGSizeMake(imageW, imageH) alignToFont:self.contentTextView.font alignment:YYTextVerticalAlignmentCenter];
-        NSMutableAttributedString *origin = [[NSMutableAttributedString alloc] initWithAttributedString:self.contentTextView.attributedText];
-        [origin appendAttributedString:attributeStr];
-        self.contentTextView.attributedText = [origin copy];
-//        self.contentTextView.selectedRange
-//        NSUInteger endPosition = _selectedTextRange.start.offset + atr.length;
-//        NSMutableAttributedString *text = _innerText.mutableCopy;
-//        [text replaceCharactersInRange:_selectedTextRange.asRange withAttributedString:atr];
-//        self.attributedText = text;
-//        YYTextPosition *pos = [self _correctedTextPosition:[YYTextPosition positionWithOffset:endPosition]];
-//        YYTextRange *range = [_innerLayout textRangeByExtendingPosition:pos];
-//        range = [self _correctedTextRange:range];
-//        if (range) {
-//            self.selectedRange = NSMakeRange(range.end.offset, 0);
-//        }
+        UIImage *origin = info[UIImagePickerControllerOriginalImage];
+        CGFloat imageW = ws.view.width;
+        CGFloat imageH;
+        CGSize imageSize = origin.size;
+        if (imageSize.height > imageW) {
+            imageH = imageSize.height / imageSize.width * imageW;
+        } else {
+            imageH = imageSize.height;
+        }
+        NSTextAttachment *attachment = [[NSTextAttachment alloc] init];
+        attachment.image = origin;
+        attachment.bounds = CGRectMake(0, 0, imageW, imageH);
+        NSMutableAttributedString *muattri = [[NSMutableAttributedString alloc] initWithAttributedString:ws.contentTextView.attributedText];
+        NSAttributedString *attribute = [NSAttributedString attributedStringWithAttachment:attachment];
+        [muattri insertAttributedString:attribute atIndex:ws.contentTextView.selectedRange.location];
+        ws.contentTextView.attributedText = [muattri copy];
+//        NSMutableParagraphStyle *paragraph      = [[NSMutableParagraphStyle alloc] init];
+//        paragraph.lineSpacing                   = 10;
+//        paragraph.paragraphSpacing              = 20;
+//        paragraph.alignment                     = NSTextAlignmentLeft;
+//        paragraph.firstLineHeadIndent           = 10;
+//        paragraph.lineBreakMode                 = NSLineBreakByCharWrapping;
+//        paragraph.baseWritingDirection          = NSWritingDirectionLeftToRight;
+//        paragraph.paragraphSpacingBefore        = 10;
+//        NSDictionary *attrs = @{
+//                                // 字体样式
+//                                NSFontAttributeName : [UIFont systemFontOfSize:15],
+//                                // 段落样式
+//                                NSParagraphStyleAttributeName : [paragraph copy],
+//                                // 字色
+//                                NSForegroundColorAttributeName : [UIColor colorWithHexString:@"303030"],
+//                                // 字间距
+//                                NSKernAttributeName : @2
+//                                };
         
-//        CGSize maxSize = CGSizeMake(imageW, CGFLOAT_MAX);
-//        CGRect rect = [self.contentTextView.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.contentTextView.font} context:nil];
-//        imageView.frame = CGRectMake(0, rect.size.height + 10, imageW, imageH);
-//        [ws.contentTextView addSubview:imageView];
-//        UIBezierPath *path = [UIBezierPath bezierPathWithRect:imageView.frame];
-//        self.contentTextView.exclusionPaths = @[path];
+//       NSAttributedString *attri  = [[NSAttributedString alloc] initWithString:@" " attributes:attrs];
+//        [muattri appendAttributedString:attri];
+     
     }];
 }
 

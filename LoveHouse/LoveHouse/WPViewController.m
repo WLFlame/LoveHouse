@@ -1,39 +1,59 @@
-//
-//  EditArticleViewController.m
-//  LoveHouse
-//
-//  Created by ywl on 16/5/16.
-//  Copyright © 2016年 wanli.yang. All rights reserved.
-//
+#import "WPViewController.h"
+
 @import Photos;
 @import AVFoundation;
 @import MobileCoreServices;
-#import "EditArticleViewController.h"
-#import "WPImageMetaViewController.h"
+#import <WordPressShared/WPStyleGuide.h>
+#import <WordPressShared/WPFontManager.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 #import "WPEditorField.h"
 #import "WPEditorView.h"
-@interface EditArticleViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, WPImageMetaViewControllerDelegate>
+#import "WPImageMetaViewController.h"
+
+@interface WPViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, WPImageMetaViewControllerDelegate>
 @property(nonatomic, strong) NSMutableDictionary *mediaAdded;
 @property(nonatomic, strong) NSString *selectedMediaID;
 @property(nonatomic, strong) NSCache *videoPressCache;
+
 @end
 
-@implementation EditArticleViewController
+@implementation WPViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    self.delegate = self;
-    self.mediaAdded = [NSMutableDictionary dictionary];
-    self.videoPressCache = [[NSCache alloc] init];
 
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit"
+    self.delegate = self;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit"
                                                                              style:UIBarButtonItemStylePlain
                                                                             target:self
                                                                             action:@selector(editTouchedUpInside)];
-    
+    self.mediaAdded = [NSMutableDictionary dictionary];
+    self.videoPressCache = [[NSCache alloc] init];
 }
 
+- (void)customizeAppearance
+{
+    [super customizeAppearance];
+    [WPFontManager merriweatherBoldFontOfSize:16.0];
+    [WPFontManager merriweatherBoldItalicFontOfSize:16.0];
+    [WPFontManager merriweatherItalicFontOfSize:16.0];
+    [WPFontManager merriweatherLightFontOfSize:16.0];
+    [WPFontManager merriweatherRegularFontOfSize:16.0];
 
+    self.placeholderColor = [WPStyleGuide grey];
+    self.editorView.sourceViewTitleField.font = [WPFontManager merriweatherBoldFontOfSize:24.0];
+    self.editorView.sourceContentDividerView.backgroundColor = [WPStyleGuide greyLighten30];
+    [self.toolbarView setBorderColor:[WPStyleGuide greyLighten10]];
+    [self.toolbarView setItemTintColor: [WPStyleGuide greyLighten10]];
+    [self.toolbarView setSelectedItemTintColor: [WPStyleGuide baseDarkerBlue]];
+    [self.toolbarView setDisabledItemTintColor:[UIColor colorWithRed:0.78 green:0.84 blue:0.88 alpha:0.5]];
+    // Explicit design decision to use non-standard colors. See:
+    // https://github.com/wordpress-mobile/WordPress-Editor-iOS/issues/657#issuecomment-113651034
+    [self.toolbarView setBackgroundColor: [UIColor colorWithRed:0xF9/255.0 green:0xFB/255.0 blue:0xFC/255.0 alpha:1]];
+}
+
+#pragma mark - Navigation Bar
 
 - (void)editTouchedUpInside
 {
@@ -44,22 +64,29 @@
     }
 }
 
+#pragma mark - IBActions
+
+- (IBAction)exit:(UIStoryboardSegue*)segue
+{
+}
+
 #pragma mark - WPEditorViewControllerDelegate
 
 - (void)editorDidBeginEditing:(WPEditorViewController *)editorController
 {
-    
+    DDLogInfo(@"Editor did begin editing.");
 }
 
 - (void)editorDidEndEditing:(WPEditorViewController *)editorController
 {
- 
+    DDLogInfo(@"Editor did end editing.");
 }
 
 - (void)editorDidFinishLoadingDOM:(WPEditorViewController *)editorController
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"html"];
     NSString *htmlParam = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    [self setTitleText:@"I'm editing a post!"];
     [self setBodyText:htmlParam];
 }
 
@@ -71,23 +98,23 @@
 
 - (void)editorDidPressMedia:(WPEditorViewController *)editorController
 {
-    NSLog(@"Pressed Media!");
+    DDLogInfo(@"Pressed Media!");
     [self showPhotoPicker];
 }
 
 - (void)editorTitleDidChange:(WPEditorViewController *)editorController
 {
-    NSLog(@"Editor title did change: %@", self.titleText);
+    DDLogInfo(@"Editor title did change: %@", self.titleText);
 }
 
 - (void)editorTextDidChange:(WPEditorViewController *)editorController
 {
-    NSLog(@"Editor body text changed: %@", self.bodyText);
+    DDLogInfo(@"Editor body text changed: %@", self.bodyText);
 }
 
 - (void)editorViewController:(WPEditorViewController *)editorViewController fieldCreated:(WPEditorField*)field
 {
-    NSLog(@"Editor field created: %@", field.nodeId);
+    DDLogInfo(@"Editor field created: %@", field.nodeId);
 }
 
 - (void)editorViewController:(WPEditorViewController*)editorViewController
@@ -140,13 +167,13 @@
 {
     NSProgress * progress = self.mediaAdded[mediaID];
     [progress cancel];
-    NSLog(@"Media Removed: %@", mediaID);
+    DDLogInfo(@"Media Removed: %@", mediaID);
 }
 
 - (void)editorFormatBarStatusChanged:(WPEditorViewController *)editorController
                              enabled:(BOOL)isEnabled
 {
-    NSLog(@"Editor format bar status is now %@.", (isEnabled ? @"enabled" : @"disabled"));
+    DDLogInfo(@"Editor format bar status is now %@.", (isEnabled ? @"enabled" : @"disabled"));
 }
 
 #pragma mark - Media actions
@@ -299,7 +326,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.editorView insertLocalImage:[[NSURL fileURLWithPath:path] absoluteString] uniqueId:imageID];
     });
-    
+
     NSProgress *progress = [[NSProgress alloc] initWithParent:nil userInfo:@{ @"imageID": imageID, @"url": path }];
     progress.cancellable = YES;
     progress.totalUnitCount = 100;
@@ -327,8 +354,8 @@
     [[PHImageManager defaultManager] requestImageDataForAsset:asset
                                                       options:options
                                                 resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
-                                                    [self addImageDataToContent:imageData];
-                                                }];
+        [self addImageDataToContent:imageData];
+    }];
 }
 
 - (void)addVideoAssetToContent:(PHAsset *)originalAsset
@@ -346,42 +373,42 @@
                                               contentMode:PHImageContentModeAspectFit
                                                   options:options
                                             resultHandler:^(UIImage *image, NSDictionary * _Nullable info) {
-                                                NSData *data = UIImageJPEGRepresentation(image, 0.7);
-                                                NSString *posterImagePath = [NSString stringWithFormat:@"%@/%@.jpg", NSTemporaryDirectory(), [[NSUUID UUID] UUIDString]];
-                                                [data writeToFile:posterImagePath atomically:YES];
-                                                dispatch_async(dispatch_get_main_queue(), ^{
-                                                    [self.editorView insertInProgressVideoWithID:videoID
-                                                                                usingPosterImage:[[NSURL fileURLWithPath:posterImagePath] absoluteString]];
-                                                });
-                                                PHVideoRequestOptions *videoOptions = [PHVideoRequestOptions new];
-                                                videoOptions.networkAccessAllowed = YES;
-                                                [[PHImageManager defaultManager] requestExportSessionForVideo:originalAsset
-                                                                                                      options:videoOptions
-                                                                                                 exportPreset:AVAssetExportPresetPassthrough
-                                                                                                resultHandler:^(AVAssetExportSession * _Nullable exportSession, NSDictionary * _Nullable info) {
-                                                                                                    exportSession.outputFileType = (__bridge NSString*)kUTTypeQuickTimeMovie;
-                                                                                                    exportSession.shouldOptimizeForNetworkUse = YES;
-                                                                                                    exportSession.outputURL = [NSURL fileURLWithPath:videoPath];
-                                                                                                    [exportSession exportAsynchronouslyWithCompletionHandler:^{
-                                                                                                        if (exportSession.status != AVAssetExportSessionStatusCompleted) {
-                                                                                                            return;
-                                                                                                        }
-                                                                                                        dispatch_async(dispatch_get_main_queue(), ^{
-                                                                                                            NSProgress *progress = [[NSProgress alloc] initWithParent:nil
-                                                                                                                                                             userInfo:@{@"videoID": videoID, @"url": videoPath, @"poster": posterImagePath }];
-                                                                                                            progress.cancellable = YES;
-                                                                                                            progress.totalUnitCount = 100;
-                                                                                                            [NSTimer scheduledTimerWithTimeInterval:0.1
-                                                                                                                                             target:self
-                                                                                                                                           selector:@selector(timerFireMethod:)
-                                                                                                                                           userInfo:progress
-                                                                                                                                            repeats:YES];
-                                                                                                            self.mediaAdded[videoID] = progress;
-                                                                                                        });
-                                                                                                    }];
-                                                                                                    
-                                                                                                }];
-                                            }];
+        NSData *data = UIImageJPEGRepresentation(image, 0.7);
+        NSString *posterImagePath = [NSString stringWithFormat:@"%@/%@.jpg", NSTemporaryDirectory(), [[NSUUID UUID] UUIDString]];
+        [data writeToFile:posterImagePath atomically:YES];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.editorView insertInProgressVideoWithID:videoID
+                                        usingPosterImage:[[NSURL fileURLWithPath:posterImagePath] absoluteString]];
+        });
+        PHVideoRequestOptions *videoOptions = [PHVideoRequestOptions new];
+        videoOptions.networkAccessAllowed = YES;
+        [[PHImageManager defaultManager] requestExportSessionForVideo:originalAsset
+                                                              options:videoOptions
+                                                         exportPreset:AVAssetExportPresetPassthrough
+                                                        resultHandler:^(AVAssetExportSession * _Nullable exportSession, NSDictionary * _Nullable info) {
+                                                            exportSession.outputFileType = (__bridge NSString*)kUTTypeQuickTimeMovie;
+                                                            exportSession.shouldOptimizeForNetworkUse = YES;
+                                                            exportSession.outputURL = [NSURL fileURLWithPath:videoPath];
+                                                            [exportSession exportAsynchronouslyWithCompletionHandler:^{
+                                                                if (exportSession.status != AVAssetExportSessionStatusCompleted) {
+                                                                    return;
+                                                                }
+                                                                dispatch_async(dispatch_get_main_queue(), ^{
+                                                                    NSProgress *progress = [[NSProgress alloc] initWithParent:nil
+                                                                                                                     userInfo:@{@"videoID": videoID, @"url": videoPath, @"poster": posterImagePath }];
+                                                                    progress.cancellable = YES;
+                                                                    progress.totalUnitCount = 100;
+                                                                    [NSTimer scheduledTimerWithTimeInterval:0.1
+                                                                                                     target:self
+                                                                                                   selector:@selector(timerFireMethod:)
+                                                                                                   userInfo:progress
+                                                                                                    repeats:YES];
+                                                                    self.mediaAdded[videoID] = progress;
+                                                                });
+                                                            }];
+            
+        }];
+    }];
 }
 
 - (void)addAssetToContent:(NSURL *)assetURL
@@ -391,7 +418,7 @@
         return;
     }
     PHAsset *asset = [assets firstObject];
-    
+        
     if (asset.mediaType == PHAssetMediaTypeVideo) {
         [self addVideoAssetToContent:asset];
     } if (asset.mediaType == PHAssetMediaTypeImage) {
@@ -418,16 +445,16 @@
         }
         return;
     }
-    
+
     NSString *videoID = progress.userInfo[@"videoID"];
     if (videoID) {
         [self.editorView setProgress:progress.fractionCompleted onVideo:videoID];
         // Uncomment this code if you need to test a failed video upload
-        //        if (progress.fractionCompleted >= 0.15) {
-        //            [progress cancel];
-        //            [self.editorView markVideo:videoID failedUploadWithMessage:@"Failed"];
-        //            [timer invalidate];
-        //        }
+//        if (progress.fractionCompleted >= 0.15) {
+//            [progress cancel];
+//            [self.editorView markVideo:videoID failedUploadWithMessage:@"Failed"];
+//            [timer invalidate];
+//        }
         if (progress.fractionCompleted >= 1) {
             NSString * videoURL = [[NSURL fileURLWithPath:progress.userInfo[@"url"]] absoluteString];
             NSString * posterURL = [[NSURL fileURLWithPath:progress.userInfo[@"poster"]] absoluteString];

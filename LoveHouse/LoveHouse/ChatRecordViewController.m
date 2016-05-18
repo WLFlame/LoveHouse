@@ -35,7 +35,14 @@
     self.table = table;
     [table registerNib:[UINib nibWithNibName:@"DiaryTableViewCell" bundle:nil] forCellReuseIdentifier:@"DiaryTableViewCell"];
     [self.view addSubview:self.table];
-    
+ 
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"记录" style:UIBarButtonItemStyleDone target:self action:@selector(rightBarButtonItemClick)];
+}
+
+- (void)rightBarButtonItemClick
+{
+    EditArticleViewController *articleVc = [[EditArticleViewController alloc] init];
+    [self presentViewController:articleVc animated:YES completion:nil];
 }
 
 

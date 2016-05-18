@@ -51,6 +51,7 @@
 - (BOOL)editorShouldDisplaySourceView:(WPEditorViewController *)editorController
 {
     [self.editorView pauseAllVideos];
+    [self.view endEditing:YES];
     return YES;
 }
 

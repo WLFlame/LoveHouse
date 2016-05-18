@@ -59,6 +59,7 @@
 
 - (void)buildToolbars
 {
+    
     self.leftToolbar.barTintColor = self.backgroundColor;
     self.leftToolbar.translucent = NO;
     self.leftToolbar.clipsToBounds = YES;

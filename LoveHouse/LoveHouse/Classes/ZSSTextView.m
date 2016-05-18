@@ -24,6 +24,7 @@
 
 - (void)commonSetup
 {
+   
     // No Line Numbers
     self.lineNumbersEnabled = NO;
     self.lineCursorEnabled = NO;

@@ -64,6 +64,7 @@ static NSString* const kWPEditorFieldJavascriptTrue = @"true";
     self = [super init];
     
     if (self) {
+        
         _nodeId = nodeId;
         _webView = webView;
     }

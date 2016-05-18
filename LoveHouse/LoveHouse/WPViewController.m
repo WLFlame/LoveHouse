@@ -14,7 +14,7 @@
 @property(nonatomic, strong) NSMutableDictionary *mediaAdded;
 @property(nonatomic, strong) NSString *selectedMediaID;
 @property(nonatomic, strong) NSCache *videoPressCache;
-
+@property (nonatomic, strong) UIImageView *snapShotImageView;
 @end
 
 @implementation WPViewController
@@ -30,6 +30,23 @@
                                                                             action:@selector(editTouchedUpInside)];
     self.mediaAdded = [NSMutableDictionary dictionary];
     self.videoPressCache = [[NSCache alloc] init];
+    
+    self.snapShotImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"snapshotEditVc"]];
+    self.snapShotImageView.frame = self.view.frame;
+    [self.view addSubview:self.snapShotImageView];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (self.snapShotImageView.superview) {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.snapShotImageView.alpha = 0;
+        } completion:^(BOOL finished) {
+            [self.snapShotImageView removeFromSuperview];
+        }];
+    }
+    
 }
 
 - (void)customizeAppearance
@@ -86,7 +103,7 @@
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"html"];
     NSString *htmlParam = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    [self setTitleText:@"I'm editing a post!"];
+//    [self setTitleText:@"I'm editing a post!"];
     [self setBodyText:htmlParam];
 }
 

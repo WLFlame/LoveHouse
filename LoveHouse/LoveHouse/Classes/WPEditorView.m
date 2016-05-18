@@ -72,6 +72,7 @@ static NSString* const WPEditorViewWebViewContentSizeKey = @"contentSize";
 	self = [super initWithFrame:frame];
 	
 	if (self) {
+        
 		CGRect childFrame = frame;
 		childFrame.origin = CGPointZero;
 		
@@ -153,6 +154,7 @@ static NSString* const WPEditorViewWebViewContentSizeKey = @"contentSize";
 	NSAssert(!_webView, @"The web view must not exist when this method is called!");
 	
 	_webView = [[UIWebView alloc] initWithFrame:frame];
+    
 	_webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	_webView.delegate = self;
 	_webView.scalesPageToFit = YES;
@@ -167,7 +169,12 @@ static NSString* const WPEditorViewWebViewContentSizeKey = @"contentSize";
     [self startObservingWebViewContentSizeChanges];
     
 	[self addSubview:_webView];
+    
+    
+    
 }
+
+
 
 - (void)setupHTMLEditor
 {

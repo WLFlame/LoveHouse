@@ -208,8 +208,10 @@
         self.editorView.sourceViewTitleField.inputAccessoryView = self.toolbarView;
         
         // Default placeholder text
-        self.titlePlaceholderText = NSLocalizedString(@"Post title",  @"Placeholder for the post title.");
-        self.bodyPlaceholderText = NSLocalizedString(@"Share your story here...", @"Placeholder for the post body.");
+//        self.titlePlaceholderText = NSLocalizedString(@"Post title",  @"Placeholder for the post title.");
+        self.titlePlaceholderText = @"标题";
+//        self.bodyPlaceholderText = NSLocalizedString(@"Share your story here...", @"Placeholder for the post body.");
+        self.bodyPlaceholderText = @"记下你的心情...";
     }
 	
     [self.view addSubview:self.editorView];

@@ -26,6 +26,22 @@
     self.mediaAdded = [NSMutableDictionary dictionary];
     self.videoPressCache = [[NSCache alloc] init];
 
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit"
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:@selector(editTouchedUpInside)];
+    
+}
+
+
+
+- (void)editTouchedUpInside
+{
+    if (self.isEditing) {
+        [self stopEditing];
+    } else {
+        [self startEditing];
+    }
 }
 
 #pragma mark - WPEditorViewControllerDelegate
@@ -44,7 +60,6 @@
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"html"];
     NSString *htmlParam = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    [self setTitleText:@"标题"];
     [self setBodyText:htmlParam];
 }
 

@@ -8,6 +8,10 @@
 
 #import "Message.h"
 
-@implementation Message
-
-@end
+const NSString *messageId = @"messageId";
+const NSString *message_senderId = @"senderId";
+const NSString *message_content = @"content";
+const NSString *message_time = @"time";
+const NSString *message_type = @"type";
+const NSString *message_image = @"image";
+const NSString *message_voice = @"voice";

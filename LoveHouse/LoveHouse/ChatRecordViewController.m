@@ -10,6 +10,7 @@
 #import "DiaryTableViewCell.h"
 #import "EditDiaryViewController.h"
 #import "EditArticleViewController.h"
+#import "WPViewController.h"
 @interface ChatRecordViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *table;
 @end
@@ -35,16 +36,19 @@
     self.table = table;
     [table registerNib:[UINib nibWithNibName:@"DiaryTableViewCell" bundle:nil] forCellReuseIdentifier:@"DiaryTableViewCell"];
     [self.view addSubview:self.table];
- 
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"记录" style:UIBarButtonItemStyleDone target:self action:@selector(rightBarButtonItemClick)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"记录" style:UIBarButtonItemStyleDone target:self action:@selector(edit)];
+    
 }
 
-- (void)rightBarButtonItemClick
+
+- (void)edit
 {
-    EditArticleViewController *articleVc = [[EditArticleViewController alloc] init];
-    [self presentViewController:articleVc animated:YES completion:nil];
+    WPViewController *editDiary = [[WPViewController alloc] initWithMode:kWPEditorViewControllerModeEdit];
+    UINavigationController *editNav = [[UINavigationController alloc] initWithRootViewController:editDiary];
+    
+    [self presentViewController:editNav animated:YES completion:nil];
 }
-
 
 #pragma mark --- UITableViewDataSource Method
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -61,7 +65,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    EditArticleViewController *editDiary = [[EditArticleViewController alloc] initWithMode:kWPEditorViewControllerModeEdit];
+    EditArticleViewController *editDiary = [[EditArticleViewController alloc] initWithMode:kWPEditorViewControllerModePreview];
     [self.navigationController pushViewController:editDiary animated:YES];
 }
 

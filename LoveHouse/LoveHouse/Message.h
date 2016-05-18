@@ -8,19 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, MessageType) {
-    MessageTypeText,
-    MessageTypeImage,
-    MessageTypeVoice
-};
+extern const NSString *messageId;
+extern const NSString *message_senderId;
+extern const NSString *message_content;
+extern const NSString *message_time;
+extern const NSString *message_type;
+extern const NSString *message_image;
+extern const NSString *message_voice;
 
-@interface Message : NSObject
-@property (nonatomic, copy) NSString *messageId;
-@property (nonatomic, copy) NSString *senderId;
-@property (nonatomic, copy) NSString *textContent;
-@property (nonatomic, copy) NSString *imageContent;
-@property (nonatomic, copy) NSString *voiceContent;
-@property (nonatomic, assign) MessageType type;
-
-
-@end

@@ -293,6 +293,13 @@
 		D2F23B021CD64DFD008E7E88 /* DiaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F23B001CD64DFD008E7E88 /* DiaryTableViewCell.m */; };
 		D2F23B051CD657E2008E7E88 /* DiaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F23B041CD657E2008E7E88 /* DiaryTableViewCell.xib */; };
 		F65A403B1CE0A77C005E4A1F /* ChoseCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = F65A403A1CE0A77C005E4A1F /* ChoseCropView.m */; };
+		F68D02501CEAE8F900911D8C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F68D024F1CEAE8F900911D8C /* User.m */; };
+		F68D02531CEAEA9600911D8C /* House.m in Sources */ = {isa = PBXBuildFile; fileRef = F68D02521CEAEA9600911D8C /* House.m */; };
+		F68D02561CEAEDF900911D8C /* MessageBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F68D02551CEAEDF900911D8C /* MessageBoard.m */; };
+		F68D02591CEAF45500911D8C /* Diary.m in Sources */ = {isa = PBXBuildFile; fileRef = F68D02581CEAF45500911D8C /* Diary.m */; };
+		F68D025C1CEAF58B00911D8C /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = F68D025B1CEAF58B00911D8C /* Album.m */; };
+		F68D025F1CEAF6FE00911D8C /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F68D025E1CEAF6FE00911D8C /* Photo.m */; };
+		F68D02621CEAFA4900911D8C /* DiaryRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = F68D02611CEAFA4900911D8C /* DiaryRecord.m */; };
 		F69002F81CDC6AF20001736A /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = F69002F71CDC6AF20001736A /* Message.m */; };
 		F6DD01E21CE9D22300246D8D /* EditArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DD01E11CE9D22300246D8D /* EditArticleViewController.m */; };
 /* End PBXBuildFile section */
@@ -852,6 +859,20 @@
 		D2F23B041CD657E2008E7E88 /* DiaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaryTableViewCell.xib; sourceTree = "<group>"; };
 		F65A40391CE0A77C005E4A1F /* ChoseCropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoseCropView.h; sourceTree = "<group>"; };
 		F65A403A1CE0A77C005E4A1F /* ChoseCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoseCropView.m; sourceTree = "<group>"; };
+		F68D024E1CEAE8F900911D8C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F68D024F1CEAE8F900911D8C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		F68D02511CEAEA9600911D8C /* House.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = House.h; sourceTree = "<group>"; };
+		F68D02521CEAEA9600911D8C /* House.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = House.m; sourceTree = "<group>"; };
+		F68D02541CEAEDF900911D8C /* MessageBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageBoard.h; sourceTree = "<group>"; };
+		F68D02551CEAEDF900911D8C /* MessageBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageBoard.m; sourceTree = "<group>"; };
+		F68D02571CEAF45500911D8C /* Diary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Diary.h; sourceTree = "<group>"; };
+		F68D02581CEAF45500911D8C /* Diary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Diary.m; sourceTree = "<group>"; };
+		F68D025A1CEAF58B00911D8C /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		F68D025B1CEAF58B00911D8C /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		F68D025D1CEAF6FE00911D8C /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		F68D025E1CEAF6FE00911D8C /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		F68D02601CEAFA4900911D8C /* DiaryRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryRecord.h; sourceTree = "<group>"; };
+		F68D02611CEAFA4900911D8C /* DiaryRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryRecord.m; sourceTree = "<group>"; };
 		F69002F61CDC6AF20001736A /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		F69002F71CDC6AF20001736A /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		F6DD01E01CE9D22300246D8D /* EditArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditArticleViewController.h; sourceTree = "<group>"; };
@@ -996,6 +1017,7 @@
 		D236E8351CCB4D0000397C19 /* LoveHouse */ = {
 			isa = PBXGroup;
 			children = (
+				F68D02491CEAE69100911D8C /* Models */,
 				D236E8391CCB4D0000397C19 /* AppDelegate.h */,
 				D236E83A1CCB4D0000397C19 /* AppDelegate.m */,
 				D236EB461CCB561200397C19 /* lovehouse.pch */,
@@ -1034,7 +1056,6 @@
 		D236E84D1CCB4D2F00397C19 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				D236E8541CCB4DB200397C19 /* Model */,
 				D236E8531CCB4DAD00397C19 /* View */,
 				D236E8521CCB4DA400397C19 /* Controller */,
 			);
@@ -1051,7 +1072,6 @@
 		D236E84F1CCB4D6300397C19 /* House */ = {
 			isa = PBXGroup;
 			children = (
-				D236E85F1CCB53CF00397C19 /* Model */,
 				D236E85E1CCB53CB00397C19 /* View */,
 				D236E85D1CCB53C400397C19 /* Controller */,
 			);
@@ -1093,18 +1113,10 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		D236E8541CCB4DB200397C19 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		D236E8551CCB51BB00397C19 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				D236E8581CCB52CD00397C19 /* View */,
-				D236E8571CCB52C900397C19 /* Model */,
 				D236E8561CCB52BE00397C19 /* Controller */,
 			);
 			name = Main;
@@ -1119,13 +1131,6 @@
 				D236E8611CCB548A00397C19 /* NavigationController.m */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		D236E8571CCB52C900397C19 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		D236E8581CCB52CD00397C19 /* View */ = {
@@ -1154,15 +1159,6 @@
 				D23339D11CCFC42100436B9A /* LeftReplyViewCell */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		D236E85F1CCB53CF00397C19 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F69002F61CDC6AF20001736A /* Message.h */,
-				F69002F71CDC6AF20001736A /* Message.m */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		D236E8641CCB55D600397C19 /* Category */ = {
@@ -2284,7 +2280,6 @@
 			isa = PBXGroup;
 			children = (
 				D27523D71CD17AED00A0C013 /* View */,
-				D27523D61CD17AE800A0C013 /* Model */,
 				D27523D51CD17AE100A0C013 /* Controller */,
 			);
 			name = Album;
@@ -2297,13 +2292,6 @@
 				D27523D91CD17AFD00A0C013 /* AlbumViewController.m */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		D27523D61CD17AE800A0C013 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		D27523D71CD17AED00A0C013 /* View */ = {
@@ -2345,7 +2333,6 @@
 		D27523E41CD17BF500A0C013 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				D2F23AFE1CD64DB9008E7E88 /* Model */,
 				D2F23AFD1CD64DB2008E7E88 /* view */,
 				D27523E51CD17C0E00A0C013 /* Controller */,
 			);
@@ -2472,13 +2459,6 @@
 			name = view;
 			sourceTree = "<group>";
 		};
-		D2F23AFE1CD64DB9008E7E88 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		F30321470B673ED47903001A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2495,6 +2475,29 @@
 				F65A403A1CE0A77C005E4A1F /* ChoseCropView.m */,
 			);
 			name = ChoseCropView;
+			sourceTree = "<group>";
+		};
+		F68D02491CEAE69100911D8C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F69002F61CDC6AF20001736A /* Message.h */,
+				F69002F71CDC6AF20001736A /* Message.m */,
+				F68D024E1CEAE8F900911D8C /* User.h */,
+				F68D024F1CEAE8F900911D8C /* User.m */,
+				F68D02511CEAEA9600911D8C /* House.h */,
+				F68D02521CEAEA9600911D8C /* House.m */,
+				F68D02541CEAEDF900911D8C /* MessageBoard.h */,
+				F68D02551CEAEDF900911D8C /* MessageBoard.m */,
+				F68D02571CEAF45500911D8C /* Diary.h */,
+				F68D02581CEAF45500911D8C /* Diary.m */,
+				F68D025A1CEAF58B00911D8C /* Album.h */,
+				F68D025B1CEAF58B00911D8C /* Album.m */,
+				F68D025D1CEAF6FE00911D8C /* Photo.h */,
+				F68D025E1CEAF6FE00911D8C /* Photo.m */,
+				F68D02601CEAFA4900911D8C /* DiaryRecord.h */,
+				F68D02611CEAFA4900911D8C /* DiaryRecord.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		F6DD01DF1CE9D1E800246D8D /* EditArticleViewController */ = {
@@ -2664,6 +2667,7 @@
 				D236EB3F1CCB55D600397C19 /* UIWebView+Load.m in Sources */,
 				D236EA881CCB55D600397C19 /* NSDictionary+SafeAccess.m in Sources */,
 				D236EB2E1CCB55D600397C19 /* UIView+Toast.m in Sources */,
+				F68D02591CEAF45500911D8C /* Diary.m in Sources */,
 				D27523ED1CD17E8500A0C013 /* HouseSummaryViewController.m in Sources */,
 				D236EB0F1CCB55D600397C19 /* UIScreen+Frame.m in Sources */,
 				D236EABA1CCB55D600397C19 /* NSURL+Param.m in Sources */,
@@ -2671,6 +2675,7 @@
 				D236EB261CCB55D600397C19 /* UIView+Frame.m in Sources */,
 				D236EAED1CCB55D600397C19 /* UIImage+Blur.m in Sources */,
 				D236EB141CCB55D600397C19 /* UISearchBar+Blocks.m in Sources */,
+				F68D02531CEAEA9600911D8C /* House.m in Sources */,
 				D236EAA61CCB55D600397C19 /* NSString+Base64.m in Sources */,
 				D2EB702B1CCBDD570069C726 /* Foundation+Log.m in Sources */,
 				D236EAA51CCB55D600397C19 /* NSMutableString+Ruby.m in Sources */,
@@ -2752,6 +2757,7 @@
 				D236EAB91CCB55D600397C19 /* NSTimer+Blocks.m in Sources */,
 				D236EA971CCB55D600397C19 /* NSNumber+Round.m in Sources */,
 				D236EA8C1CCB55D600397C19 /* NSFileHandle+readLine.m in Sources */,
+				F68D02561CEAEDF900911D8C /* MessageBoard.m in Sources */,
 				D22E72781CDF0ED90029577C /* PlaceholderTextView.m in Sources */,
 				D236EABF1CCB55D600397C19 /* NSUserDefaults+iCloudSync.m in Sources */,
 				D26783271CD5201E00509FC1 /* HouseDetailHeaderView.m in Sources */,
@@ -2767,10 +2773,12 @@
 				D236EB391CCB55D600397C19 /* UIViewController+TopBarMessage.m in Sources */,
 				D236EB051CCB55D600397C19 /* UINavigationController+BATransitions.m in Sources */,
 				D236EB491CCB5BA900397C19 /* LoginViewController.m in Sources */,
+				F68D025C1CEAF58B00911D8C /* Album.m in Sources */,
 				D236EB071CCB55D600397C19 /* UINavigationController+StackManager.m in Sources */,
 				D236EADC1CCB55D600397C19 /* UIButton+TouchAreaInsets.m in Sources */,
 				D2C172EE1CCBAAE900E9AAB4 /* RegisterContainerView.m in Sources */,
 				D236EA801CCB55D600397C19 /* NSDate+Reporting.m in Sources */,
+				F68D02621CEAFA4900911D8C /* DiaryRecord.m in Sources */,
 				D236EA841CCB55D600397C19 /* NSDateFormatter+Make.m in Sources */,
 				D27523C71CD15F0C00A0C013 /* MenuHeaderCell.m in Sources */,
 				D236EAE71CCB55D600397C19 /* UIFont+DynamicFontControl.m in Sources */,
@@ -2795,6 +2803,7 @@
 				D236EAB21CCB55D600397C19 /* NSString+Score.m in Sources */,
 				D236EA6B1CCB55D600397C19 /* NSManagedObjectContext+Extensions.m in Sources */,
 				D236EA6E1CCB55D600397C19 /* NSManagedObjectContext+ObjectClear.m in Sources */,
+				F68D02501CEAE8F900911D8C /* User.m in Sources */,
 				D236EAAF1CCB55D600397C19 /* NSString+RegexCategory.m in Sources */,
 				D236EA741CCB55D600397C19 /* NSBundle+AppIcon.m in Sources */,
 				D236EAAD1CCB55D600397C19 /* NSString+MIME.m in Sources */,
@@ -2876,6 +2885,7 @@
 				D236EB0B1CCB55D600397C19 /* UIPopoverController+iPhone.m in Sources */,
 				D236EAA21CCB55D600397C19 /* NSObject+Runtime.m in Sources */,
 				D236EB311CCB55D600397C19 /* UIViewController+BackButtonHandler.m in Sources */,
+				F68D025F1CEAF6FE00911D8C /* Photo.m in Sources */,
 				D236EA681CCB55D600397C19 /* NSFetchRequest+Extensions.m in Sources */,
 				D236EB541CCB616200397C19 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				D236EACB1CCB55D600397C19 /* UIApplication+ApplicationSize.m in Sources */,

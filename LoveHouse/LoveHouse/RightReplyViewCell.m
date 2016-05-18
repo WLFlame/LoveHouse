@@ -23,7 +23,7 @@
 - (void)setMessage:(Message *)message
 {
     _message = message;
-    self.lbReply.text = message.textContent;
+//    self.lbReply.text = message.textContent;
 }
 
 @end

@@ -258,6 +258,7 @@
 		D236EB4D1CCB5D7900397C19 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D236EB4C1CCB5D7900397C19 /* BaseViewController.m */; };
 		D236EB541CCB616200397C19 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = D236EB511CCB616200397C19 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		D236EB551CCB616200397C19 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D236EB531CCB616200397C19 /* UIView+SDAutoLayout.m */; };
+		D246C0781CF0622D00DAFF6C /* content.html in Resources */ = {isa = PBXBuildFile; fileRef = D246C0771CF0622D00DAFF6C /* content.html */; };
 		D26783271CD5201E00509FC1 /* HouseDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D26783261CD5201E00509FC1 /* HouseDetailHeaderView.m */; };
 		D26783291CD5205C00509FC1 /* HouseDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26783281CD5205C00509FC1 /* HouseDetailHeaderView.xib */; };
 		D267832D1CD5242D00509FC1 /* TimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D267832B1CD5242D00509FC1 /* TimeLineCell.m */; };
@@ -946,6 +947,7 @@
 		D236EB511CCB616200397C19 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
 		D236EB521CCB616200397C19 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
 		D236EB531CCB616200397C19 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		D246C0771CF0622D00DAFF6C /* content.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = content.html; sourceTree = "<group>"; };
 		D26783251CD5201E00509FC1 /* HouseDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseDetailHeaderView.h; sourceTree = "<group>"; };
 		D26783261CD5201E00509FC1 /* HouseDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseDetailHeaderView.m; sourceTree = "<group>"; };
 		D26783281CD5205C00509FC1 /* HouseDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseDetailHeaderView.xib; sourceTree = "<group>"; };
@@ -2703,6 +2705,7 @@
 		D27523E41CD17BF500A0C013 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				D246C0771CF0622D00DAFF6C /* content.html */,
 				F607241F1CEC55C800E4E960 /* WPViewController.h */,
 				F60724201CEC55C800E4E960 /* WPViewController.m */,
 				D2F23AFD1CD64DB2008E7E88 /* view */,
@@ -3182,6 +3185,7 @@
 				F60723B41CEC4E0A00E4E960 /* ZSSoutdent@2x.png in Resources */,
 				F60723991CEC4E0A00E4E960 /* ZSSbgcolor.png in Resources */,
 				F60723781CEC4E0A00E4E960 /* icon_format_quote@2x.png in Resources */,
+				D246C0781CF0622D00DAFF6C /* content.html in Resources */,
 				F60723971CEC4E0A00E4E960 /* wpposter.svg in Resources */,
 				F60723701CEC4E0A00E4E960 /* icon_format_media@3x.png in Resources */,
 				F60723941CEC4E0A00E4E960 /* WPHybridCallbacker.js in Resources */,

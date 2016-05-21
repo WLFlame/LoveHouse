@@ -459,6 +459,11 @@ stylesForCurrentSelection:(NSArray*)styles;
 
 #pragma mark - Editing lock
 
+
+- (void)focus;
+
+- (void)blur;
+
 /**
  *	@brief		Disables editing.
  */

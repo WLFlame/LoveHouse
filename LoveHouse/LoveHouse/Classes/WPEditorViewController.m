@@ -75,6 +75,11 @@
 	return self;
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 #pragma mark - Shared Initialization Code
 
 - (void)sharedInitializationWithEditing:(BOOL)editing
@@ -94,6 +99,13 @@
 
     NSBundle *editorBundle = [NSBundle bundleForClass:[WPEditorFormatbarView class]];
     _toolbarView = (WPEditorFormatbarView *)[[editorBundle loadNibNamed:NSStringFromClass([WPEditorFormatbarView class]) owner:nil options:nil] firstObject];
+    [_toolbarView toolBarItemWithTag:kWPEditorViewControllerElementTagBlockQuoteBarButton setVisible:NO];
+    [_toolbarView toolBarItemWithTag:kWPEditorViewControllerElementTagBoldBarButton setVisible:NO];
+    [_toolbarView toolBarItemWithTag:kWPEditorViewControllerElementTagInsertLinkBarButton setVisible:NO];
+    [_toolbarView toolBarItemWithTag:kWPEditorViewControllerElementTagItalicBarButton setVisible:NO];
+    [_toolbarView toolBarItemWithTag:kWPEditorViewControllerElementOrderedListBarButton setVisible:NO];
+//    [_toolbarView toolBarItemWithTag:kWPEditorViewControllerElementShowSourceBarButton setVisible:NO];
+    [_toolbarView toolBarItemWithTag:kWPEditorViewControllerElementUnorderedListBarButton setVisible:NO];
     _toolbarView.delegate = self;
 }
 
@@ -107,6 +119,24 @@
     [self createToolbarView];
     [self buildTextViews];
     [self customizeAppearance];
+//    [self registerNotification];
+}
+
+- (void)registerNotification
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide) name:UIKeyboardWillHideNotification object:nil];
+}
+
+
+- (void)keyboardWillShow
+{
+    self.editing = YES;
+}
+
+- (void)keyboardWillHide
+{
+    self.editing = NO;
 }
 
 - (void)customizeAppearance {
@@ -367,10 +397,19 @@
 	}
 }
 
+- (void)focus
+{
+    [self.editorView focus];
+}
+
+- (void)blur
+{
+    [self.editorView blur];
+}
+
 - (void)stopEditing
 {
 	self.editing = NO;
-	
 	[self disableEditing];
 	[self tellOurDelegateEditingDidEnd];
 }
@@ -433,20 +472,27 @@
 
 #pragma mark - Editor Interaction
 
+- (void)setEditing:(BOOL)editing
+{
+    _editing = editing;
+}
+
 - (void)showHTMLSource:(UIBarButtonItem *)barButtonItem
-{	
-    if ([self.editorView isInVisualMode]) {
-        if ([self askOurDelegateShouldDisplaySourceView]) {
-            [self.editorView showHTMLSource];
-            barButtonItem.tintColor = [self barButtonItemSelectedDefaultColor];
-        } else {
-            // Deselect the HTML button so it is in the proper state
-            [(UIButton *)barButtonItem setSelected:NO];
-        }
-    } else {
-		[self.editorView showVisualEditor];
-		barButtonItem.tintColor = [self.toolbarView itemTintColor];
-    }
+{
+    [self blur];
+    
+//    if ([self.editorView isInVisualMode]) {
+//        if ([self askOurDelegateShouldDisplaySourceView]) {
+//            [self.editorView showHTMLSource];
+//            barButtonItem.tintColor = [self barButtonItemSelectedDefaultColor];
+//        } else {
+//            // Deselect the HTML button so it is in the proper state
+//            [(UIButton *)barButtonItem setSelected:NO];
+//        }
+//    } else {
+//		[self.editorView showVisualEditor];
+//		barButtonItem.tintColor = [self.toolbarView itemTintColor];
+//    }
     
 }
 

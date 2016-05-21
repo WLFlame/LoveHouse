@@ -29,19 +29,15 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit"
                                                                              style:UIBarButtonItemStylePlain
                                                                             target:self
-                                                                            action:@selector(editTouchedUpInside)];
+                                                                            action:@selector(completeBtnClick)];
     
 }
 
 
 
-- (void)editTouchedUpInside
+- (void)completeBtnClick
 {
-    if (self.isEditing) {
-        [self stopEditing];
-    } else {
-        [self startEditing];
-    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - WPEditorViewControllerDelegate

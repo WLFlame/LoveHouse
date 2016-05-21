@@ -67,11 +67,15 @@
     self.regularToolbar.barTintColor = self.backgroundColor;
     self.regularToolbar.translucent = NO;
     self.regularToolbar.clipsToBounds = YES;
-    
+#warning 隐藏一些
+    // 隐藏引用
     [self initBlockQuoteBarButton];
+    // 隐藏粗体
     [self initBoldBarButton];
     [self initImageBarButton];
+    // 隐藏链接
     [self initLinkBarButton];
+    // 隐藏字体
     [self initItalicBarButton];
     [self initOrderedListBarButton];
     [self initUnorderedListBarButton];
@@ -467,7 +471,7 @@
     [self initBarButtonItem:self.htmlButton
                     withTag:kWPEditorViewControllerElementShowSourceBarButton
                htmlProperty:@"source"
-                  imageName:@"icon_format_html"
+                  imageName:@"tragle"
                      target:self
                    selector:@selector(showHTML:)
          accessibilityLabel:accessibilityLabel];
@@ -475,7 +479,7 @@
     [self initBarButtonItem:self.htmlRegularButton
                     withTag:kWPEditorViewControllerElementShowSourceBarButton
                htmlProperty:@"source"
-                  imageName:@"icon_format_html"
+                  imageName:@"tragle"
                      target:self
                    selector:@selector(showHTML:)
          accessibilityLabel:accessibilityLabel];

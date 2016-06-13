@@ -1748,7 +1748,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 {
     BOOL titleHadFocus = self.sourceViewTitleField.isFirstResponder;
     
-	[self.contentField setHtml:self.sourceView.text];
+//	[self.contentField setHtml:self.sourceView.text];
 	self.sourceView.hidden = YES;
     [self.titleField setHtml:self.sourceViewTitleField.text];
     self.sourceViewTitleField.hidden = YES;
@@ -1769,9 +1769,12 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     if (!self.sourceView.hidden) {
         [self showVisualEditor];
     }
-    
     [self.titleField disableEditing];
+//    [self.titleField blur];
     [self.contentField disableEditing];
+//    [self.contentField blur];
+//    [self.sourceViewTitleField resignFirstResponder];
+//    [self.sourceView resignFirstResponder];
     [self.sourceViewTitleField setEnabled:NO];
     [self.sourceView setEditable:NO];
 }
@@ -1782,6 +1785,20 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     [self.contentField enableEditing];
     [self.sourceViewTitleField setEnabled:YES];
     [self.sourceView setEditable:YES];
+}
+
+- (void)blur
+{
+    [self.titleField blur];
+    //    [self.contentField disableEditing];
+    [self.contentField blur];
+    [self.sourceViewTitleField resignFirstResponder];
+    [self.sourceView resignFirstResponder];
+}
+
+- (void)focus
+{
+    [self.contentField focus];
 }
 
 #pragma mark - Styles

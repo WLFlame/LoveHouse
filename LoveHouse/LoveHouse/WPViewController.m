@@ -24,16 +24,10 @@
     [super viewDidLoad];
 
     self.delegate = self;
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit"
-                                                                             style:UIBarButtonItemStylePlain
-                                                                            target:self
-                                                                            action:@selector(editTouchedUpInside)];
     self.mediaAdded = [NSMutableDictionary dictionary];
     self.videoPressCache = [[NSCache alloc] init];
     
-    self.snapShotImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"snapshotEditVc"]];
-    self.snapShotImageView.frame = self.view.frame;
-    [self.view addSubview:self.snapShotImageView];
+    [self setupUI];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -49,9 +43,25 @@
     
 }
 
+- (void)setupUI
+{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成"
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:@selector(completeBtnClick)];
+    
+    
+    self.snapShotImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"snapshotEditVc"]];
+    self.snapShotImageView.frame = self.view.frame;
+    [self.view addSubview:self.snapShotImageView];
+    
+    
+}
+
 - (void)customizeAppearance
 {
     [super customizeAppearance];
+    // 设置字体
     [WPFontManager merriweatherBoldFontOfSize:16.0];
     [WPFontManager merriweatherBoldItalicFontOfSize:16.0];
     [WPFontManager merriweatherItalicFontOfSize:16.0];
@@ -72,13 +82,9 @@
 
 #pragma mark - Navigation Bar
 
-- (void)editTouchedUpInside
+- (void)completeBtnClick
 {
-    if (self.isEditing) {
-        [self stopEditing];
-    } else {
-        [self startEditing];
-    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - IBActions
@@ -103,7 +109,7 @@
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"html"];
     NSString *htmlParam = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-//    [self setTitleText:@"I'm editing a post!"];
+    [self setTitleText:@"I'm editing a post!"];
     [self setBodyText:htmlParam];
 }
 

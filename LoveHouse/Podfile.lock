@@ -8,6 +8,7 @@ PODS:
   - DGActivityIndicatorView (2.0)
   - ECSlidingViewController (2.0.3)
   - Masonry (1.0.0)
+  - tingyunApp (2.3.5)
   - YYText (1.0.5)
 
 DEPENDENCIES:
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - DGActivityIndicatorView
   - ECSlidingViewController (~> 2.0.3)
   - Masonry
+  - tingyunApp
   - YYText (~> 1.0.5)
 
 SPEC CHECKSUMS:
@@ -26,6 +28,7 @@ SPEC CHECKSUMS:
   DGActivityIndicatorView: 52875b025a6ccf6a431a905285c12e2bb95eb559
   ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
+  tingyunApp: 069e29a378ce9dfdd515ac0637cda4ea4e16908c
   YYText: ac09660c9ccd9b817f409a20caa6f5587444d2ae
 
 COCOAPODS: 0.39.0

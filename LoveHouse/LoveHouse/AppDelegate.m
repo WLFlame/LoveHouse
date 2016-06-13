@@ -25,6 +25,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [AVOSCloud setApplicationId:@"NicESrLxi2FHWq17yT2l0Qo7-gzGzoHsz"
                       clientKey:@"jl7ezSvszYBGV7fzXAxTR2Xp"];
+    [NBSAppAgent startWithAppID:@"195b3583147d408f8927fb64761547be"];
     [self globalAppearnceSet];
     AVUser *currentUser = [AVUser currentUser];
     if (currentUser != nil) {

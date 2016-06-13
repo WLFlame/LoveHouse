@@ -23,4 +23,6 @@
 #import "Masonry.h"
 #import "UIView+Frame.h"
 #import "UIColor+Alaways.h"
+
+#import <tingyunApp/NBSAppAgent.h>
 #endif /* lovehouse_pch */

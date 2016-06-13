@@ -3779,6 +3779,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/LoveHouse",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LoveHouse/lovehouse.pch";
 				INFOPLIST_FILE = LoveHouse/Info.plist;
@@ -3800,6 +3801,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/LoveHouse",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LoveHouse/lovehouse.pch";
 				INFOPLIST_FILE = LoveHouse/Info.plist;
